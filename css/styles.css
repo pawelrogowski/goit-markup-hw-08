@@ -11,9 +11,9 @@
 }
 
 body {
+  font-family: "Roboto", "Raleway", sans-serif;
   background-color: var(--backgroundColorMain);
   color: var(--fontColorMain);
-  font-family: "Roboto", "Raleway", sans-serif;
 }
 
 h5 {
@@ -22,7 +22,10 @@ h5 {
 }
 
 p {
-  /* border: solid 1px black; */
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--fontColorSecondary);
 }
 .wrapper {
   background-color: var(--colorWhite);
@@ -33,6 +36,10 @@ p {
 .container {
   width: 1200px;
   margin-left: 215px;
+}
+
+.section {
+  padding: 92px 0;
 }
 
 .box-header {
@@ -63,15 +70,12 @@ p {
   padding: 0;
 }
 
-.section {
-  padding: 92px 0;
-}
 
 .box-article {
   display: flex;
   list-style: none;
   gap: 30px;
-  padding: 0;
+  padding: 0; */
 }
 .main-top {
   display: flex;
@@ -227,10 +231,7 @@ p {
 }
 
 .paragraph-text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--fontColorSecondary);
+
 }
 
 .person-name {
