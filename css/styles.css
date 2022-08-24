@@ -15,6 +15,15 @@ body {
   color: var(--fontColorMain);
   font-family: "Roboto", "Raleway", sans-serif;
 }
+
+h5 {
+  margin: 0 0 5px 0;
+  /* border: solid 1px black; */
+}
+
+p {
+  /* border: solid 1px black; */
+}
 .wrapper {
   background-color: var(--colorWhite);
   width: 1600px;
@@ -49,10 +58,21 @@ body {
   margin-left: 369px;
 }
 
-.no-margin {
+.no-margin-padding {
   margin: 0;
+  padding: 0;
 }
 
+.section {
+  padding: 92px 0;
+}
+
+.box-article {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+}
 .main-top {
   display: flex;
   flex-direction: column;
