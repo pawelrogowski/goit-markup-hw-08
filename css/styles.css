@@ -70,12 +70,24 @@ p {
   padding: 0;
 }
 
-
 .box-article {
   display: flex;
   list-style: none;
   gap: 30px;
-  padding: 0; */
+  padding: 0;
+}
+
+.box-images {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+}
+.box-images-team {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
 }
 .main-top {
   display: flex;
@@ -231,7 +243,6 @@ p {
 }
 
 .paragraph-text {
-
 }
 
 .person-name {
