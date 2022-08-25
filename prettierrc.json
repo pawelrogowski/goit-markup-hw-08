@@ -17,7 +17,7 @@
   "useTabs": false,
   "vueIndentScriptAndStyle": false,
   "parser": "babel-flow",
-  "bracketSameLine": false,
+  "bracketSameLine": true,
   "overrides": [
     {
       "files": "*.html",
@@ -30,9 +30,7 @@
       }
     },
     {
-      "files": [
-        "*.css"
-      ],
+      "files": ["*.css"],
       "options": {
         "parser": "css",
         "tabWidth": 2

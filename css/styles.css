@@ -41,6 +41,10 @@ h4 {
   margin: 0 0 10px 0;
   text-align: center;
 }
+h3 {
+  padding: 60px 0 20px 0;
+  margin: 0;
+}
 h5 {
   font-weight: 700;
   font-size: 14px;
@@ -87,6 +91,10 @@ p {
   justify-content: space-between;
   border-bottom: 1px solid var(--colorGrey);
 }
+
+.box-header > a {
+  padding: 24px 0;
+}
 .nav-list {
   display: flex;
   gap: 46px;
@@ -119,21 +127,22 @@ p {
   gap: 30px;
   padding: 0;
 }
+.box-what-we-do > li > img {
+  display: block;
+}
 .box-our-team {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   text-align: center;
   padding: 0;
-  /* border: 1px solid black;
-	*/
 }
+
 .background-grey {
   background: var(--colorAlmostWhite);
 }
 .box-our-team li {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .box-our-team > li > img {
   display: block;
@@ -145,6 +154,20 @@ p {
   line-height: 19px;
   margin-bottom: 30px;
 }
+
+.box-footer {
+  padding: 60px 0;
+}
+.box-footer > a {
+  display: block;
+  margin-bottom: 20px;
+}
+.box-footer > address > ul > li:not(:last-child) {
+  margin-bottom: 9px;
+}
+/* .box-footer > address {
+  padding-bottom: 60px;
+} */
 .logo {
   font-family: "Raleway";
   font-style: normal;
@@ -154,10 +177,10 @@ p {
   letter-spacing: 0.03em;
   color: var(--selectionColor);
   text-decoration: none;
-  padding: 24px 0;
   /* border: 1px solid #212121;
 	*/
 }
+
 .logo-recolor-top {
   color: var(--fontColorMain);
 }
@@ -184,13 +207,14 @@ p {
 .links-contact {
   color: var(--fontColorSecondary);
 }
-.links-contact: focus {
+.links-contact:focus {
   color: var(--selectionColor);
 }
 .links-contact-bottom {
   font-style: normal;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--colorWhiteTransp);
 }
@@ -203,7 +227,8 @@ p {
 .addr {
   font-style: normal;
   font-size: 14px;
-  line-height: 1.71;
+  font-weight: 400;
+  line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--colorWhite);
 }
@@ -214,12 +239,12 @@ p {
   font-size: 16px;
   line-height: 30px;
 }
-.btn: hover {
+.btn:hover {
   background: var(--selectionColor);
   color: var(--colorWhite);
   cursor: pointer;
 }
-.btn: focus {
+.btn:focus {
   background: var(--selectionColor);
   color: var(--colorWhite);
   cursor: pointer;
@@ -236,12 +261,12 @@ p {
   font-size: 1.875;
   line-height: 30px;
 }
-.btn-order: hover {
+.btn-order:hover {
   background: var(--colorAlmostWhite);
   color: var(--fontColorMain);
   cursor: pointer;
 }
-.btn-order: focus {
+.btn-order:focus {
   background: var(--colorAlmostWhite);
   color: var(--fontColorMain);
   cursor: pointer;
