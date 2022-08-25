@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -14,39 +14,43 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="box-header container">
-        <a class="logo" href="./index.html">
-          Web<span class="logo-recolor-top">Studio</span>
-        </a>
-        <nav>
-          <ul class="nav-list">
-            <li>
-              <a class="links links-curr-hl" href="./index.html">Agencja</a>
-            </li>
-            <li>
-              <a class="links" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li>
-              <a class="links" href="./contacts.html">Kontakt</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contact-list">
-          <li>
-            <a class="links links-contact" href="emailto:info@devstudio.com"
-              >info@devstudio.com
+      <header>
+        <section class="container">
+          <div class="box-header">
+            <a class="logo" href="./index.html">
+              Web<span class="logo-recolor-top">Studio</span>
             </a>
-          </li>
-          <li>
-            <a class="links links-contact" href="tel:+48111111111"
-              >+48 111 111 111</a
-            >
-          </li>
-        </ul>
+            <nav>
+              <ul class="nav-list">
+                <li>
+                  <a class="links links-curr-hl" href="./index.html">Agencja</a>
+                </li>
+                <li>
+                  <a class="links" href="./portfolio.html">Portfolio</a>
+                </li>
+                <li>
+                  <a class="links" href="./contacts.html">Kontakt</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="contact-list">
+              <li>
+                <a class="links links-contact" href="emailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a class="links links-contact" href="tel:+48111111111"
+                  >+48 111 111 111</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
       </header>
       <main>
         <section class="main-top">
-          <h1 class="main-heading no-margin-padding">
+          <h1 class="main-heading">
             Efektywne rozwiązania<br />
             dla waszego biznesu
           </h1>
@@ -54,7 +58,7 @@
         </section>
         <section class="section">
           <div class="container">
-            <ul class="box-article no-margin-padding">
+            <ul class="box-article">
               <li>
                 <h5 class="paragraph-heading">Lorem ipsum</h5>
                 <p class="paragraph-text no-margin-padding">
@@ -64,21 +68,21 @@
               </li>
               <li>
                 <h5 class="paragraph-heading">Lorem ipsum</h5>
-                <p class="paragraph-text no-margin-padding">
+                <p class="paragraph-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   vel arcu sem. Sed non sodales dui. Interdum et malesuada
                 </p>
               </li>
               <li>
                 <h5 class="paragraph-heading">Lorem ipsum</h5>
-                <p class="paragraph-text no-margin-padding">
+                <p class="paragraph-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   vel arcu sem. Sed non sodales dui. Interdum et malesuada
                 </p>
               </li>
               <li>
                 <h5 class="paragraph-heading">Lorem ipsum</h5>
-                <p class="paragraph-text no-margin-padding">
+                <p class="paragraph-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   vel arcu sem. Sed non sodales dui. Interdum et malesuada
                 </p>
@@ -86,99 +90,104 @@
             </ul>
           </div>
         </section>
-        <div class="container">
-          <h2 class="secondary-heading no-margin-padding">
-            Czym się zajmujemy
-          </h2>
-          <ul class="box-images">
-            <li>
-              <img
-                src="./images/studio1.jpg"
-                alt="osoba pisząca na klawiaturze"
-                width="370"
-                height="294" />
-            </li>
-            <li>
-              <img
-                src="./images/studio2.jpg"
-                alt="osoba pracująca na laptopie"
-                width="370"
-                height="294" />
-            </li>
-            <li>
-              <img
-                src="./images/studio3.jpg"
-                alt="osoba pracująca na tablecie"
-                width="370"
-                height="294" />
-            </li>
-          </ul>
-        </div class="section">
-        <section class="container">
-          <h2 class="secondary-heading no-margin-padding">Nasz Zespół</h2>
-          <ul class="box-images-team">
-            <li>
-              <img
-                src="./images/person1.jpg"
-                alt="uśmiechnięty John Doe"
-                width="270"
-                height="260" />
-              <h4 class="person-name">John Doe</h4>
-              <p class="person-position">Product Designer</p>
-            </li>
-            <li>
-              <img
-                src="./images/person2.jpg"
-                alt="uśmiechnięta Jane Doe"
-                width="270"
-                height="260" />
-              <h4 class="person-name">Jane Doe</h4>
-              <p class="person-position">Frontend Developer</p>
-            </li>
-            <li>
-              <img
-                src="./images/person3.jpg"
-                alt="uśmiechnięty John Doe"
-                width="270"
-                height="260" />
-              <h4 class="person-name">John Doe</h4>
-              <p class="person-position">Marketing</p>
-            </li>
-            <li>
-              <img
-                src="./images/person4.jpg"
-                alt="uśmiechnięty John Doe"
-                width="270"
-                height="260" />
-              <h4 class="person-name">John Doe</h4>
-              <p class="person-position">UI Designer</p>
-            </li>
-          </ul>
+        <section class="section-two">
+          <div class="container">
+            <h2 class="secondary-heading">Czym się zajmujemy</h2>
+            <ul class="box-images">
+              <li>
+                <img
+                  src="./images/studio1.jpg"
+                  alt="osoba pisząca na klawiaturze"
+                  width="370"
+                  height="294" />
+              </li>
+              <li>
+                <img
+                  src="./images/studio2.jpg"
+                  alt="osoba pracująca na laptopie"
+                  width="370"
+                  height="294" />
+              </li>
+              <li>
+                <img
+                  class="no-padding-margin"
+                  src="./images/studio3.jpg"
+                  alt="osoba pracująca na tablecie"
+                  width="370"
+                  height="294" />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <h2 class="secondary-heading no-margin-padding">Nasz Zespół</h2>
+            <ul class="box-images-team">
+              <li>
+                <img
+                  src="./images/person1.jpg"
+                  alt="uśmiechnięty John Doe"
+                  width="270"
+                  height="260" />
+                <h4 class="person-name">John Doe</h4>
+                <p class="person-position">Product Designer</p>
+              </li>
+              <li>
+                <img
+                  src="./images/person2.jpg"
+                  alt="uśmiechnięta Jane Doe"
+                  width="270"
+                  height="260" />
+                <h4 class="person-name">Jane Doe</h4>
+                <p class="person-position">Frontend Developer</p>
+              </li>
+              <li>
+                <img
+                  src="./images/person3.jpg"
+                  alt="uśmiechnięty John Doe"
+                  width="270"
+                  height="260" />
+                <h4 class="person-name">John Doe</h4>
+                <p class="person-position">Marketing</p>
+              </li>
+              <li>
+                <img
+                  src="./images/person4.jpg"
+                  alt="uśmiechnięty John Doe"
+                  width="270"
+                  height="260" />
+                <h4 class="person-name">John Doe</h4>
+                <p class="person-position">UI Designer</p>
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
       <footer class="bottom-background">
-        <h3>
-          <a class="logo" href="./index.html"
-            >Web<span class="logo-recolor-bottom">Studio</span>
-          </a>
-        </h3>
-        <address>
-          <ul>
-            <li class="addr">m. Warszawa, Aleje Jerozolimskie 21</li>
-            <li>
-              <a
-                class="links links-contact-bottom"
-                href="mailto:info@example.com">
-                info@example.com
-              </a>
-            </li>
-            <li>
-              <a class="links links-contact-bottom" href="tel:+48111111111">
-                +48 111 111 111
-              </a>
-            </li>
-          </ul>
-        </address>
+        <div class="container">
+          <h3>
+            <a class="logo" href="./index.html"
+              >Web<span class="logo-recolor-bottom">Studio</span></a
+            >
+          </h3>
+          <address>
+            <ul>
+              <li class="addr">m. Warszawa, Aleje Jerozolimskie 21</li>
+              <li>
+                <a
+                  class="links links-contact-bottom"
+                  href="mailto:info@example.com">
+                  info@example.com
+                </a>
+              </li>
+              <li>
+                <a class="links links-contact-bottom" href="tel:+48111111111">
+                  +48 111 111 111
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </footer>
     </div>
   </body>

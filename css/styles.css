@@ -1,4 +1,4 @@
-:root {
+:root  {
   --backgroundColorMain: #e5e5e5;
   --backgroundColorSecondary: #2f303a;
   --fontColorMain: #212121;
@@ -9,87 +9,97 @@
   --colorAlmostWhite: #f5f4fa;
   --colorGrey: #ececec;
 }
-
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   background-color: var(--backgroundColorMain);
   color: var(--fontColorMain);
 }
-
-h5 {
-  margin: 0 0 5px 0;
-  /* border: solid 1px black; */
+h1 {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--colorWhite);
+  margin: 0;
+  padding: 0 40px 0 40px;
 }
-
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0 0 50px 0;
+}
+h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+h5 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--fontColorMain);
+  margin: 0 0 10px 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 p {
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--fontColorSecondary);
+  margin: 0px;
 }
 .wrapper {
   background-color: var(--colorWhite);
   width: 1600px;
   margin: 0 auto;
+  /* border: #ff0000 solid 1px;
+	*/
 }
-
 .container {
   width: 1200px;
-  margin-left: 215px;
+  /* border: #0004ff solid 1px;
+	*/
+  margin: 0 215px;
 }
-
 .section {
-  padding: 92px 0;
+  padding: 94px 0;
 }
-
+.section-two {
+  padding: 0 0 94px 0;
+}
 .box-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--colorGrey);
 }
-
 .nav-list {
   display: flex;
-  list-style: none;
   gap: 46px;
-  padding: 0;
   margin-left: 93px;
 }
-
 .contact-list {
   display: flex;
-  list-style: none;
   gap: 50px;
   padding: 0;
-  margin-left: 369px;
-}
-
-.no-margin-padding {
-  margin: 0;
-  padding: 0;
-}
-
-.box-article {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  padding: 0;
-}
-
-.box-images {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  padding: 0;
-}
-.box-images-team {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  padding: 0;
+  margin-left: 371px;
 }
 .main-top {
+  background: var(--backgroundColorSecondary);
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -98,56 +108,85 @@ p {
   background: var(--backgroundColorSecondary);
   padding: 200px 0;
 }
-
+.box-our-speciality {
+  display: flex;
+  gap: 30px;
+  padding: 6.5px 0;
+}
+.box-what-we-do {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0;
+}
+.box-our-team {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: center;
+  padding: 0;
+  /* border: 1px solid black;
+	*/
+}
+.background-grey {
+  background: var(--colorAlmostWhite);
+}
+.box-our-team li {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.box-our-team > li > img {
+  display: block;
+  margin-bottom: 30px;
+}
+.box-our-team > li > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 30px;
+}
 .logo {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 31px;
   letter-spacing: 0.03em;
   color: var(--selectionColor);
   text-decoration: none;
-  padding: 24px 0 24.07px 0;
-  /* border: 1px solid #212121; */
+  padding: 24px 0;
+  /* border: 1px solid #212121;
+	*/
 }
-
 .logo-recolor-top {
   color: var(--fontColorMain);
 }
-
 .logo-recolor-bottom {
   color: var(--colorWhite);
 }
-
 .links {
   text-decoration: none;
   color: var(--fontColorMain);
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 16px;
   letter-spacing: 0.02em;
 }
-
-.links:hover {
+.links: hover {
   color: var(--selectionColor);
 }
-
-.links:focus {
+.links: focus {
   color: var(--selectionColor);
 }
-
 .links-curr-hl {
   color: var(--selectionColor);
 }
-
 .links-contact {
   color: var(--fontColorSecondary);
 }
-.links-contact:focus {
+.links-contact: focus {
   color: var(--selectionColor);
 }
-
 .links-contact-bottom {
   font-style: normal;
   font-size: 14px;
@@ -155,15 +194,12 @@ p {
   letter-spacing: 0.03em;
   color: var(--colorWhiteTransp);
 }
-
 .links-contact-bottom-underline {
   text-decoration: underline;
 }
-
 .bottom-background {
   background: var(--backgroundColorSecondary);
 }
-
 .addr {
   font-style: normal;
   font-size: 14px;
@@ -171,26 +207,23 @@ p {
   letter-spacing: 0.03em;
   color: var(--colorWhite);
 }
-
 .btn {
   background: var(--colorAlmostWhite);
   color: var(--fontColorMain);
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 30px;
 }
-
-.btn:hover {
+.btn: hover {
   background: var(--selectionColor);
   color: var(--colorWhite);
   cursor: pointer;
 }
-.btn:focus {
+.btn: focus {
   background: var(--selectionColor);
   color: var(--colorWhite);
   cursor: pointer;
 }
-
 .btn-order {
   background: var(--selectionColor);
   color: var(--colorWhite);
@@ -203,74 +236,29 @@ p {
   font-size: 1.875;
   line-height: 30px;
 }
-
-.btn-order:hover {
+.btn-order: hover {
   background: var(--colorAlmostWhite);
   color: var(--fontColorMain);
   cursor: pointer;
 }
-.btn-order:focus {
+.btn-order: focus {
   background: var(--colorAlmostWhite);
   color: var(--fontColorMain);
   cursor: pointer;
 }
-
-.main-heading {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--colorWhite);
-}
-
-.secondary-heading {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.paragraph-heading {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--fontColorMain);
-}
-
-.paragraph-text {
-}
-
-.person-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.187;
-  letter-spacing: 0.03em;
-}
-
 .person-position {
   font-size: 16px;
   line-height: 1.187;
   letter-spacing: 0.03em;
   color: var(--fontColorSecondary);
 }
-
 .image-caption-main {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
 }
-
 .image-caption-secondary {
   font-size: 16px;
   line-height: 1.88;
   color: var(--fontColorSecondary);
 }
-
-/* .no-margin {
-  margin: 0;
-} */
