@@ -1,4 +1,4 @@
-:root  {
+:root {
   --backgroundColorMain: #e5e5e5;
   --backgroundColorSecondary: #2f303a;
   --fontColorMain: #212121;
@@ -262,3 +262,4 @@ p {
   line-height: 1.88;
   color: var(--fontColorSecondary);
 }
+/*  */
