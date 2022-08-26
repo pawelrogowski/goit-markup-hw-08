@@ -211,11 +211,10 @@ p {
   background: var(--backgroundColorSecondary);
   display: flex;
   flex-direction: column;
-  justify-items: center;
   align-items: center;
   gap: 30px;
   background: var(--backgroundColorSecondary);
-  padding: 200px 0;
+  padding: 200px 452px 200px 452px;
 }
 .box-our-speciality {
   display: flex;
