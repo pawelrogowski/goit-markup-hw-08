@@ -87,9 +87,6 @@ p {
 .logo-top {
   padding: 24px 0;
 }
-.logo-bottom {
-  margin-bottom: 20px;
-}
 
 .logo-recolor-top {
   color: var(--fontColorMain);
@@ -263,6 +260,12 @@ p {
 .card-product > img {
   display: block;
 }
+.address-list {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
 .background-almost-white {
   background: var(--colorAlmostWhite);
 }
@@ -288,7 +291,7 @@ p {
   flex-direction: column;
   justify-content: center;
   gap: 9px;
-  padding: 60px 0;
+  padding: 60px 0 51px 0;
   background: var(--backgroundColorSecondary);
 }
 .person-position {
