@@ -188,6 +188,7 @@ p {
 }
 .container {
   width: 1200px;
+  margin: 0 215px;
 }
 .section {
   padding: 94px 0;
