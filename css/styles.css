@@ -45,7 +45,6 @@ h4 {
   line-height: 19px;
   letter-spacing: 0.03em;
   margin: 0 0 10px 0;
-  text-align: center;
 }
 h5 {
   font-weight: 700;
@@ -55,6 +54,13 @@ h5 {
   text-transform: uppercase;
   color: var(--fontColorMain);
   margin: 0 0 10px 0;
+}
+h6 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  margin: 0 0 0 0;
 }
 ul {
   list-style: none;
@@ -108,6 +114,7 @@ p {
   display: flex;
   justify-content: flex-start;
   gap: 30px;
+  padding-bottom: 94px;
 }
 .box-what-we-do {
   display: flex;
@@ -137,11 +144,7 @@ p {
   justify-content: center;
   gap: 30px;
 }
-.product-card {
-  border: var(--colorAlmostWhiteTwo) solid 1px;
-  flex-basis: calc((100% - 90px) / 4);
-  margin-bottom: px;
-}
+
 .background-almost-white {
   background: var(--colorAlmostWhite);
 }
@@ -184,7 +187,7 @@ p {
   text-decoration: none;
 }
 .logo-top {
-  padding: 24px 0 25px 0;
+  padding: 24px 0;
 }
 .logo-bottom {
   margin-bottom: 20px;
@@ -287,14 +290,27 @@ p {
   letter-spacing: 0.03em;
   color: var(--fontColorSecondary);
 }
+.card-product {
+  flex-basis: 370px;
+}
+.card-product > img {
+  display: block;
+}
 .image-caption-main {
   font-weight: 700;
   font-size: 18px;
-  line-height: 2;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  padding: 20px 24px 4px;
 }
 .image-caption-secondary {
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 30px;
   color: var(--fontColorSecondary);
+  padding: 4px 24px 20px;
 }
-/*  */
+.image-caption-border {
+  border-left: 1px solid var(--colorAlmostWhiteTwo);
+  border-right: 1px solid var(--colorAlmostWhiteTwo);
+  border-bottom: 1px solid var(--colorAlmostWhiteTwo);
+}
