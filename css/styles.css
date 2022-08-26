@@ -83,9 +83,7 @@ p {
   align-items: center;
   border-bottom: 1px solid var(--colorGrey);
 }
-.logo-top {
-  padding: 24px 0 25px;
-}
+
 .nav-list {
   display: flex;
   gap: 46px;
@@ -184,9 +182,9 @@ p {
   letter-spacing: 0.03em;
   color: var(--selectionColor);
   text-decoration: none;
-  /* margin-bottom: 20px; */
-  /* border: 1px solid #212121;
-	*/
+}
+.logo-top {
+  padding: 24px 0 25px 0;
 }
 .logo-bottom {
   margin-bottom: 20px;
