@@ -8,11 +8,13 @@
   --colorWhiteTransp: #ffffff99;
   --colorAlmostWhite: #f5f4fa;
   --colorGrey: #ececec;
+  --colorAlmostWhiteTwo: #eeeeee;
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   background-color: var(--backgroundColorMain);
   color: var(--fontColorMain);
+  background-color: var(--colorWhite);
 }
 h1 {
   font-weight: 900;
@@ -33,6 +35,10 @@ h2 {
   letter-spacing: 0.03em;
   margin: 0 0 50px 0;
 }
+h3 {
+  padding: 60px 0 20px 0;
+  margin: 0;
+}
 h4 {
   font-weight: 500;
   font-size: 16px;
@@ -40,10 +46,6 @@ h4 {
   letter-spacing: 0.03em;
   margin: 0 0 10px 0;
   text-align: center;
-}
-h3 {
-  padding: 60px 0 20px 0;
-  margin: 0;
 }
 h5 {
   font-weight: 700;
@@ -66,18 +68,9 @@ p {
   color: var(--fontColorSecondary);
   margin: 0px;
 }
-.wrapper {
-  background-color: var(--colorWhite);
-  width: 1600px;
-  margin: 0 auto;
-  /* border: #ff0000 solid 1px;
-	*/
-}
 .container {
   width: 1200px;
-  /* border: #0004ff solid 1px;
-	*/
-  margin: 0 215px;
+  /* margin: 0px 215px; */
 }
 .section {
   padding: 94px 0;
@@ -88,10 +81,8 @@ p {
 .box-header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   border-bottom: 1px solid var(--colorGrey);
 }
-
 .logo-top {
   padding: 24px 0 25px;
 }
@@ -117,8 +108,8 @@ p {
 }
 .box-our-speciality {
   display: flex;
+  justify-content: flex-start;
   gap: 30px;
-  padding: 6.5px 0;
 }
 .box-what-we-do {
   display: flex;
@@ -136,8 +127,28 @@ p {
   text-align: center;
   padding: 0;
 }
+.box-button {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.box-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.product-card {
+  border: var(--colorAlmostWhiteTwo) solid 1px;
+  flex-basis: calc((100% - 90px) / 4);
+  margin-bottom: px;
+}
 .background-almost-white {
   background: var(--colorAlmostWhite);
+}
+.background-color-white {
+  background: var(--colorWhite);
 }
 .box-our-team li {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -158,6 +169,7 @@ p {
   justify-content: center;
   gap: 9px;
   padding: 60px 0;
+  background: var(--backgroundColorSecondary);
 }
 /* .address-list > p:not(:last-child) {
   margin-bottom: 9px;
@@ -220,9 +232,7 @@ p {
 .links-contact-bottom-underline {
   text-decoration: underline;
 }
-.bottom-background {
-  background: var(--backgroundColorSecondary);
-}
+
 .addr {
   display: block;
   font-style: normal;
@@ -237,11 +247,14 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
+  border-style: none;
+  border-radius: 4px;
 }
 .btn:hover {
   background: var(--selectionColor);
   color: var(--colorWhite);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn:focus {
   background: var(--selectionColor);
