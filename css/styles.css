@@ -73,7 +73,6 @@ p {
   color: var(--fontColorSecondary);
   margin: 0px;
 }
-
 .logo {
   font-family: "Raleway";
   font-style: normal;
@@ -83,6 +82,7 @@ p {
   letter-spacing: 0.03em;
   color: var(--selectionColor);
   text-decoration: none;
+  margin: 0;
 }
 .border-header {
   border-bottom: 1px solid var(--colorGrey);
@@ -96,7 +96,6 @@ p {
 .logo-recolor-bottom {
   color: var(--colorWhite);
 }
-
 .links {
   text-decoration: none;
   color: var(--fontColorMain);
@@ -131,7 +130,6 @@ p {
 .links-contact-bottom-underline {
   text-decoration: underline;
 }
-
 .addr {
   font-style: normal;
   font-size: 14px;
@@ -218,7 +216,6 @@ p {
 .background-color-secondary {
   background: var(--backgroundColorSecondary);
 }
-
 .box-our-speciality {
   display: flex;
   justify-content: flex-start;
