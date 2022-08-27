@@ -96,6 +96,7 @@ p {
 .logo-recolor-bottom {
   color: var(--colorWhite);
 }
+
 .links {
   text-decoration: none;
   color: var(--fontColorMain);
@@ -132,7 +133,6 @@ p {
 }
 
 .addr {
-  display: block;
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
@@ -215,7 +215,7 @@ p {
   background: var(--backgroundColorSecondary);
   padding: 200px 0;
 }
-.background-slider {
+.background-color-secondary {
   background: var(--backgroundColorSecondary);
 }
 
@@ -261,8 +261,8 @@ p {
 .card-product > img {
   display: block;
 }
-.address-list {
-  padding-top: 20px;
+.box-address {
+  justify-items: center;
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -290,10 +290,8 @@ p {
 .box-footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 9px;
-  padding: 60px 0 51px 0;
-  background: var(--backgroundColorSecondary);
+  gap: 20px;
+  padding: 55.5px 0;
 }
 .person-position {
   font-size: 16px;
