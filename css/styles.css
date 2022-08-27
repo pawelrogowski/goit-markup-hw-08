@@ -259,7 +259,6 @@ p {
   display: block;
 }
 .box-address {
-  justify-items: center;
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -286,6 +285,7 @@ p {
 }
 .box-footer {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   gap: 20px;
   padding: 55.5px 0;
