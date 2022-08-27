@@ -84,10 +84,12 @@ p {
   color: var(--selectionColor);
   text-decoration: none;
 }
+.border-header {
+  border-bottom: 1px solid var(--colorGrey);
+}
 .logo-top {
   padding: 24px 0;
 }
-
 .logo-recolor-top {
   color: var(--fontColorMain);
 }
@@ -192,7 +194,6 @@ p {
 .box-header {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--colorGrey);
 }
 .nav-list {
   display: flex;
