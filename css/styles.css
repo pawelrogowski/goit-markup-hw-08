@@ -186,6 +186,9 @@ p {
 .section {
   padding: 94px 0;
 }
+.section-lorem {
+  padding: 94px 0 0 0;
+}
 .box-header {
   display: flex;
   align-items: center;
@@ -218,7 +221,6 @@ p {
   display: flex;
   justify-content: flex-start;
   gap: 30px;
-  padding-bottom: 94px;
 }
 .box-what-we-do {
   display: flex;
