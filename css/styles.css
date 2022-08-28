@@ -194,12 +194,12 @@ p {
 .nav-list {
   display: flex;
   gap: 46px;
-  padding-left: 93px;
+  margin-left: 93px;
 }
 .contact-list {
   display: flex;
   gap: 50px;
-  padding-left: 371px;
+  margin-left: 371px;
 }
 .box-slider {
   background: var(--backgroundColorSecondary);
