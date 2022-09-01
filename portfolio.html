@@ -9,7 +9,7 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header class="border-header background-color-white">
+    <header class="border-header">
       <div class="container box-header">
         <a class="logo" href="./index.html">Web<span class="logo-recolor-top">Studio</span></a>
         <nav>
@@ -27,10 +27,20 @@
         </nav>
         <ul class="contact-list">
           <li>
-            <a class="links links-contact" href="emailto:info@devstudio.com">info@devstudio.com</a>
+            <a class="links links-contact envelope-icon icon-header" href="emailto:info@devstudio.com">
+              <svg class="icon-header-spacing" width="16px" height="12px">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
           </li>
           <li>
-            <a class="links links-contact" href="tel:+48111111111">+48 111 111 111</a>
+            <a class="links links-contact phone-icon icon-header" href="tel:+48111111111">
+              <svg class="icon-header-spacing" width="10px" height="16px">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +48 111 111 111
+            </a>
           </li>
         </ul>
       </div>
@@ -113,13 +123,40 @@
     </main>
     <footer class="background-color-secondary">
       <div class="container box-footer">
-        <a class="logo" href="./index.html">Web<span class="logo-recolor-bottom">Studio</span></a>
-        <address class="addr box-address">
-          m. Warszawa, Aleje Jerozolimskie 21
-          <a class="links links-contact-bottom links-contact-bottom-underline" href="mailto:info@example.com">info@example.com</a>
-          <a class="links links-contact-bottom" href="tel:+48111111111">+48 111 111 111</a>
-        </address>
+        <div>
+          <a class="logo logo-footer" href="./index.html">Web<span class="logo-recolor-bottom">Studio</span></a>
+          <address class="addr box-address">
+            m. Warszawa, Aleje Jerozolimskie 21
+            <a class="links links-contact-bottom links-contact-bottom-underline" href="mailto:info@example.com">info@example.com</a>
+            <a class="links links-contact-bottom" href="tel:+48111111111">+48 111 111 111</a>
+          </address>
+        </div>
+        <div class="box-socials-footer">
+          <h2 class="social-heading-footer">Dołącz do nas</h2>
+          <div class="socials-footer">
+            <a class="icon-social-footer" href="./index.html">
+              <svg class="icon-social-footer">
+                <use href="./images/icons.svg#icon-instagram" width="20" height="20" x="12" y="12"></use>
+              </svg>
+            </a>
+            <a class="icon-social-footer" href="./index.html">
+              <svg class="icon-social-footer">
+                <use href="./images/icons.svg#icon-twitter" width="20" height="20" x="12" y="12"></use>
+              </svg>
+            </a>
+            <a class="icon-social-footer" href="./index.html" nore>
+              <svg class="icon-social-footer">
+                <use href="./images/icons.svg#icon-facebook" width="20" height="20" x="12" y="12"></use>
+              </svg>
+            </a>
+            <a class="icon-social-footer" href="./index.html">
+              <svg class="icon-social-footer">
+                <use href="./images/icons.svg#icon-linkedin" width="20" height="20" x="12" y="12"></use>
+              </svg>
+            </a>
+          </div>
       </div>
     </footer>
+
   </body>
 </html>
