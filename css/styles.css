@@ -182,11 +182,12 @@ p {
 .container {
   width: 1200px;
   margin: 0 auto;
+  border: solid 1px red;
 }
 .section {
   padding: 94px 0;
 }
-.section-lorem {
+.section-our-speciality {
   padding: 94px 0 0 0;
 }
 .box-header {
@@ -201,8 +202,30 @@ p {
 }
 .contact-list {
   display: flex;
-  gap: 50px;
-  margin-left: 371px;
+  gap: 30px;
+  margin-left: 345px;
+  align-items: center;
+  justify-content: center;
+}
+.envelope-icon:hover {
+  fill: var(--selectionColor);
+}
+.envelope-icon:focus {
+  fill: var(--selectionColor);
+}
+.phone-icon:hover {
+  fill: var(--selectionColor);
+}
+.phone-icon:focus {
+  fill: var(--selectionColor);
+}
+.icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-header-spacing {
+  margin-right: 10px;
 }
 .box-slider {
   background: var(--backgroundColorSecondary);
@@ -219,8 +242,18 @@ p {
 }
 .box-our-speciality {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 30px;
+}
+.box-icons-our-speciality {
+  width: 270px;
+  height: 120px;
+  background-color: var(--colorAlmostWhite);
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.icon-our-speciality {
+  margin: 25px 100px;
 }
 .box-what-we-do {
   display: flex;
@@ -237,6 +270,28 @@ p {
   gap: 30px;
   text-align: center;
   padding: 0;
+}
+.box-our-clients {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: center;
+  padding: 0;
+}
+.logo-our-clients {
+  border-radius: 4px;
+  border: var(--fontColorSecondary) solid 1px;
+  fill: var(--fontColorSecondary);
+}
+.box-icons-our-clients {
+  width: 170px;
+  height: 92px;
+  background-color: var(--colorWhite);
+  border: 1px solid var(--fontColorSecondary);
+  border-radius: 4px;
+}
+.icon-our-clients {
+  margin: 25px 100px;
 }
 .box-button {
   display: flex;
