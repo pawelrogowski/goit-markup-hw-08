@@ -271,7 +271,29 @@ p {
   justify-content: space-between;
   gap: 30px;
   text-align: center;
-  padding: 0;
+}
+.box-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.icon-social {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--colorWhite);
+  fill: var(--colorIconInactive);
+}
+.icon-social:hover svg,
+.icon-social:focus svg {
+  background-color: var(--selectionColor);
+  fill: var(--colorWhite);
+}
+.box-circle {
+  width: 44px;
+  height: 44px;
 }
 .box-our-clients {
   display: flex;
@@ -292,26 +314,13 @@ p {
 .icon-our-clients {
   fill: var(--colorIconInactive);
 }
-.box-icons-our-clients:hover {
-  fill: var(--selectionColor);
-  border-color: var(--selectionColor);
-}
-.box-icons-our-clients:hover svg {
-  fill: var(--selectionColor);
-  border-color: var(--selectionColor);
-}
+.box-icons-our-clients:hover svg,
+.box-icons-our-clients:focus svg,
+.box-icons-our-clients:hover,
 .box-icons-our-clients:focus {
   fill: var(--selectionColor);
   border-color: var(--selectionColor);
 }
-.box-icons-our-clients:focus svg {
-  fill: var(--selectionColor);
-  border-color: var(--selectionColor);
-}
-/* .icon-link:hover svg{
-  fill: var(--selectionColor);
-  border-color: var(--selectionColor); 
-} */
 .box-button {
   display: flex;
   justify-content: center;
@@ -356,7 +365,7 @@ p {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 .box-footer {
   display: flex;
