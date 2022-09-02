@@ -103,18 +103,20 @@ p {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  transition: 0.2s;
 }
 .links-curr-hl {
   color: var(--selectionColor);
 }
 .links-contact {
   color: var(--fontColorSecondary);
+  transition: 0.2s;
 }
 .links:focus,
 .links:hover,
 .links-contact:focus {
   color: var(--selectionColor);
-  transition: 0.15s;
+  transition: 0.2s;
 }
 .links-contact-bottom {
   font-style: normal;
@@ -144,6 +146,7 @@ p {
   border-style: none;
   border-radius: 4px;
   padding: 6px 22px;
+  transition: 0.25s;
 }
 .btn:hover,
 .btn:focus {
@@ -171,6 +174,7 @@ p {
   letter-spacing: 0.06em;
   padding: 10px 41px 10px 42px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.2s;
 }
 .btn-order:hover,
 .btn-order:focus {
@@ -206,6 +210,12 @@ p {
   align-items: center;
   justify-content: center;
 }
+.envelope-icon,
+.phone-icon {
+  fill: var(--fontColorSecondary);
+  transition: 0.2s;
+}
+
 .envelope-icon:hover,
 .envelope-icon:focus,
 .phone-icon:hover,
@@ -275,12 +285,13 @@ p {
   border-radius: 50%;
   background-color: var(--colorWhite);
   fill: var(--colorIconInactive);
+  transition: 0.3s;
 }
 .icon-social:hover svg,
 .icon-social:focus svg {
   background-color: var(--selectionColor);
   fill: var(--colorWhite);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .box-circle {
   width: 44px;
@@ -301,9 +312,11 @@ p {
   background-color: var(--colorWhite);
   border: 1px solid var(--colorIconInactive);
   border-radius: 4px;
+  transition: 0.4s;
 }
 .icon-our-clients {
   fill: var(--colorIconInactive);
+  transition: 0.4s;
 }
 .box-icons-our-clients:hover svg,
 .box-icons-our-clients:focus svg,
@@ -311,7 +324,7 @@ p {
 .box-icons-our-clients:focus {
   fill: var(--selectionColor);
   border-color: var(--selectionColor);
-  transition: 0.3s;
+  transition: 0.4s;
 }
 .box-button {
   display: flex;
@@ -328,11 +341,12 @@ p {
 }
 .card-product {
   margin: 0;
+  transition: 0.35s;
 }
 .card-product:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 0.2s;
+  transition: 0.35s;
 }
 .card-product > img {
   display: block;
@@ -429,6 +443,7 @@ p {
   border-radius: 50%;
   background-color: var(--colorIconBackgroundFooter);
   fill: var(--colorWhite);
+  transition: 0.2s;
 }
 .icon-social-footer:hover svg,
 .icon-social-footer:focus svg {
