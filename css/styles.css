@@ -11,6 +11,7 @@
   --colorAlmostWhiteTwo: #eeeeee;
   --colorIconInactive: #afb1b8;
   --colorIconBackgroundFooter: #ffffff1a;
+  --colorBackgroundImage: #2f303a66;
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
@@ -86,7 +87,6 @@ p {
   text-decoration: none;
   margin: 0;
 }
-
 .border-header {
   border-bottom: 1px solid var(--colorGrey);
 }
@@ -179,7 +179,6 @@ p {
   cursor: pointer;
   transition: 0.2s;
 }
-
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -223,13 +222,11 @@ p {
   margin-right: 10px;
 }
 .box-slider {
-  background: var(--backgroundColorSecondary);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  background: var(--backgroundColorSecondary);
   padding: 200px 0;
 }
 .background-color-secondary {
@@ -247,7 +244,6 @@ p {
   margin-bottom: 30px;
   border-radius: 4px;
 }
-
 .icon-our-speciality {
   margin: 25px 100px;
 }
@@ -328,17 +324,15 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  flex-basis: calc((100% - 2 * 30px) / 3);
 }
 .card-product {
-  padding: 1px;
-  flex-basis: 370px;
-  flex-direction: column;
+  margin: 0;
 }
 .card-product:hover {
-  padding: 0;
-  border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 0.2s;
 }
 .card-product > img {
   display: block;
@@ -354,6 +348,15 @@ p {
 }
 .background-color-white {
   background: var(--colorWhite);
+}
+.background-slider {
+  background-image: linear-gradient(
+      var(--colorBackgroundImage),
+      var(--colorBackgroundImage)
+    ),
+    url("../images/sliderbg.jpg");
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .box-our-team li {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -387,20 +390,20 @@ p {
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.06em;
-  padding: 20px 24px 4px 24px;
+  margin: 0px 24px 4px 24px;
+  padding-top: 20px;
 }
 .image-caption-secondary {
   font-size: 16px;
   line-height: 30px;
   color: var(--fontColorSecondary);
-  padding: 0px 24px 20px 24px;
+  margin: 0px 24px 20px 24px;
 }
 .image-caption-border {
   border-left: 1px solid var(--colorAlmostWhiteTwo);
   border-right: 1px solid var(--colorAlmostWhiteTwo);
   border-bottom: 1px solid var(--colorAlmostWhiteTwo);
 }
-
 .social-heading-footer {
   font-weight: 700;
   font-size: 14px;
@@ -420,7 +423,6 @@ p {
   align-items: center;
   gap: 10px;
 }
-
 .icon-social-footer {
   width: 44px;
   height: 44px;

@@ -30,9 +30,10 @@
       }
     },
     {
-      "files": ["*.css"],
+      "files": "*.css",
       "options": {
         "parser": "css",
+        "printWidth": 80,
         "tabWidth": 2
       }
     }
