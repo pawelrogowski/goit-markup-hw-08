@@ -13,6 +13,7 @@
   --colorIconBackgroundFooter: #ffffff1a;
   --colorBackgroundImage: #2f303a66;
 }
+
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   background-color: var(--backgroundColorMain);
@@ -186,12 +187,13 @@ p {
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .section {
   padding: 94px 0;
 }
 .section-our-speciality {
-  padding: 94px 0 0 0;
+  padding: 94px 15px 0 15px;
 }
 .box-header {
   display: flex;
@@ -244,7 +246,7 @@ p {
 }
 .box-our-speciality {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
 }
 .box-icons-our-speciality {
@@ -259,16 +261,15 @@ p {
 }
 .box-what-we-do {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
-  padding: 0;
 }
 .box-what-we-do > li > img {
   display: block;
 }
 .box-our-team {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
   text-align: center;
 }
@@ -285,13 +286,14 @@ p {
   border-radius: 50%;
   background-color: var(--colorWhite);
   fill: var(--colorIconInactive);
-  transition: 0.3s;
 }
 .icon-social:hover svg,
 .icon-social:focus svg {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   background-color: var(--selectionColor);
   fill: var(--colorWhite);
-  transition: 0.3s;
 }
 .box-circle {
   width: 44px;
@@ -299,7 +301,7 @@ p {
 }
 .box-our-clients {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
   padding: 0;
 }
