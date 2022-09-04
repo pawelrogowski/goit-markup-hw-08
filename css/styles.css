@@ -99,6 +99,18 @@ p {
   text-decoration: none;
   margin: 0;
 }
+.links-curr-hl::after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 44px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--selectionColor);
+  cursor: unset;
+  pointer-events: none;
+}
 .border-header {
   border-bottom: 1px solid var(--colorGrey);
 }
@@ -109,6 +121,7 @@ p {
   color: var(--colorWhite);
 }
 .links {
+  position: relative;
   text-decoration: none;
   color: var(--fontColorMain);
   font-weight: 500;
@@ -124,16 +137,7 @@ p {
 .links-curr-hl {
   color: var(--selectionColor);
 }
-.links-curr-hl::after {
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--selectionColor);
-}
+
 .links:focus,
 .links:hover,
 .links-contact:focus,
@@ -158,6 +162,7 @@ p {
 .links-contact-bottom-underline {
   text-decoration: underline;
 }
+
 .addr {
   font-style: normal;
   font-size: 14px;
