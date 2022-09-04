@@ -1,4 +1,5 @@
 :root {
+  /* colors */
   --backgroundColorMain: #e5e5e5;
   --backgroundColorSecondary: #2f303a;
   --fontColorMain: #212121;
@@ -12,6 +13,16 @@
   --colorIconInactive: #afb1b8;
   --colorIconBackgroundFooter: #ffffff1a;
   --colorBackgroundImage: #2f303a66;
+  /* transitions */
+  --timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 250ms;
+  --transitionButton: var(--duration) var(--timingFunction), background var(--duration) var(--timingFunction);
+  --transitionLink: color var(--duration) var(--timingFunction);
+  --transitionIcon: fill var(--duration) var(--timingFunction);
+  --transitionIconSocialFooter: background-color var(--duration) var(--timingFunction);
+  --transitionIconSocial: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
+  --transitionIconClient: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
+  --transitionCard: box-shadow var(--duration) var(--timingFunction);
 }
 
 body {
@@ -104,20 +115,26 @@ p {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  transition: 0.2s;
-}
-.links-curr-hl {
-  color: var(--selectionColor);
+  transition: var(--transitionLink);
 }
 .links-contact {
   color: var(--fontColorSecondary);
-  transition: 0.2s;
+  transition: var(--transitionLink);
+}
+.links:local-link {
+  color: var(--selectionColor);
 }
 .links:focus,
 .links:hover,
-.links-contact:focus {
+.links-contact:focus,
+.links-contact:hover {
   color: var(--selectionColor);
-  transition: 0.2s;
+  transition: var(--transitionLink);
+}
+.links-contact:focus svg,
+.links-contact:hover svg {
+  fill: var(--selectionColor);
+  transition: var(--transitionIcon);
 }
 .links-contact-bottom {
   font-style: normal;
@@ -126,6 +143,7 @@ p {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--colorWhiteTransp);
+  transition: var(--transitionLink);
 }
 .links-contact-bottom-underline {
   text-decoration: underline;
@@ -147,21 +165,15 @@ p {
   border-style: none;
   border-radius: 4px;
   padding: 6px 22px;
-  transition: 0.25s;
+  transition: var(--transitionButton);
 }
 .btn:hover,
 .btn:focus {
   background: var(--selectionColor);
   color: var(--colorWhite);
   cursor: pointer;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: 0.25s;
-}
-.btn:focus {
-  background: var(--selectionColor);
-  color: var(--colorWhite);
-  cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: var(--transitionButton);
 }
 .btn-order {
   background: var(--selectionColor);
@@ -175,14 +187,14 @@ p {
   letter-spacing: 0.06em;
   padding: 10px 41px 10px 42px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: 0.2s;
+  transition: var(--transitionButton);
 }
 .btn-order:hover,
 .btn-order:focus {
   background: var(--colorAlmostWhite);
   color: var(--fontColorMain);
   cursor: pointer;
-  transition: 0.2s;
+  transition: var(--transitionButton);
 }
 .container {
   width: 1200px;
@@ -215,15 +227,14 @@ p {
 .envelope-icon,
 .phone-icon {
   fill: var(--fontColorSecondary);
-  transition: 0.2s;
+  transition: var(--transitionIcon);
 }
-
 .envelope-icon:hover,
 .envelope-icon:focus,
 .phone-icon:hover,
 .phone-icon:focus {
   fill: var(--selectionColor);
-  transition: 0.2s;
+  transition: var(--transitionIcon);
 }
 .icon-header {
   display: flex;
@@ -286,6 +297,7 @@ p {
   border-radius: 50%;
   background-color: var(--colorWhite);
   fill: var(--colorIconInactive);
+  transition: var(--transitionIconSocial);
 }
 .icon-social:hover svg,
 .icon-social:focus svg {
@@ -294,6 +306,7 @@ p {
   border-radius: 50%;
   background-color: var(--selectionColor);
   fill: var(--colorWhite);
+  transition: var(--transitionIconSocial);
 }
 .box-circle {
   width: 44px;
@@ -314,11 +327,11 @@ p {
   background-color: var(--colorWhite);
   border: 1px solid var(--colorIconInactive);
   border-radius: 4px;
-  transition: 0.4s;
+  transition: var(--transitionIconClient);
 }
 .icon-our-clients {
   fill: var(--colorIconInactive);
-  transition: 0.4s;
+  transition: var(--transitionIconClient);
 }
 .box-icons-our-clients:hover svg,
 .box-icons-our-clients:focus svg,
@@ -326,7 +339,7 @@ p {
 .box-icons-our-clients:focus {
   fill: var(--selectionColor);
   border-color: var(--selectionColor);
-  transition: 0.4s;
+  transition: var(--transitionIconClient);
 }
 .box-button {
   display: flex;
@@ -343,12 +356,11 @@ p {
 }
 .card-product {
   margin: 0;
-  transition: 0.35s;
+  transition: var(--transitionCard);
 }
 .card-product:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 0.35s;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: var(--transitionCard);
 }
 .card-product > img {
   display: block;
@@ -366,17 +378,12 @@ p {
   background: var(--colorWhite);
 }
 .background-slider {
-  background-image: linear-gradient(
-      var(--colorBackgroundImage),
-      var(--colorBackgroundImage)
-    ),
-    url("../images/sliderbg.jpg");
+  background-image: linear-gradient(var(--colorBackgroundImage), var(--colorBackgroundImage)), url("../images/sliderbg.jpg");
   max-width: 1600px;
   margin: 0 auto;
 }
 .box-our-team li {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .box-our-team > li > img {
   display: block;
@@ -445,10 +452,10 @@ p {
   border-radius: 50%;
   background-color: var(--colorIconBackgroundFooter);
   fill: var(--colorWhite);
-  transition: 0.2s;
+  transition: var(--transitionIconSocialFooter);
 }
 .icon-social-footer:hover svg,
 .icon-social-footer:focus svg {
-  transition: 0.2s;
   background-color: var(--selectionColor);
+  transition: var(--transitionIconSocialFooter);
 }

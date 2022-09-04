@@ -33,7 +33,7 @@
       "files": "*.css",
       "options": {
         "parser": "css",
-        "printWidth": 80,
+        "printWidth": 150,
         "tabWidth": 2
       }
     }
