@@ -99,18 +99,7 @@ p {
   text-decoration: none;
   margin: 0;
 }
-.links-curr-hl::after {
-  position: absolute;
-  display: block;
-  content: "";
-  top: 44px;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--selectionColor);
-  cursor: unset;
-  pointer-events: none;
-}
+
 .border-header {
   border-bottom: 1px solid var(--colorGrey);
 }
@@ -134,9 +123,6 @@ p {
   color: var(--fontColorSecondary);
   transition: var(--transitionLink);
 }
-.links-curr-hl {
-  color: var(--selectionColor);
-}
 
 .links:focus,
 .links:hover,
@@ -144,6 +130,22 @@ p {
 .links-contact:hover {
   color: var(--selectionColor);
   transition: var(--transitionLink);
+}
+.links-curr-hl {
+  color: var(--selectionColor);
+}
+/* if you find this code usefull send me some memes ;) */
+.links-curr-hl::after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 44px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--selectionColor);
+  cursor: unset;
+  pointer-events: none;
 }
 .links-contact:focus svg,
 .links-contact:hover svg {
