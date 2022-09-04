@@ -121,7 +121,7 @@ p {
   color: var(--fontColorSecondary);
   transition: var(--transitionLink);
 }
-.links:local-link {
+.links-curr-hl {
   color: var(--selectionColor);
 }
 .links:focus,
