@@ -124,6 +124,16 @@ p {
 .links-curr-hl {
   color: var(--selectionColor);
 }
+.links-curr-hl::after {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--selectionColor);
+}
 .links:focus,
 .links:hover,
 .links-contact:focus,
