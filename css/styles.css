@@ -23,6 +23,7 @@
   --transitionIconSocial: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
   --transitionIconClient: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
   --transitionCard: box-shadow var(--duration) var(--timingFunction);
+  --flexible-height: 15vw;
 }
 
 body {
@@ -31,50 +32,49 @@ body {
   color: var(--fontColorMain);
   background-color: var(--colorWhite);
 }
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+.main-heading {
   font-weight: 900;
   font-size: 44px;
-  line-height: 60px;
+  line-height: 1.363636364;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   color: var(--colorWhite);
   margin: 0;
 }
-h2 {
+.section-heading {
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.166666667;
   text-align: center;
   letter-spacing: 0.03em;
   margin: 0 0 50px 0;
 }
-h3 {
-  padding: 60px 0 20px 0;
-  margin: 0;
-}
-h4 {
+
+.name-our-team {
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.1875;
   letter-spacing: 0.03em;
   margin: 0 0 10px 0;
 }
-h5 {
+.paragraph-heading {
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.142857143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--fontColorMain);
   margin: 0 0 10px 0;
-}
-h6 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.03em;
-  margin: 0;
 }
 ul {
   list-style: none;
@@ -83,7 +83,7 @@ ul {
 }
 p {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.714285714;
   letter-spacing: 0.03em;
   color: var(--fontColorSecondary);
   margin: 0px;
@@ -93,13 +93,12 @@ p {
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.192307692;
   letter-spacing: 0.03em;
   color: var(--selectionColor);
   text-decoration: none;
   margin: 0;
 }
-
 .border-header {
   border-bottom: 1px solid var(--colorGrey);
 }
@@ -115,7 +114,7 @@ p {
   color: var(--fontColorMain);
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.142857143;
   letter-spacing: 0.02em;
   transition: var(--transitionLink);
 }
@@ -123,7 +122,6 @@ p {
   color: var(--fontColorSecondary);
   transition: var(--transitionLink);
 }
-
 .links:focus,
 .links:hover,
 .links-contact:focus,
@@ -139,7 +137,7 @@ p {
   position: absolute;
   display: block;
   content: "";
-  top: 44px;
+  top: 45px;
   width: 100%;
   height: 4px;
   border-radius: 2px;
@@ -156,7 +154,7 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.714285714;
   letter-spacing: 0.03em;
   color: var(--colorWhiteTransp);
   transition: var(--transitionLink);
@@ -168,7 +166,7 @@ p {
 .addr {
   font-style: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.714285714;
   letter-spacing: 0.03em;
   color: var(--colorWhite);
   padding-top: 20px;
@@ -178,7 +176,7 @@ p {
   color: var(--fontColorMain);
   font-weight: 500;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.875;
   border-style: none;
   border-radius: 4px;
   padding: 6px 22px;
@@ -200,7 +198,7 @@ p {
   border-style: none;
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   padding: 10px 41px 10px 42px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -409,7 +407,7 @@ p {
 .box-our-team > li > p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.1875;
   margin-bottom: 16px;
 }
 .box-footer {
@@ -428,14 +426,14 @@ p {
 .image-caption-main {
   font-weight: 700;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 2;
   letter-spacing: 0.06em;
   margin: 0px 24px 4px 24px;
   padding-top: 20px;
 }
 .image-caption-secondary {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.875;
   color: var(--fontColorSecondary);
   margin: 0px 24px 20px 24px;
 }
@@ -447,7 +445,7 @@ p {
 .social-heading-footer {
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.142857143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: start;
