@@ -132,7 +132,7 @@ p {
 .links-curr-hl {
   color: var(--selectionColor);
 }
-/* if you find this code usefull send me some memes ;) */
+/* having issues with position while zooming in/out or using different browsers*/
 .links-curr-hl::after {
   position: absolute;
   display: block;
