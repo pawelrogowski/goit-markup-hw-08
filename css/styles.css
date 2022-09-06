@@ -23,7 +23,6 @@
   --transitionIconSocial: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
   --transitionIconClient: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
   --transitionCard: box-shadow var(--duration) var(--timingFunction);
-  --flexible-height: 15vw;
 }
 
 body {
@@ -314,11 +313,8 @@ p {
   fill: var(--colorIconInactive);
   transition: var(--transitionIconSocial);
 }
-.icon-social:hover svg,
+.icon-social:hover > svg,
 .icon-social:focus svg {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
   background-color: var(--selectionColor);
   fill: var(--colorWhite);
   transition: var(--transitionIconSocial);
@@ -469,8 +465,8 @@ p {
   fill: var(--colorWhite);
   transition: var(--transitionIconSocialFooter);
 }
-.icon-social-footer:hover svg,
-.icon-social-footer:focus svg {
+.icon-social-footer:hover,
+.icon-social-footer:focus {
   background-color: var(--selectionColor);
   transition: var(--transitionIconSocialFooter);
 }
