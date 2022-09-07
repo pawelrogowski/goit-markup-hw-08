@@ -14,16 +14,19 @@
   --colorIconBackgroundFooter: #ffffff1a;
   --colorBackgroundImage: #2f303a66;
   --colorBackgroundFigcaption: #2f303acc;
+  --colorBackgroundOverlay: #2196f3e6;
   /* transitions */
   --timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
   --duration: 250ms;
-  --transitionButton: var(--duration) var(--timingFunction), background var(--duration) var(--timingFunction);
+  --transitionButton: box-shadow var(--duration) var(--timingFunction), background var(--duration) var(--timingFunction),
+    color var(--duration) var(--timingFunction);
   --transitionLink: color var(--duration) var(--timingFunction);
   --transitionIcon: fill var(--duration) var(--timingFunction);
   --transitionIconSocialFooter: background-color var(--duration) var(--timingFunction);
   --transitionIconSocial: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
   --transitionIconClient: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
   --transitionCard: box-shadow var(--duration) var(--timingFunction);
+  --transitionCardOverlay: transform var(--duration) var(--timingFunction);
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
@@ -295,8 +298,11 @@ p {
 .box-what-we-do img {
   display: block;
 }
-.what-we-do-caption {
+.what-we-do-anchor {
   position: relative;
+}
+.what-we-do-caption {
+  position: absolute;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.142857143;
@@ -306,7 +312,8 @@ p {
   padding: 27px 0px;
   background: var(--colorBackgroundFigcaption);
   color: var(--colorWhite);
-  bottom: 70px;
+  bottom: 0px;
+  width: 100%;
 }
 .box-our-team {
   display: flex;
@@ -384,13 +391,36 @@ p {
 }
 .card-product {
   margin: 0;
+  /* overflow: hidden; */
   transition: var(--transitionCard);
 }
 .card-product:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   transition: var(--transitionCard);
 }
-.card-product > img {
+.card-overlay-anchor {
+  position: relative;
+  overflow: hidden;
+}
+.card-product-overlay {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  line-height: 1.555555556;
+  letter-spacing: 0.03em;
+  color: var(--colorWhite);
+  background: var(--colorBackgroundOverlay);
+  padding: 49px 45px 49px 24px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: var(--transitionCardOverlay);
+}
+.card-product:hover .card-product-overlay {
+  transform: translateY(0%);
+  transition: var(--transitionCardOverlay);
+}
+.card-product img {
   display: block;
 }
 .box-address {
