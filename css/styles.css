@@ -24,7 +24,6 @@
   --transitionIconClient: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
   --transitionCard: box-shadow var(--duration) var(--timingFunction);
 }
-
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   background-color: var(--backgroundColorMain);
@@ -225,6 +224,7 @@ p {
   display: flex;
   align-items: center;
   padding: 24px 0;
+  height: 80px;
 }
 .nav-list {
   display: flex;
@@ -312,6 +312,7 @@ p {
   background-color: var(--colorWhite);
   fill: var(--colorIconInactive);
   transition: var(--transitionIconSocial);
+  overflow: hidden;
 }
 .icon-social:hover > svg,
 .icon-social:focus svg {
@@ -411,7 +412,7 @@ p {
   align-items: flex-start;
   flex-direction: row;
   gap: 70px;
-  padding: 55.5px 0;
+  padding: 55.5008px 0;
 }
 .person-position {
   font-size: 16px;
@@ -464,6 +465,7 @@ p {
   background-color: var(--colorIconBackgroundFooter);
   fill: var(--colorWhite);
   transition: var(--transitionIconSocialFooter);
+  overflow: hidden;
 }
 .icon-social-footer:hover,
 .icon-social-footer:focus {
