@@ -297,7 +297,6 @@ p {
 }
 .what-we-do-caption {
   position: relative;
-  bottom: 70px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.142857143;
@@ -307,6 +306,7 @@ p {
   padding: 27px 0px;
   background: var(--colorBackgroundFigcaption);
   color: var(--colorWhite);
+  bottom: 70px;
 }
 .box-our-team {
   display: flex;
