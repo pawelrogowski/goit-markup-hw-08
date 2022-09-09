@@ -15,6 +15,8 @@
   --colorBackgroundImage: #2f303a66;
   --colorBackgroundFigcaption: #2f303acc;
   --colorBackgroundOverlay: #2196f3e6;
+  --colorBlackTransp: hsla(0, 0%, 0%, 0.2);
+  --colorBlackVeryTransp: hsla(0, 0%, 0%, 0.2);
   /* transitions */
   --timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
   --duration: 250ms;
@@ -27,6 +29,7 @@
   --transitionIconClient: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
   --transitionCard: box-shadow var(--duration) var(--timingFunction);
   --transitionCardOverlay: transform var(--duration) var(--timingFunction);
+  --transitionIconModalClose: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
@@ -113,7 +116,6 @@ p {
   color: var(--colorWhite);
 }
 .links {
-  position: relative;
   text-decoration: none;
   color: var(--fontColorMain);
   font-weight: 500;
@@ -134,6 +136,7 @@ p {
   transition: var(--transitionLink);
 }
 .links-curr-hl {
+  position: relative;
   color: var(--selectionColor);
 }
 /* having issues with position while zooming in/out or using different browsers*/
@@ -518,4 +521,52 @@ p {
   background-color: var(--selectionColor);
   transition: var(--transitionIconSocialFooter);
 }
-/*  */
+.backdrop {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--colorBlackTransp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-window {
+  display: flex;
+  justify-content: flex-end;
+  width: 528px;
+  height: 581px;
+  background: var(--colorWhite);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 8px;
+}
+.modal-window-close-button {
+  display: flex;
+  justify-content: flex-end;
+  background: var(--colorWhite);
+  border: 1px solid var(--colorBlackVeryTransp);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: var(--transitionIconModalClose);
+  overflow: hidden;
+  cursor: pointer;
+}
+.modal-window-close-button:hover,
+.modal-window-close-button:focus {
+  border-color: var(--selectionColor);
+  fill: var(--selectionColor);
+  transition: var(--transitionIconModalClose);
+}
+modal-window-close-icon {
+  fill: var(--colorBlackTransp);
+}

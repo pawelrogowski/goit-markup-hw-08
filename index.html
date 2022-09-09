@@ -55,7 +55,7 @@
               Efektywne rozwiązania<br />
               dla waszego biznesu
             </h1>
-            <button class="btn-order" type="button">Zamów usługe</button>
+            <button class="btn-order" type="button" data-modal-open>Zamów usługe</button>
           </div>
         </div>
       </section>
@@ -64,7 +64,7 @@
           <li>
             <div class="box-icons-our-speciality">
               <svg class="icon-our-speciality" width="70" height="70">
-                <use href="./images/icons.svg#icon-antenna-1"></use>
+                <use href="./images/icons.svg#icon-antenna"></use>
               </svg>
             </div>
             <h5 class="paragraph-heading">Lorem ipsum</h5>
@@ -73,7 +73,7 @@
           <li>
             <div class="box-icons-our-speciality">
               <svg class="icon-our-speciality" width="70" height="70">
-                <use href="./images/icons.svg#icon-clock-1"></use>
+                <use href="./images/icons.svg#icon-clock"></use>
               </svg>
             </div>
             <h5 class="paragraph-heading">Lorem ipsum</h5>
@@ -82,7 +82,7 @@
           <li>
             <div class="box-icons-our-speciality">
               <svg class="icon-our-speciality" width="70" height="70">
-                <use href="./images/icons.svg#icon-diagram-1"></use>
+                <use href="./images/icons.svg#icon-diagram"></use>
               </svg>
             </div>
             <h5 class="paragraph-heading">Lorem ipsum</h5>
@@ -91,7 +91,7 @@
           <li>
             <div class="box-icons-our-speciality">
               <svg class="icon-our-speciality" width="70" height="70">
-                <use href="./images/icons.svg#icon-astronaut-1"></use>
+                <use href="./images/icons.svg#icon-astronaut"></use>
               </svg>
             </div>
             <h5 class="paragraph-heading">Lorem ipsum</h5>
@@ -328,5 +328,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <button class="modal-window-close-button" type="button" data-modal-close>
+          <svg class="modal-window-close-icon" width="30" height="30">
+            <use href="./images/icons.svg#icon-xclose" width="10" height="10" x="3" y="8"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
