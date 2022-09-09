@@ -30,6 +30,7 @@
   --transitionCard: box-shadow var(--duration) var(--timingFunction);
   --transitionCardOverlay: transform var(--duration) var(--timingFunction);
   --transitionIconModalClose: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
+  --transitionBackdrop: opacity var(--duration) var(--timingFunction), visibility var(--duration) var(--timingFunction);
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
@@ -532,12 +533,13 @@ p {
   justify-content: center;
   align-items: center;
   opacity: 1;
-  transition: opacity 250ms ease-in-out;
+  transition: var(--transitionBackdrop);
 }
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transition: var(--transitionBackdrop);
 }
 .modal-window {
   display: flex;
@@ -551,7 +553,8 @@ p {
 }
 .modal-window-close-button {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   background: var(--colorWhite);
   border: 1px solid var(--colorBlackVeryTransp);
   width: 30px;
