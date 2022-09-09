@@ -396,6 +396,7 @@ p {
 .card-product {
   margin: 0;
   /* overflow: hidden; */
+  cursor: pointer;
   transition: var(--transitionCard);
 }
 .card-product:hover {
