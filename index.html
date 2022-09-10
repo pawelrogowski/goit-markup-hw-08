@@ -326,12 +326,22 @@
             </a>
           </div>
         </div>
+        <!-- not sure if it's right but im happy for now, gonna revisit this part later -->
+        <form class="box-newsletter" name="newsletter-signup-form">
+          <label class="newsletter-label" for="input_email_newsletter"> Zapisz się do Newslettera </label>
+          <div class="box-newsletter-input">
+            <input class="input-newsletter" id="input_email_newsletter" type="email" name="email" placeholder="E-mail" />
+            <button class="btn-sign-up" type="submit">
+              Zapisz się <svg class="icon-sign-up" width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
         <button class="modal-window-close-button" type="button" data-modal-close>
-          <svg class="modal-window-close-icon" width="30" height="30">
+          <svg width="30" height="30">
             <use href="./images/icons.svg#icon-xclose" width="10" height="10" x="3" y="10"></use>
           </svg>
         </button>
