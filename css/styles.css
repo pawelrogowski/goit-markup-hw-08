@@ -4,6 +4,7 @@
   --backgroundColorSecondary: #2f303a;
   --fontColorMain: #212121;
   --fontColorSecondary: #757575;
+  --fontColorGrayTransp: #75757580;
   --selectionColor: #2196f3;
   --colorWhite: #ffffff;
   --colorWhiteTransp: #ffffff99;
@@ -15,8 +16,8 @@
   --colorBackgroundImage: #2f303a66;
   --colorBackgroundFigcaption: #2f303acc;
   --colorBackgroundOverlay: #2196f3e6;
-  --colorBlackTransp: hsla(0, 0%, 0%, 0.2);
-  --colorBlackVeryTransp: hsla(0, 0%, 0%, 0.2);
+  --colorBlackTransp: #00000033;
+
   /* transitions */
   --timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
   --duration: 250ms;
@@ -31,7 +32,8 @@
   --transitionIconClient: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
   --transitionCard: box-shadow var(--duration) var(--timingFunction);
   --transitionCardOverlay: transform var(--duration) var(--timingFunction);
-  --transitionIconModalClose: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
+  --transitionIconModalClose: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction),
+    background-color var(--duration) var(--timingFunction);
   --transitionBackdrop: opacity var(--duration) var(--timingFunction), visibility var(--duration) var(--timingFunction);
   --transitionInputLabel: border-color var(--duration) var(--timingFunction);
 }
@@ -139,6 +141,11 @@ p {
   color: var(--selectionColor);
   transition: var(--transitionLink);
 }
+.links-contact:focus svg,
+.links-contact:hover svg {
+  fill: var(--selectionColor);
+  transition: var(--transitionIcon);
+}
 .links-curr-hl {
   position: relative;
   color: var(--selectionColor);
@@ -155,11 +162,6 @@ p {
   background-color: var(--selectionColor);
   cursor: unset;
   pointer-events: none;
-}
-.links-contact:focus svg,
-.links-contact:hover svg {
-  fill: var(--selectionColor);
-  transition: var(--transitionIcon);
 }
 .links-contact-bottom {
   font-style: normal;
@@ -426,7 +428,6 @@ p {
 }
 .card-product:hover .card-product-overlay {
   transform: translateY(0%);
-  transition: var(--transitionCardOverlay);
 }
 .card-product img {
   display: block;
@@ -546,26 +547,23 @@ p {
   transition: var(--transitionBackdrop);
 }
 .modal-window {
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
   width: 528px;
   height: 581px;
   background: var(--colorWhite);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 8px;
 }
 .modal-window-close-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
   background: var(--colorWhite);
-  border: 1px solid var(--colorBlackVeryTransp);
+  border: 1px solid var(--colorBlackTransp);
   width: 30px;
   height: 30px;
   border-radius: 50%;
   transition: var(--transitionIconModalClose);
-  overflow: hidden;
   cursor: pointer;
 }
 .modal-window-close-button:hover,
@@ -573,11 +571,142 @@ p {
   border-color: var(--selectionColor);
   fill: var(--selectionColor);
   transition: var(--transitionIconModalClose);
+  background-color: var(--backgroundColorSecondary);
 }
 .modal-window-close-icon {
   fill: var(--colorBlackTransp);
 }
+.modal-header {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--fontColorMain);
+}
+.box-modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 40px;
+}
+.box-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.label-modal-form {
+  font-size: 12px;
+  line-height: 1.166666667;
+  letter-spacing: 0.01em;
+  color: var(--fontColorSecondary);
+}
+.input-modal-form {
+  width: 448px;
+  height: 40px;
+  border: 1px solid var(--colorBlackTransp);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 12px 0 12px 42px;
+  font-size: 12px;
+  line-height: 1.166666667;
+  letter-spacing: 0.01em;
+}
+.field-form {
+  position: relative;
+  display: block;
+}
 
+.icon-input-form {
+  position: absolute;
+  top: 36px;
+  left: 15px;
+  fill: var(--fontColorMain);
+}
+.comment-modal-form {
+  width: 448px;
+  height: 120px;
+  border: 1px solid var(--colorBlackTransp);
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: 1.166666667;
+  letter-spacing: 0.01em;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  resize: none;
+}
+.comment-modal-form::placeholder {
+  color: var(--fontColorGrayTransp);
+}
+
+.input-modal-form:focus,
+.comment-modal-form:focus {
+  border-color: var(--selectionColor);
+  outline: none;
+}
+/* works only if both classes are next to each other in this exact order */
+.input-modal-form:focus + .icon-input-form {
+  fill: var(--selectionColor);
+}
+.btn-complete-order {
+  background: var(--selectionColor);
+  box-shadow: 0px 4px 4px #00000026;
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--colorWhite);
+  padding: 10px 76px;
+  cursor: pointer;
+  align-self: center;
+  transition: var(--transitionButton);
+  margin-top: 12px;
+}
+.btn-complete-order:hover,
+.btn-complete-order:focus {
+  background: var(--backgroundColorSecondary);
+  color: var(--selectionColor);
+  cursor: pointer;
+  transition: var(--transitionButton);
+}
+.label-modal-checkbox {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.714285714;
+  letter-spacing: 0.03em;
+  color: var(--fontColorSecondary);
+  white-space: pre;
+}
+.links-order-form {
+  color: var(--selectionColor);
+}
+.input-modal-checkbox {
+  margin-left: 14px;
+  appearance: none;
+  position: absolute;
+}
+.checkbox {
+  border: 2px var(--fontColorMain) solid;
+  border-radius: 2px;
+  background: var(--colorWhite);
+  fill: var(--colorWhite);
+  margin: 0 7px 2px 0;
+  cursor: pointer;
+}
+
+.input-modal-checkbox:checked + .checkbox {
+  fill: var(--colorWhite);
+  background: var(--selectionColor);
+  border: var(--selectionColor);
+}
 .box-newsletter {
   display: flex;
   justify-content: center;
@@ -607,7 +736,7 @@ p {
   letter-spacing: 0.03em;
   background-color: var(--backgroundColorSecondary);
   border: 1px solid #ffffff4d;
-  box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  /* drop-shadow:(0px 4px 4px rgba(0, 0, 0, 0.15)); */
   border-radius: 4px;
   color: #ffffff99;
   width: 358px;

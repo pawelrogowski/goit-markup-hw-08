@@ -25,7 +25,7 @@
         "printWidth": 300,
         "endOfLine": "auto",
         "parser": "html",
-        "htmlWhitespaceSensitivity": "css",
+        "htmlWhitespaceSensitivity": "strict",
         "bracketSameLine": true
       }
     },

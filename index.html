@@ -13,7 +13,7 @@
   <body>
     <header class="border-header">
       <div class="container box-header">
-        <a class="logo" href="./index.html">Web<span class="logo-recolor-top">Studio</span></a>
+        <a class="logo" href="./index.html"> Web<span class="logo-recolor-top">Studio</span> </a>
         <nav>
           <ul class="nav-list">
             <li>
@@ -52,7 +52,8 @@
         <div class="background-slider">
           <div class="box-slider container">
             <h1 class="main-heading">
-              Efektywne rozwiązania<br />
+              Efektywne rozwiązania
+              <br />
               dla waszego biznesu
             </h1>
             <button class="btn-order" type="button" data-modal-open>Zamów usługe</button>
@@ -294,7 +295,7 @@
     <footer class="background-color-secondary">
       <div class="container box-footer">
         <div>
-          <a class="logo logo-footer" href="./index.html">Web<span class="logo-recolor-bottom">Studio</span></a>
+          <a class="logo logo-footer" href="./index.html"> Web<span class="logo-recolor-bottom">Studio</span> </a>
           <address class="addr box-address">
             m. Warszawa, Aleje Jerozolimskie 21
             <a class="links links-contact-bottom" href="mailto:info@example.com">info@example.com</a>
@@ -328,23 +329,62 @@
         </div>
         <!-- not sure if it's right but im happy for now, gonna revisit this part later -->
         <form class="box-newsletter" name="newsletter-signup-form">
-          <label class="newsletter-label" for="input_email_newsletter"> Zapisz się do Newslettera </label>
+          <label class="newsletter-label" for="input_email_newsletter">Zapisz się do Newslettera</label>
           <div class="box-newsletter-input">
-            <input class="input-newsletter" id="input_email_newsletter" type="email" name="email" placeholder="E-mail" />
+            <input class="input-newsletter" id="input_email_newsletter" type="email" name="newsletter_email" placeholder="E-mail" />
             <button class="btn-sign-up" type="submit">
-              Zapisz się <svg class="icon-sign-up" width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
+              Zapisz się
+              <svg class="icon-sign-up" width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
             </button>
           </div>
         </form>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal-window">
         <button class="modal-window-close-button" type="button" data-modal-close>
           <svg width="30" height="30">
-            <use href="./images/icons.svg#icon-xclose" width="10" height="10" x="3" y="10"></use>
+            <use href="./images/icons.svg#icon-xclose" width="10" height="10" x="3" y="8"></use>
           </svg>
         </button>
+        <!--hope you are hungry because this is a spaghetti imo -->
+        <div class="box-modal-form">
+          <h3 class="modal-header">Zostaw Swoje Dane w Formularzu Poniżej</h3>
+          <form class="box-form">
+            <div class="field-form">
+              <label class="label-modal-form" for="input-name-order">Imie</label>
+              <input class="input-modal-form" type="text" name="client_name" id="input-name-order" />
+              <svg class="icon-input-form" width="12" height="12"><use href="./images/icons.svg#icon-Vector2"></use></svg>
+            </div>
+            <div class="field-form">
+              <label class="label-modal-form" for="input-phone-order">Telefon</label>
+              <input class="input-modal-form" type="text" name="client_phone" id="input-phone-order" />
+              <svg class="icon-input-form" width="13" height="13"><use href="./images/icons.svg#icon-Vector1" y="1"></use></svg>
+            </div>
+            <div class="field-form">
+              <label class="label-modal-form" for="input-email-order">Email</label>
+              <input class="input-modal-form" type="text" name="client_email" id="input-email-order" />
+              <svg class="icon-input-form" width="15" height="12"><use href="./images/icons.svg#icon-Vector3"></use></svg>
+            </div>
+            <div class="field-form">
+              <label class="label-modal-form" for="input-comment-order">Komentarz</label>
+              <textarea class="comment-modal-form" name="client_comment" id="input-comment-order" placeholder="Wprowadź tekst"></textarea>
+            </div>
+            <div class="field-form">
+              <label class="label-modal-checkbox">
+                <input class="input-modal-checkbox" type="checkbox" name="terms_of_service" value="accepted" />
+                <svg class="checkbox" width="16" height="15">
+                  <use href="./images/icons.svg#icon-Vector4" width="11" height="8" x="3" y="3"></use>
+                </svg>
+                <span>Oświadczam iż akceptuję </span>
+                <a class="links-order-form" href="#">Regulamin</a>
+                <span> i </span>
+                <a class="links-order-form" href="#">Politykę prywatności.</a>
+              </label>
+            </div>
+            <button class="btn-complete-order" type="submit">Wyślij</button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>

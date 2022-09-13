@@ -223,7 +223,7 @@
           <a class="logo logo-footer" href="./index.html">Web<span class="logo-recolor-bottom">Studio</span></a>
           <address class="addr box-address">
             m. Warszawa, Aleje Jerozolimskie 21
-            <a class="links links-contact-bottom links-contact-bottom-underline" href="mailto:info@example.com">info@example.com</a>
+            <a class="links links-contact-bottom" href="mailto:info@example.com">info@example.com</a>
             <a class="links links-contact-bottom" href="tel:+48111111111">+48 111 111 111</a>
           </address>
         </div>
@@ -252,6 +252,16 @@
             </a>
           </div>
         </div>
+        <!-- not sure if it's right but im happy for now, gonna revisit this part later -->
+        <form class="box-newsletter" name="newsletter-signup-form">
+          <label class="newsletter-label" for="input_email_newsletter"> Zapisz się do Newslettera </label>
+          <div class="box-newsletter-input">
+            <input class="input-newsletter" id="input_email_newsletter" type="email" name="newsletter_email" placeholder="E-mail" />
+            <button class="btn-sign-up" type="submit">
+              Zapisz się <svg class="icon-sign-up" width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
   </body>
