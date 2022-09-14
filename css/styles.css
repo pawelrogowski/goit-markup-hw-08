@@ -36,6 +36,8 @@
     background-color var(--duration) var(--timingFunction);
   --transitionBackdrop: opacity var(--duration) var(--timingFunction), visibility var(--duration) var(--timingFunction);
   --transitionInputLabel: border-color var(--duration) var(--timingFunction);
+  --transitionCheckbox: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction),
+    border-color var(--duration) var(--timingFunction);
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
@@ -568,6 +570,7 @@ p {
 }
 .modal-window-close-button:hover,
 .modal-window-close-button:focus {
+  outline: none;
   border-color: var(--selectionColor);
   fill: var(--selectionColor);
   transition: var(--transitionIconModalClose);
@@ -595,7 +598,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 .label-modal-form {
   font-size: 12px;
@@ -608,11 +611,11 @@ p {
   height: 40px;
   border: 1px solid var(--colorBlackTransp);
   border-radius: 4px;
-  margin-top: 4px;
-  padding: 12px 0 12px 42px;
+  padding: 12px 22px 12px 42px;
   font-size: 12px;
   line-height: 1.166666667;
   letter-spacing: 0.01em;
+  margin-top: 2px;
 }
 .field-form {
   position: relative;
@@ -621,7 +624,7 @@ p {
 
 .icon-input-form {
   position: absolute;
-  top: 36px;
+  top: 35px;
   left: 15px;
   fill: var(--fontColorMain);
 }
@@ -634,18 +637,22 @@ p {
   font-size: 12px;
   line-height: 1.166666667;
   letter-spacing: 0.01em;
-  margin-top: 4px;
+  margin-top: 2px;
   margin-bottom: 10px;
   resize: none;
 }
 .comment-modal-form::placeholder {
   color: var(--fontColorGrayTransp);
 }
-
+.input-modal-form:focus + svg,
+.label-modal-form:focus + svg {
+  transition: var(--transitionIconClient);
+}
 .input-modal-form:focus,
 .comment-modal-form:focus {
   border-color: var(--selectionColor);
   outline: none;
+  transition: var(--transitionIconClient);
 }
 /* works only if both classes are next to each other in this exact order */
 .input-modal-form:focus + .icon-input-form {
@@ -665,7 +672,7 @@ p {
   cursor: pointer;
   align-self: center;
   transition: var(--transitionButton);
-  margin-top: 12px;
+  margin-top: 20px;
 }
 .btn-complete-order:hover,
 .btn-complete-order:focus {
@@ -698,14 +705,16 @@ p {
   border-radius: 2px;
   background: var(--colorWhite);
   fill: var(--colorWhite);
-  margin: 0 7px 2px 0;
+  margin: 2px 7px 2px 0;
   cursor: pointer;
+  transition: var(--transitionCheckbox);
 }
 
 .input-modal-checkbox:checked + .checkbox {
   fill: var(--colorWhite);
   background: var(--selectionColor);
-  border: var(--selectionColor);
+  border-color: var(--selectionColor);
+  transition: var(--transitionCheckbox);
 }
 .box-newsletter {
   display: flex;
@@ -746,6 +755,7 @@ p {
 .input-newsletter:focus {
   border-color: var(--selectionColor);
   transition: var(--transitionInputLabel);
+  outline: none;
 }
 .btn-sign-up {
   background: var(--selectionColor);
@@ -764,6 +774,7 @@ p {
   padding: 10px 28px 10px 42px;
   cursor: pointer;
   transition: var(--transitionButton);
+  outline: none;
 }
 .icon-sign-up {
   fill: var(--colorWhite);
