@@ -621,7 +621,6 @@ p {
   position: relative;
   display: block;
 }
-
 .icon-input-form {
   position: absolute;
   top: 35px;
@@ -709,7 +708,6 @@ p {
   cursor: pointer;
   transition: var(--transitionCheckbox);
 }
-
 .input-modal-checkbox:checked + .checkbox {
   fill: var(--colorWhite);
   background: var(--selectionColor);
@@ -728,7 +726,6 @@ p {
   display: inline-flex;
   gap: 12px;
 }
-
 .newsletter-label {
   font-weight: 700;
   font-size: 14px;
