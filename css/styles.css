@@ -39,6 +39,7 @@
   --transitionCheckbox: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction),
     border-color var(--duration) var(--timingFunction);
   --transitionLinkUnderline: text-decoration-thickness var(--duration) var(--timingFunction);
+  --transitionFormTextInput: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
@@ -230,10 +231,9 @@ p {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 .section {
-  padding: 94px 0;
+  padding: 94px 15px;
 }
 .section-our-speciality {
   padding: 94px 15px 0 15px;
@@ -241,7 +241,7 @@ p {
 .box-header {
   display: flex;
   align-items: center;
-  padding: 24px 0;
+  padding: 24px 15px;
   height: 80px;
 }
 .nav-list {
@@ -470,7 +470,7 @@ p {
   align-items: flex-start;
   flex-direction: row;
   gap: 70px;
-  padding: 55.5008px 0;
+  padding: 55.5008px 15px;
 }
 .person-position {
   font-size: 16px;
@@ -606,6 +606,7 @@ p {
   line-height: 1.166666667;
   letter-spacing: 0.01em;
   color: var(--fontColorSecondary);
+  transition: var(--transitionFormTextInput);
 }
 .input-modal-form {
   width: 448px;
@@ -617,16 +618,11 @@ p {
   line-height: 1.166666667;
   letter-spacing: 0.01em;
   margin-top: 2px;
+  transition: var(--transitionFormTextInput);
 }
 .field-form {
   position: relative;
   display: block;
-}
-.icon-input-form {
-  position: absolute;
-  top: 35px;
-  left: 15px;
-  fill: var(--fontColorMain);
 }
 .comment-modal-form {
   width: 448px;
@@ -644,19 +640,23 @@ p {
 .comment-modal-form::placeholder {
   color: var(--fontColorGrayTransp);
 }
-.input-modal-form:focus + svg,
-.label-modal-form:focus + svg {
-  transition: var(--transitionIconClient);
+.icon-input-form {
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  fill: var(--fontColorMain);
+  transition: var(--transitionFormTextInput);
 }
 .input-modal-form:focus,
 .comment-modal-form:focus {
   border-color: var(--selectionColor);
   outline: none;
-  transition: var(--transitionIconClient);
+  transition: var(--transitionFormTextInput);
 }
 /* works only if both classes are next to each other in this exact order */
 .input-modal-form:focus + .icon-input-form {
   fill: var(--selectionColor);
+  transition: var(--transitionFormTextInput);
 }
 .btn-complete-order {
   background: var(--selectionColor);
