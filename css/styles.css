@@ -38,6 +38,7 @@
   --transitionInputLabel: border-color var(--duration) var(--timingFunction);
   --transitionCheckbox: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction),
     border-color var(--duration) var(--timingFunction);
+  --transitionLinkUnderline: text-decoration-thickness var(--duration) var(--timingFunction);
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
@@ -693,10 +694,18 @@ p {
 }
 .links-order-form {
   color: var(--selectionColor);
+  text-decoration-thickness: 1px;
+  transition: var(--transitionLinkUnderline);
 }
+/* text-decoration-thickness transition 
+is always instant on chrome/firefox no matter the timing function
+might be wise to swap it for some other effect 
+*/
 .links-order-form:hover {
   color: var(--selectionColor);
   text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  transition: var(--transitionLinkUnderline);
 }
 .input-modal-checkbox {
   margin-left: 14px;
