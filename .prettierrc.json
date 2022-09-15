@@ -22,7 +22,7 @@
     {
       "files": "*.html",
       "options": {
-        "printWidth": 300,
+        "printWidth": 800,
         "endOfLine": "auto",
         "parser": "html",
         "htmlWhitespaceSensitivity": "strict",

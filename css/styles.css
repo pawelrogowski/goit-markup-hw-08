@@ -694,6 +694,10 @@ p {
 .links-order-form {
   color: var(--selectionColor);
 }
+.links-order-form:hover {
+  color: var(--selectionColor);
+  text-decoration-thickness: 2px;
+}
 .input-modal-checkbox {
   margin-left: 14px;
   appearance: none;
