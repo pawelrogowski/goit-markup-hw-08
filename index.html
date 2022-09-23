@@ -335,54 +335,52 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
-        <button class="modal-window-close-button" type="button" data-modal-close>
+        <button class="modal-window__close-button" type="button" data-modal-close>
           <svg width="30" height="30">
-            <use href="./images/icons.svg#icon-xclose" width="10" height="10" x="3" y="8"></use>
+            <use href="./images/icons.svg#icon-xclose" width="10" height="10" x="9" y="9"></use>
           </svg>
         </button>
-        <div class="box-modal-form">
-          <h3 class="modal-header">Zostaw Swoje Dane w Formularzu Poniżej</h3>
-          <form class="box-form">
-            <div class="field-form">
-              <label class="label-modal-form" for="input-name-order">Imie</label>
-              <input class="input-modal-form" type="text" name="client_name" id="input-name-order" />
-              <svg class="icon-input-form" width="12" height="12">
-                <use href="./images/icons.svg#icon-Vector2"></use>
+        <h3 class="modal-window__heading">Zostaw Swoje Dane w Formularzu Poniżej</h3>
+        <form class="modal-window__form">
+          <div class="form-field">
+            <label class="form-field__label" for="input-name-order">Imie</label>
+            <input class="form-field__input" type="text" name="client_name" id="input-name-order" />
+            <svg class="form-field__icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-Vector2"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label class="form-field__label" for="input-phone-order">Telefon</label>
+            <input class="form-field__input" type="text" name="client_phone" id="input-phone-order" />
+            <svg class="form-field__icon" width="13" height="13">
+              <use href="./images/icons.svg#icon-Vector1"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label class="form-field__label" for="input-email-order">Email</label>
+            <input class="form-field__input" type="text" name="client_email" id="input-email-order" />
+            <svg class="form-field__icon" width="15" height="12">
+              <use href="./images/icons.svg#icon-Vector3"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label class="form-field__label" for="input-comment-order">Komentarz</label>
+            <textarea class="form-field__comment" name="client_comment" id="input-comment-order" placeholder="Wprowadź tekst"></textarea>
+          </div>
+          <div class="checkbox-field">
+            <label class="checkbox-field__label">
+              <input class="checkbox-field__input" type="checkbox" name="terms_of_service" value="accepted" />
+              <svg class="checkbox-field__icon" width="16" height="15">
+                <use href="./images/icons.svg#icon-Vector4" width="11" height="8" x="1" y="1"></use>
               </svg>
-            </div>
-            <div class="field-form">
-              <label class="label-modal-form" for="input-phone-order">Telefon</label>
-              <input class="input-modal-form" type="text" name="client_phone" id="input-phone-order" />
-              <svg class="icon-input-form" width="13" height="13">
-                <use href="./images/icons.svg#icon-Vector1"></use>
-              </svg>
-            </div>
-            <div class="field-form">
-              <label class="label-modal-form" for="input-email-order">Email</label>
-              <input class="input-modal-form" type="text" name="client_email" id="input-email-order" />
-              <svg class="icon-input-form" width="15" height="12">
-                <use href="./images/icons.svg#icon-Vector3"></use>
-              </svg>
-            </div>
-            <div class="field-form">
-              <label class="label-modal-form" for="input-comment-order">Komentarz</label>
-              <textarea class="comment-modal-form" name="client_comment" id="input-comment-order" placeholder="Wprowadź tekst"></textarea>
-            </div>
-            <div class="field-form">
-              <label class="label-modal-checkbox">
-                <input class="input-modal-checkbox" type="checkbox" name="terms_of_service" value="accepted" />
-                <svg class="checkbox" width="16" height="15">
-                  <use href="./images/icons.svg#icon-Vector4" width="11" height="8" x="1" y="1"></use>
-                </svg>
-                <span>Oświadczam iż akceptuję </span>
-                <a class="links-order-form" href="#">Regulamin</a>
-                <span> i </span>
-                <a class="links-order-form" href="#">Politykę prywatności.</a>
-              </label>
-            </div>
-            <button class="btn-complete-order" type="submit">Wyślij</button>
-          </form>
-        </div>
+              <span>Oświadczam iż akceptuję </span>
+              <a class="link checkbox-field__link" href="#">Regulamin</a>
+              <span> i </span>
+              <a class="link checkbox-field__link" href="#">Politykę prywatności.</a>
+            </label>
+          </div>
+          <button class="button modal-window__button" type="submit">Wyślij</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

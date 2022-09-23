@@ -66,6 +66,7 @@ body {
 .page-header {
   display: flex;
   align-items: center;
+  padding: 0 15px;
 }
 .section__page-header {
   border-bottom: 1px solid var(--colorGrey);
@@ -240,6 +241,7 @@ body {
   display: flex;
   gap: 30px;
   justify-content: center;
+  padding: 0 15px;
 }
 .features__item {
   display: flex;
@@ -278,6 +280,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 0 15px;
 }
 .section__our-speciality {
   padding: 0px 0 94px 0;
@@ -326,6 +329,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 0 15px;
 }
 .team__heading {
   font-weight: 700;
@@ -406,6 +410,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 0 15px;
 }
 .clients__heading {
   font-weight: 700;
@@ -579,9 +584,8 @@ body {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  flex-basis: calc(370 * 3 + 2 * 30);
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex-basis: calc(100% - 2 * 30px / 3);
+  padding: 0 15px;
 }
 .grid-item {
   display: flex;
@@ -642,4 +646,747 @@ body {
 }
 .product-card:hover .product-card__overlay {
   transform: translateY(0%);
+}
+
+.modal-window {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  background: var(--colorWhite);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+}
+.modal-window__close-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: var(--colorWhite);
+  border: 1px solid var(--colorBlackTransp);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: var(--transitionIconModalClose);
+  cursor: pointer;
+}
+.modal-window__close-button:hover,
+.modal-window__close-button:focus {
+  outline: none;
+  border-color: var(--selectionColor);
+  fill: var(--selectionColor);
+  transition: var(--transitionIconModalClose);
+  background-color: var(--backgroundColorSecondary);
+}
+.modal-window__heading {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--fontColorMain);
+}
+.modal-window__form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-field {
+  position: relative;
+  display: block;
+}
+.form-field__label {
+  font-size: 12px;
+  line-height: 1.166666667;
+  letter-spacing: 0.01em;
+  color: var(--fontColorSecondary);
+  transition: var(--transitionFormTextInput);
+}
+.form-field__input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid var(--colorBlackTransp);
+  border-radius: 4px;
+  padding: 12px 22px 12px 42px;
+  font-size: 12px;
+  line-height: 1.166666667;
+  letter-spacing: 0.01em;
+  margin-top: 2px;
+  transition: var(--transitionFormTextInput);
+}
+.form-field__comment {
+  width: 448px;
+  height: 120px;
+  border: 1px solid var(--colorBlackTransp);
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: 1.166666667;
+  letter-spacing: 0.01em;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  resize: none;
+}
+.form-field__comment::placeholder {
+  color: var(--fontColorGrayTransp);
+}
+.form-field__icon {
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  fill: var(--fontColorMain);
+  transition: var(--transitionFormTextInput);
+}
+.form-field__input:focus,
+.form-field__comment:focus {
+  border-color: var(--selectionColor);
+  outline: none;
+  transition: var(--transitionFormTextInput);
+}
+/* works only if both classes are next to each other in this exact order */
+.form-field__input:focus + .form-field__icon {
+  fill: var(--selectionColor);
+  transition: var(--transitionFormTextInput);
+}
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.714285714;
+  letter-spacing: 0.03em;
+  color: var(--fontColorSecondary);
+  white-space: pre;
+}
+.checkbox-field__label {
+  display: inline-flex;
+}
+.checkbox-field__input {
+  margin-left: 14px;
+  appearance: none;
+  position: absolute;
+}
+.checkbox-field__icon {
+  border: 2px var(--fontColorMain) solid;
+  border-radius: 2px;
+  background: var(--colorWhite);
+  fill: var(--colorWhite);
+  margin: 4px 7px 2px 15px;
+  cursor: pointer;
+  transition: var(--transitionCheckbox);
+}
+.checkbox-field__link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: var(--selectionColor);
+  transition: var(--transitionLinkUnderline);
+}
+.checkbox-field__link:focus,
+.checkbox-field__link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  color: var(--selectionColor);
+  transition: var(--transitionLinkUnderline);
+}
+.checkbox-field__input:checked + .checkbox-field__icon {
+  fill: var(--colorWhite);
+  background: var(--selectionColor);
+  border-color: var(--selectionColor);
+  transition: var(--transitionCheckbox);
+}
+.modal-window__button {
+  background: var(--selectionColor);
+  box-shadow: 0px 4px 4px #00000026;
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--colorWhite);
+  padding: 10px 76px;
+  cursor: pointer;
+  align-self: center;
+  transition: var(--transitionButton);
+  margin-top: 20px;
+}
+.modal-window__button:hover,
+.modal-window__button:focus {
+  background: var(--backgroundColorSecondary);
+  color: var(--selectionColor);
+  cursor: pointer;
+  transition: var(--transitionButton);
+}
+/* ___________________________________________________________________ */
+
+.links {
+  text-decoration: none;
+  color: var(--fontColorMain);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142857143;
+  letter-spacing: 0.02em;
+  transition: var(--transitionLink);
+}
+.links-contact {
+  color: var(--fontColorSecondary);
+  transition: var(--transitionLink);
+}
+.links:focus,
+.links:hover,
+.links-contact:focus,
+.links-contact:hover {
+  color: var(--selectionColor);
+  transition: var(--transitionLink);
+}
+.links-contact:focus svg,
+.links-contact:hover svg {
+  fill: var(--selectionColor);
+  transition: var(--transitionIcon);
+}
+.links-curr-hl {
+  position: relative;
+  color: var(--selectionColor);
+}
+.links-contact-bottom {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714285714;
+  letter-spacing: 0.03em;
+  color: var(--colorWhiteTransp);
+  transition: var(--transitionLink);
+}
+.links-contact-bottom-underline {
+  text-decoration: underline;
+}
+.addr {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.714285714;
+  letter-spacing: 0.03em;
+  color: var(--colorWhite);
+  padding-top: 20px;
+}
+.btn {
+  background: var(--colorAlmostWhite);
+  color: var(--fontColorMain);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.875;
+  border-style: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+  transition: var(--transitionButton);
+}
+.btn:hover,
+.btn:focus {
+  background: var(--selectionColor);
+  color: var(--colorWhite);
+  cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: var(--transitionButton);
+}
+.btn-order {
+  background: var(--selectionColor);
+  color: var(--colorWhite);
+  background: var(--selectionColor);
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  padding: 10px 41px 10px 42px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: var(--transitionButton);
+}
+.btn-order:hover,
+.btn-order:focus {
+  background: var(--colorAlmostWhite);
+  color: var(--fontColorMain);
+  cursor: pointer;
+  transition: var(--transitionButton);
+}
+.box-header {
+  display: flex;
+  align-items: center;
+  padding: 24px 15px;
+  height: 80px;
+}
+.nav-list {
+  display: flex;
+  gap: 46px;
+  margin-left: 93px;
+}
+.contact-list {
+  display: flex;
+  gap: 30px;
+  margin-left: 345px;
+  align-items: center;
+  justify-content: center;
+}
+.envelope-icon,
+.phone-icon {
+  fill: var(--fontColorSecondary);
+  transition: var(--transitionIcon);
+}
+.envelope-icon:hover,
+.envelope-icon:focus,
+.phone-icon:hover,
+.phone-icon:focus {
+  fill: var(--selectionColor);
+  transition: var(--transitionIcon);
+}
+.icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-header-spacing {
+  margin-right: 10px;
+}
+.box-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 200px 0;
+}
+.box-our-speciality {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.box-icons-our-speciality {
+  width: 270px;
+  height: 120px;
+  background-color: var(--colorAlmostWhite);
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.icon-our-speciality {
+  margin: 25px 100px;
+}
+.box-what-we-do {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.box-what-we-do img {
+  display: block;
+}
+.what-we-do-anchor {
+  position: relative;
+}
+.what-we-do-caption {
+  position: absolute;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142857143;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 0px;
+  background: var(--colorBackgroundFigcaption);
+  color: var(--colorWhite);
+  bottom: 0px;
+  width: 100%;
+}
+.box-our-team {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+}
+.box-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.icon-social {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--colorWhite);
+  fill: var(--colorIconInactive);
+  transition: var(--transitionIconSocial);
+}
+.icon-social:hover > svg,
+.icon-social:focus svg {
+  background-color: var(--selectionColor);
+  fill: var(--colorWhite);
+  transition: var(--transitionIconSocial);
+}
+.box-circle {
+  width: 44px;
+  height: 44px;
+}
+.box-our-clients {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+}
+.box-icons-our-clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorIconInactive);
+  border-radius: 4px;
+  transition: var(--transitionIconClient);
+}
+.icon-our-clients {
+  fill: var(--colorIconInactive);
+  transition: var(--transitionIconClient);
+}
+.box-icons-our-clients:hover svg,
+.box-icons-our-clients:focus svg,
+.box-icons-our-clients:hover,
+.box-icons-our-clients:focus {
+  fill: var(--selectionColor);
+  border-color: var(--selectionColor);
+  transition: var(--transitionIconClient);
+}
+.box-button {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+.box-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.card-product {
+  margin: 0;
+  /* overflow: hidden; */
+  cursor: pointer;
+  transition: var(--transitionCard);
+}
+.card-product:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: var(--transitionCard);
+}
+.card-overlay-anchor {
+  position: relative;
+  overflow: hidden;
+}
+.card-product-overlay {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  line-height: 1.555555556;
+  letter-spacing: 0.03em;
+  color: var(--colorWhite);
+  background: var(--colorBackgroundOverlay);
+  padding: 49px 45px 49px 24px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: var(--transitionCardOverlay);
+}
+.card-product:hover .card-product-overlay {
+  transform: translateY(0%);
+}
+.card-product img {
+  display: block;
+}
+.box-address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+.background-almost-white {
+  background: var(--colorAlmostWhite);
+}
+.background-color-white {
+  background: var(--colorWhite);
+}
+.box-our-team li {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.box-our-team > li > img {
+  display: block;
+  margin-bottom: 30px;
+}
+.box-our-team > li > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.1875;
+  margin-bottom: 16px;
+}
+.box-footer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 70px;
+  padding: 55.5008px 15px;
+}
+.person-position {
+  font-size: 16px;
+  line-height: 1.187;
+  letter-spacing: 0.03em;
+  color: var(--fontColorSecondary);
+}
+.image-caption-main {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin: 0px 24px 4px 24px;
+  padding-top: 20px;
+}
+.image-caption-secondary {
+  font-size: 16px;
+  line-height: 1.875;
+  color: var(--fontColorSecondary);
+  margin: 0px 24px 20px 24px;
+}
+.image-caption-border {
+  border-left: 1px solid var(--colorAlmostWhiteTwo);
+  border-right: 1px solid var(--colorAlmostWhiteTwo);
+  border-bottom: 1px solid var(--colorAlmostWhiteTwo);
+}
+.social-heading-footer {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142857143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: start;
+  color: var(--colorAlmostWhite);
+  margin-bottom: 20px;
+}
+.box-socials-footer {
+  margin-top: 12px;
+}
+.socials-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.icon-social-footer {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--colorIconBackgroundFooter);
+  fill: var(--colorWhite);
+  transition: var(--transitionIconSocialFooter);
+  overflow: hidden;
+}
+.icon-social-footer:hover,
+.icon-social-footer:focus {
+  background-color: var(--selectionColor);
+  transition: var(--transitionIconSocialFooter);
+}
+.backdrop {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--colorBlackTransp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: var(--transitionBackdrop);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transitionBackdrop);
+}
+
+.modal-window-close-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: var(--colorWhite);
+  border: 1px solid var(--colorBlackTransp);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: var(--transitionIconModalClose);
+  cursor: pointer;
+}
+.modal-window-close-button:hover,
+.modal-window-close-button:focus {
+  outline: none;
+  border-color: var(--selectionColor);
+  fill: var(--selectionColor);
+  transition: var(--transitionIconModalClose);
+  background-color: var(--backgroundColorSecondary);
+}
+.modal-window-close-icon {
+  fill: var(--colorBlackTransp);
+}
+.modal-header {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--fontColorMain);
+}
+.box-modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 40px;
+}
+.box-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-input-form {
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  fill: var(--fontColorMain);
+  transition: var(--transitionFormTextInput);
+}
+.input-modal-form:focus,
+.comment-modal-form:focus {
+  border-color: var(--selectionColor);
+  outline: none;
+  transition: var(--transitionFormTextInput);
+}
+/* works only if both classes are next to each other in this exact order */
+.input-modal-form:focus + .icon-input-form {
+  fill: var(--selectionColor);
+  transition: var(--transitionFormTextInput);
+}
+
+.btn-complete-order:hover,
+.btn-complete-order:focus {
+  background: var(--backgroundColorSecondary);
+  color: var(--selectionColor);
+  cursor: pointer;
+  transition: var(--transitionButton);
+}
+.label-modal-checkbox {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.714285714;
+  letter-spacing: 0.03em;
+  color: var(--fontColorSecondary);
+  white-space: pre;
+}
+.links-order-form {
+  color: var(--selectionColor);
+  text-decoration-thickness: 1px;
+  transition: var(--transitionLinkUnderline);
+}
+/* text-decoration-thickness transition 
+is always instant on chrome/firefox no matter the timing function
+might be wise to swap it for some other effect 
+*/
+.links-order-form:hover {
+  color: var(--selectionColor);
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  transition: var(--transitionLinkUnderline);
+}
+.input-modal-checkbox {
+}
+.checkbox {
+  border: 2px var(--fontColorMain) solid;
+  border-radius: 2px;
+  background: var(--colorWhite);
+  fill: var(--colorWhite);
+  margin: 2px 7px 2px 0;
+  cursor: pointer;
+  transition: var(--transitionCheckbox);
+}
+.input-modal-checkbox:checked + .checkbox {
+  fill: var(--colorWhite);
+  background: var(--selectionColor);
+  border-color: var(--selectionColor);
+  transition: var(--transitionCheckbox);
+}
+.box-newsletter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 12px;
+  margin-left: 8px;
+  gap: 20px;
+}
+.box-newsletter-input {
+  display: inline-flex;
+  gap: 12px;
+}
+.newsletter-label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--colorWhite);
+}
+.input-newsletter {
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  background-color: var(--backgroundColorSecondary);
+  border: 1px solid #ffffff4d;
+  /* drop-shadow:(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+  border-radius: 4px;
+  color: #ffffff99;
+  width: 358px;
+  padding: 15px 16px;
+  transition: var(--transitionInputLabel);
+}
+.input-newsletter:focus {
+  border-color: var(--selectionColor);
+  transition: var(--transitionInputLabel);
+  outline: none;
+}
+.btn-sign-up {
+  background: var(--selectionColor);
+  box-shadow: 0px 4px 4px #00000026;
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  gap: 24px;
+  padding: 10px 28px 10px 42px;
+  cursor: pointer;
+  transition: var(--transitionButton);
+  outline: none;
+}
+.icon-sign-up {
+  fill: var(--colorWhite);
+  background: var(--selectionColor);
+  transition: var(--transitionBtnIcon);
 }
