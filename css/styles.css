@@ -647,6 +647,7 @@ body {
 .product-card__description {
   font-size: 16px;
   line-height: 1.875;
+  letter-spacing: 0.03em;
   color: var(--fontColorSecondary);
   margin: 0px 24px 20px 24px;
 }
