@@ -493,6 +493,16 @@ body {
   margin-top: 12px;
   margin-right: 78px;
 }
+.social-link-list__heading {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142857143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: start;
+  color: var(--colorAlmostWhite);
+  margin-bottom: 20px;
+}
 .newsletter-signup {
   margin-top: 12px;
 }
