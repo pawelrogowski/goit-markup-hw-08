@@ -429,7 +429,7 @@ body {
   fill: var(--colorIconInactive);
   transition: var(--transitionIconClient);
 }
-.link__clients {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -441,10 +441,10 @@ body {
   transition: var(--transitionIconClient);
   outline: none;
 }
-.link__clients:hover,
-.link__clients:focus,
-.link__clients:hover .clients__icon,
-.link__clients:focus .clients__icon {
+.clients__link:hover,
+.clients__link:focus,
+.clients__link:hover .clients__icon,
+.clients__link:focus .clients__icon {
   border-color: var(--selectionColor);
   fill: var(--selectionColor);
   transition: var(--transitionIconClient);
@@ -597,7 +597,7 @@ body {
   flex-basis: calc(100% - 2 * 30px / 3);
   padding: 0 15px;
 }
-.grid-item {
+.grid__item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
