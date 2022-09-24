@@ -1,0 +1,40 @@
+.page-footer {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px 15px;
+    &__logo {
+        margin-bottom: 20px;
+    }
+    &__contacts {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 70px;
+    }
+    &__address {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.714285714;
+        letter-spacing: 0.03em;
+        color: var(--colorWhite);
+        margin-bottom: 9px;
+    }
+    &__link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.714285714;
+        letter-spacing: 0.03em;
+        color: var(--colorWhiteTransp);
+        transition: var(--transitionLink);
+        margin-bottom: 9px;
+    }
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+        margin-right: 78px;
+    }
+    &__social-link-list {
+        margin-bottom: 0;
+    }
+}

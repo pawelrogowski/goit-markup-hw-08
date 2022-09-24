@@ -1,0 +1,13 @@
+.backdrop {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--colorBlackTransp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: var(--transitionBackdrop);
+  }

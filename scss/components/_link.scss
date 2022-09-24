@@ -1,0 +1,40 @@
+.link {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transitionLink);
+    &__clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 92px;
+        background-color: var(--colorWhite);
+        border: 1px solid var(--colorIconInactive);
+        border-radius: 4px;
+        transition: var(--transitionIconClient);
+        outline: none;
+    }
+    &:hover,
+    &:focus {
+        color: var(--selectionColor);
+        transition: var(--transitionLink);
+    }
+    &--underline {
+        text-decoration: underline;  
+    }
+    &--active {
+        color: var(--selectionColor);
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 44px;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: var(--selectionColor);
+            cursor: unset;
+            pointer-events: none;   
+        }
+    }
+  }

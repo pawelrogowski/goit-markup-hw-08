@@ -1,0 +1,17 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    color: var(--fontColorMain);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.142857143;
+    letter-spacing: 0.02em;
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 46px;
+      }
+    &__item {
+        position: relative;
+      }
+  }

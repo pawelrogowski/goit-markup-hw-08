@@ -1,0 +1,77 @@
+.newsletter-signup {
+    margin-top: 12px;
+    &__label {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--colorWhite);
+        display: block;
+        padding-bottom: 20px;
+    }
+    &__box {
+        display: inline-flex;
+        gap: 12px;
+    }
+    &__textfield {
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+        background-color: var(--backgroundColorSecondary);
+        border: 1px solid #ffffff4d;
+        border-radius: 4px;
+        color: #ffffff99;
+        width: 350px;
+        height: 50px;
+        padding: 15px 16px;
+        transition: var(--transitionInputLabel);
+        outline: none;
+        &:focus-within,
+        &:hover {
+            border-color: var(--selectionColor);
+            transition: var(--transitionInputLabel);  
+        }
+    }
+    &__icon {
+        fill: var(--colorWhite);
+        background: var(--selectionColor);
+        transition: var(--transitionBtnIcon);    
+    }
+    &__button {
+        height: 50px;
+        background: var(--selectionColor);
+        box-shadow: 0px 4px 4px #00000026;
+        border-radius: 4px;
+        border-style: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.875;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: var(--colorWhite);
+        width: 200px;
+        height: 50px;
+        gap: 24px;
+        cursor: pointer;
+        transition: var(--transitionButton);
+        outline: none;
+        &:hover,
+        &:focus {
+            background: var(--colorAlmostWhite);
+            color: var(--fontColorMain);
+            transition: var(--transitionButton);    
+        }
+        &:hover .newsletter-signup__icon,
+        &:focus .newsletter-signup__icon {
+            background: var(--colorAlmostWhite);
+            fill: var(--selectionColor);
+            transition: var(--transitionBtnIcon);  
+        }
+    }
+}

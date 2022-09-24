@@ -1,0 +1,44 @@
+.social-link-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    &__icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: var(--colorWhite);
+        fill: var(--colorIconInactive);
+        transition: var(--transitionIconSocial);
+        &--dark {
+            background-color: var(--colorIconBackgroundFooter);
+            fill: var(--colorWhite);
+            transition: var(--transitionIconSocialFooter);
+        }
+    }
+    &__heading {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.142857143;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-align: start;
+        color: var(--colorAlmostWhite);
+        margin-bottom: 20px;
+    }
+    &__link {
+        display: block;
+        width: 44px;
+        height: 44px;
+        outline: none;
+        &:hover .social-link-list__icon,
+        &:focus .social-link-list__icon {
+            fill: var(--colorWhite);
+            background-color: var(--selectionColor);
+            overflow: hidden;
+            transition: var(--transitionIconSocial);
+        }
+    }
+
+}

@@ -1,0 +1,27 @@
+.contacts {
+    display: flex;
+    align-items: center;
+    color: var(--fontColorSecondary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.142857143;
+    letter-spacing: 0.02em;
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;   
+    }
+    &__icon {
+        fill: var(--fontColorSecondary); 
+    }
+    &__link:hover .contacts__icon,
+    &__link:focus .contacts__icon {
+      fill: var(--selectionColor);
+      transition: var(--transitionIcon);
+    }
+    &__list {
+        display: flex;
+        align-content: center;
+        gap: 30px;
+    }
+}

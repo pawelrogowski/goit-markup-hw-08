@@ -1,0 +1,43 @@
+:root {
+    /* colors */
+    --backgroundColorMain: #e5e5e5;
+    --backgroundColorSecondary: #2f303a;
+    --fontColorMain: #212121;
+    --fontColorSecondary: #757575;
+    --fontColorGrayTransp: #75757580;
+    --selectionColor: #2196f3;
+    --colorWhite: #ffffff;
+    --colorWhiteTransp: #ffffff99;
+    --colorAlmostWhite: #f5f4fa;
+    --colorGrey: #ececec;
+    --colorAlmostWhiteTwo: #eeeeee;
+    --colorIconInactive: #afb1b8;
+    --colorIconBackgroundFooter: #ffffff1a;
+    --colorBackgroundImage: #2f303a66;
+    --colorBackgroundFigcaption: #2f303acc;
+    --colorBackgroundOverlay: #2196f3e6;
+    --colorBlackTransp: #00000033;
+  
+    /* transitions */
+    --timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration: 250ms;
+    --transitionButton: box-shadow var(--duration) var(--timingFunction), background var(--duration) var(--timingFunction),
+      color var(--duration) var(--timingFunction);
+    --transitionBtnIcon: box-shadow var(--duration) var(--timingFunction), background var(--duration) var(--timingFunction),
+      color var(--duration) var(--timingFunction), fill var(--duration) var(--timingFunction);
+    --transitionLink: color var(--duration) var(--timingFunction);
+    --transitionIcon: fill var(--duration) var(--timingFunction);
+    --transitionIconSocialFooter: background-color var(--duration) var(--timingFunction);
+    --transitionIconSocial: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
+    --transitionIconClient: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
+    --transitionCard: box-shadow var(--duration) var(--timingFunction);
+    --transitionCardOverlay: transform var(--duration) var(--timingFunction);
+    --transitionIconModalClose: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction),
+      background-color var(--duration) var(--timingFunction);
+    --transitionBackdrop: opacity var(--duration) var(--timingFunction), visibility var(--duration) var(--timingFunction);
+    --transitionInputLabel: border-color var(--duration) var(--timingFunction);
+    --transitionCheckbox: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction),
+      border-color var(--duration) var(--timingFunction);
+    --transitionLinkUnderline: text-decoration-thickness var(--duration) var(--timingFunction);
+    --transitionFormTextInput: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
+  }

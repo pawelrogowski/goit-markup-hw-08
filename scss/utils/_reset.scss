@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+figure,
+figcaption, {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+body {
+    font-family: "Roboto", "Raleway", sans-serif;
+    color: var(--fontColorMain);
+    background: var(--colorWhite);
+  }

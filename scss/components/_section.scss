@@ -1,0 +1,30 @@
+.section {
+    padding: 94px 15px;
+    &__page-header {
+        border-bottom: 1px solid var(--colorGrey);
+        padding: 24px 15px 24px 15px;
+      }
+    &__hero {
+        background: var(--backgroundColorSecondary);
+      }
+    &__features {
+        padding: 94px 0px;
+      }
+    &__our-speciality {
+        padding: 0px 0 94px 0;
+      }
+    &__team {
+        padding: 94px 0;
+        background-color: var(--colorAlmostWhite);
+      }
+    &__clients {
+        padding: 94px 0;
+      }
+    &__page-footer {
+        background: var(--backgroundColorSecondary);
+        padding: 60px 0px;
+      }
+    &__gallery {
+      padding: 94px 0;
+    }
+  }

@@ -1,0 +1,66 @@
+.modal-window {
+    position: relative;
+    width: 528px;
+    height: 581px;
+    background: var(--colorWhite);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+    &__close-button {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        background: var(--colorWhite);
+        border: 1px solid var(--colorBlackTransp);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: var(--transitionIconModalClose);
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            outline: none;
+            border-color: var(--selectionColor);
+            fill: var(--selectionColor);
+            transition: var(--transitionIconModalClose);
+            background-color: var(--backgroundColorSecondary);    
+        }
+    }
+    &__heading {
+        text-align: center;
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        letter-spacing: 0.03em;
+        color: var(--fontColorMain);
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__button {
+        background: var(--selectionColor);
+        box-shadow: 0px 4px 4px #00000026;
+        border-radius: 4px;
+        border-style: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.875;
+        letter-spacing: 0.06em;
+        color: var(--colorWhite);
+        padding: 10px 76px;
+        cursor: pointer;
+        align-self: center;
+        transition: var(--transitionButton);
+        margin-top: 20px;
+        &:hover,
+        &:focus {
+            background: var(--backgroundColorSecondary);
+            color: var(--selectionColor);
+            cursor: pointer;
+            transition: var(--transitionButton);   
+        }
+    }
+}
