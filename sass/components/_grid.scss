@@ -4,6 +4,10 @@
     flex-wrap: wrap;
     flex-basis: calc(100% - 2 * 30px / 3);
     padding: 0 15px;
+    &__container {
+        width: 1200px;
+        margin: 0 auto;
+    }
     &__item {
         display: flex;
         flex-direction: column;

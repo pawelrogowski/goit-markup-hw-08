@@ -1,4 +1,4 @@
-.social-link-list {
+.social-list {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -8,12 +8,12 @@
         height: 44px;
         border-radius: 50%;
         overflow: hidden;
-        background-color: var(--colorWhite);
-        fill: var(--colorIconInactive);
+        background-color: $colorBackgroundPrimary;
+        fill: $colorIconPrimary;
         transition: var(--transitionIconSocial);
         &--dark {
-            background-color: var(--colorIconBackgroundFooter);
-            fill: var(--colorWhite);
+            background-color: $colorIconSecondary;
+            fill: $colorFontAlt;
             transition: var(--transitionIconSocialFooter);
         }
     }
@@ -24,7 +24,7 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         text-align: start;
-        color: var(--colorAlmostWhite);
+        color: $colorBackgroundTertiary;
         margin-bottom: 20px;
     }
     &__link {
@@ -32,10 +32,10 @@
         width: 44px;
         height: 44px;
         outline: none;
-        &:hover .social-link-list__icon,
-        &:focus .social-link-list__icon {
-            fill: var(--colorWhite);
-            background-color: var(--selectionColor);
+        &:hover .social-list__icon,
+        &:focus .social-list__icon {
+            fill: $colorIconAlt;
+            background-color: $colorSelection;
             overflow: hidden;
             transition: var(--transitionIconSocial);
         }

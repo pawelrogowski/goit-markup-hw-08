@@ -2,7 +2,7 @@
     position: relative;
     width: 528px;
     height: 581px;
-    background: var(--colorWhite);
+    background: $colorBackgroundPrimary;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 40px;
@@ -11,7 +11,7 @@
         right: 8px;
         top: 8px;
         background: var(--colorWhite);
-        border: 1px solid var(--colorBlackTransp);
+        border: 1px solid $colorBorderPrimary;
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -20,10 +20,10 @@
         &:hover,
         &:focus {
             outline: none;
-            border-color: var(--selectionColor);
-            fill: var(--selectionColor);
+            border-color: $colorSelection;
+            fill: $colorSelection;
             transition: var(--transitionIconModalClose);
-            background-color: var(--backgroundColorSecondary);    
+            background-color: $colorBackgroundSecondary;    
         }
     }
     &__heading {
@@ -33,7 +33,7 @@
         font-size: 20px;
         line-height: 1.15;
         letter-spacing: 0.03em;
-        color: var(--fontColorMain);
+        color: $colorFontPrimary;
     }
     &__form {
         display: flex;
@@ -41,7 +41,7 @@
         gap: 8px;
     }
     &__button {
-        background: var(--selectionColor);
+        background: $colorSelection;
         box-shadow: 0px 4px 4px #00000026;
         border-radius: 4px;
         border-style: none;
@@ -49,7 +49,7 @@
         font-size: 16px;
         line-height: 1.875;
         letter-spacing: 0.06em;
-        color: var(--colorWhite);
+        color: $colorFontAlt;
         padding: 10px 76px;
         cursor: pointer;
         align-self: center;
@@ -57,8 +57,8 @@
         margin-top: 20px;
         &:hover,
         &:focus {
-            background: var(--backgroundColorSecondary);
-            color: var(--selectionColor);
+            background: $colorBackgroundSecondary;
+            color: $colorSelection;
             cursor: pointer;
             transition: var(--transitionButton);   
         }

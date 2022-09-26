@@ -1,7 +1,16 @@
 .hero {
-    background-image: linear-gradient(var(--colorBackgroundImage), var(--colorBackgroundImage)), url("../images/sliderbg.jpg");
+    background-image: linear-gradient($colorOverlaySecondary, $colorOverlaySecondary), url("../images/sliderbg.jpg");
     max-width: 1600px;
     margin: 0 auto;
+    &__container {
+        padding: 200px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;  
+    }
     &__title {
         font-weight: 900;
         font-size: 44px;
@@ -9,12 +18,12 @@
         letter-spacing: 0.06em;
         text-align: center;
         text-transform: uppercase;
-        color: var(--colorWhite);
+        color: $colorFontAlt;
         margin: 0;
     }
     &__button {
-        background: var(--selectionColor);
-        color: var(--colorWhite);
+        background: $colorSelection;
+        color: $colorBackgroundPrimary;
         border-radius: 4px;
         border-style: none;
         font-weight: 700;
@@ -26,8 +35,8 @@
         transition: var(--transitionButton); 
         &:hover,
         &:focus {
-            background: var(--colorAlmostWhite);
-            color: var(--fontColorMain);
+            background: $colorBackgroundPrimary;
+            color: $colorFontPrimary;
             cursor: pointer;
             transition: var(--transitionButton);   
         }

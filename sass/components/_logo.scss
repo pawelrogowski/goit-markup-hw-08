@@ -5,12 +5,12 @@
     font-size: 26px;
     line-height: 1.192307692;
     letter-spacing: 0.03em;
-    color: var(--selectionColor);
+    color: $colorSelection;
     text-decoration: none;
     &--dark {
-        color: var(--fontColorMain);
+        color: $colorFontPrimary;
     }
     &--light {
-        color: var(--colorWhite);
+        color: $colorFontAlt;
     }
 }

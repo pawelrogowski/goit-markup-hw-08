@@ -1,11 +1,15 @@
 .section {
-    padding: 94px 15px;
+    background: $colorBackgroundSecondary;
+    &__container {
+      width: 1600px;
+      margin: 0 auto;
+    }
     &__page-header {
-        border-bottom: 1px solid var(--colorGrey);
-        padding: 24px 15px 24px 15px;
+        border-bottom: 1px solid $colorBorderTertiary;
+        padding: 24px 15px 24px 0px;
       }
     &__hero {
-        background: var(--backgroundColorSecondary);
+        background: $colorBackgroundSecondary;
       }
     &__features {
         padding: 94px 0px;
@@ -15,16 +19,16 @@
       }
     &__team {
         padding: 94px 0;
-        background-color: var(--colorAlmostWhite);
+        background-color: $colorBackgroundTertiary;
       }
     &__clients {
         padding: 94px 0;
       }
     &__page-footer {
-        background: var(--backgroundColorSecondary);
+        background: $colorBackgroundSecondary;
         padding: 60px 0px;
       }
     &__gallery {
       padding: 94px 0;
     }
-  }
+}

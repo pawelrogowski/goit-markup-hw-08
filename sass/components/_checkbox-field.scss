@@ -6,7 +6,7 @@
     font-size: 14px;
     line-height: 1.714285714;
     letter-spacing: 0.03em;
-    color: var(--fontColorSecondary);
+    color: $colorFontSecondary;
     white-space: pre;
     &__label {
         display: inline-flex;
@@ -16,17 +16,17 @@
         appearance: none;
         position: absolute;
         &:checked + .checkbox-field__icon {
-            fill: var(--colorWhite);
-            background: var(--selectionColor);
-            border-color: var(--selectionColor);
+            fill: $colorIconAlt;
+            background: $colorSelection;
+            border-color: $colorSelection;
             transition: var(--transitionCheckbox);
         }
     }
     &__icon {
-        border: 2px var(--fontColorMain) solid;
+        border: 2px $colorFontPrimary solid;
         border-radius: 2px;
-        background: var(--colorWhite);
-        fill: var(--colorWhite);
+        background: $colorBackgroundPrimary;
+        fill: $colorIconAlt;
         margin: 4px 7px 2px 15px;
         cursor: pointer;
         transition: var(--transitionCheckbox);
@@ -34,14 +34,14 @@
     &__link {
         text-decoration: underline;
         text-decoration-thickness: 1px;
-        color: var(--selectionColor);
+        color: $colorSelection;
         transition: var(--transitionLinkUnderline);
         &:focus,
         &:hover {
             text-decoration: underline;
             text-decoration-thickness: 2px;
             text-decoration-skip-ink: none;
-            color: var(--selectionColor);
+            color: $colorSelection;
             transition: var(--transitionLinkUnderline);
         }
     }

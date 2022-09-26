@@ -5,13 +5,13 @@
         font-size: 12px;
         line-height: 1.166666667;
         letter-spacing: 0.01em;
-        color: var(--fontColorSecondary);
+        color: $colorFontSecondary;
         transition: var(--transitionFormTextInput);
     }
     &__input {
         width: 448px;
         height: 40px;
-        border: 1px solid var(--colorBlackTransp);
+        border: 1px solid $colorInputBorderPrimary;
         border-radius: 4px;
         padding: 12px 22px 12px 42px;
         font-size: 12px;
@@ -20,19 +20,19 @@
         margin-top: 2px;
         transition: var(--transitionFormTextInput);
         &:focus {
-            border-color: var(--selectionColor);
+            border-color: $colorSelection;
             outline: none;
             transition: var(--transitionFormTextInput);  
         }
         &:focus + .form-field__icon {
-            fill: var(--selectionColor);
+            fill: $colorSelection;
             transition: var(--transitionFormTextInput);
         }
     }
     &__comment {
         width: 448px;
         height: 120px;
-        border: 1px solid var(--colorBlackTransp);
+        border: 1px solid $colorInputBorderPrimary;
         border-radius: 4px;
         padding: 12px 16px;
         font-size: 12px;
@@ -42,10 +42,10 @@
         margin-bottom: 10px;
         resize: none;
         &::placeholder {
-            color: var(--fontColorGrayTransp);
+            color: $colorPlaceholder;
         }
         &:focus {
-            border-color: var(--selectionColor);
+            border-color: $colorSelection;
             outline: none;
             transition: var(--transitionFormTextInput);  
         }
@@ -54,7 +54,7 @@
         position: absolute;
         top: 35px;
         left: 15px;
-        fill: var(--fontColorMain);
+        fill: $colorFontPrimary;
         transition: var(--transitionFormTextInput);
     }
 }

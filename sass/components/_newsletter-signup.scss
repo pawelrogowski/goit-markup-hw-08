@@ -6,7 +6,7 @@
         line-height: 16px;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        color: var(--colorWhite);
+        color: $colorFontAlt;
         display: block;
         padding-bottom: 20px;
     }
@@ -20,7 +20,7 @@
         display: flex;
         align-items: center;
         letter-spacing: 0.03em;
-        background-color: var(--backgroundColorSecondary);
+        background-color: $colorBackgroundSecondary;
         border: 1px solid #ffffff4d;
         border-radius: 4px;
         color: #ffffff99;
@@ -31,18 +31,18 @@
         outline: none;
         &:focus-within,
         &:hover {
-            border-color: var(--selectionColor);
+            border-color: $colorSelection;
             transition: var(--transitionInputLabel);  
         }
     }
     &__icon {
-        fill: var(--colorWhite);
-        background: var(--selectionColor);
+        fill: $colorIconAlt;
+        background: $colorSelection;
         transition: var(--transitionBtnIcon);    
     }
     &__button {
         height: 50px;
-        background: var(--selectionColor);
+        background: $colorSelection;
         box-shadow: 0px 4px 4px #00000026;
         border-radius: 4px;
         border-style: none;
@@ -54,7 +54,7 @@
         justify-content: center;
         text-align: center;
         letter-spacing: 0.06em;
-        color: var(--colorWhite);
+        color: $colorFontAlt;
         width: 200px;
         height: 50px;
         gap: 24px;
@@ -63,14 +63,14 @@
         outline: none;
         &:hover,
         &:focus {
-            background: var(--colorAlmostWhite);
-            color: var(--fontColorMain);
+            background: $colorBackgroundTertiary;
+            color: $colorFontPrimary;
             transition: var(--transitionButton);    
         }
         &:hover .newsletter-signup__icon,
         &:focus .newsletter-signup__icon {
-            background: var(--colorAlmostWhite);
-            fill: var(--selectionColor);
+            background: $colorBackgroundTertiary;
+            fill: $colorSelection;
             transition: var(--transitionBtnIcon);  
         }
     }

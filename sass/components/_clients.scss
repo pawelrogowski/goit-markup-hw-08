@@ -2,14 +2,18 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 0 15px;
+    &__container {
+        @extend .clients;
+        width: 1200px;
+        margin: 0 auto;
+    }
     &__heading {
         font-weight: 700;
         font-size: 36px;
         line-height: 1.17;
         text-align: center;
         letter-spacing: 0.03em;
-        color: var(--fontColorMain);
+        color: $colorFontPrimary;
     }
     &__list {
         display: flex;
@@ -17,7 +21,7 @@
         gap: 30px;
     }
     &__icon {
-        fill: var(--colorIconInactive);
+        fill: $colorIconPrimary;
         transition: var(--transitionIconClient);
     }
     &__link {
@@ -26,8 +30,8 @@
         align-items: center;
         width: 170px;
         height: 92px;
-        background-color: var(--colorWhite);
-        border: 1px solid var(--colorIconInactive);
+        background-color: $colorBackgroundPrimary;
+        border: 1px solid $colorBorderPrimary;
         border-radius: 4px;
         transition: var(--transitionIconClient);
         outline: none;
@@ -35,8 +39,8 @@
         &:focus,
         &:hover .clients__icon,
         &:focus .clients__icon {
-            border-color: var(--selectionColor);
-            fill: var(--selectionColor);
+            border-color: $colorSelection;
+            fill: $colorSelection;
             transition: var(--transitionIconClient);   
         } 
     }

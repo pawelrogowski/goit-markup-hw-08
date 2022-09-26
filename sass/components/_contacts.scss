@@ -1,7 +1,7 @@
 .contacts {
     display: flex;
     align-items: center;
-    color: var(--fontColorSecondary);
+    color: $colorFontSecondary;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.142857143;
@@ -12,11 +12,11 @@
         gap: 10px;   
     }
     &__icon {
-        fill: var(--fontColorSecondary); 
+        fill: $colorFontSecondary; 
     }
     &__link:hover .contacts__icon,
     &__link:focus .contacts__icon {
-      fill: var(--selectionColor);
+      fill: $colorSelection;
       transition: var(--transitionIcon);
     }
     &__list {

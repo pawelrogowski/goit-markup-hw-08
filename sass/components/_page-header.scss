@@ -2,10 +2,34 @@
     display: flex;
     align-items: center;
     padding: 0 15px;
+    &__container {
+        @extend .page-header;
+        width: 1200px;
+        margin: 0 auto;
+    }
     &__logo {
-        margin-right: 93px;
-      }
+        margin-right: 93px;    
+    }
     &__navigation {
         margin-right: 345px;
-      }
-  }
+    }
+    &__logo {
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.192307692;
+        letter-spacing: 0.03em;
+        color: $colorSelection;
+        text-decoration: none; 
+    }
+    &__navigation {
+        display: flex;
+        align-items: center;
+        color: $colorFontPrimary;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.142857143;
+        letter-spacing: 0.02em;
+    }
+}

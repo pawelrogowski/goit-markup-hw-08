@@ -7,17 +7,19 @@ h6,
 ul,
 p,
 figure,
-figcaption, {
+figcaption {
     margin: 0;
     padding: 0;
 }
-
+ul {
+    list-style: none;
+}
 img {
     display: block;
 }
 
 body {
     font-family: "Roboto", "Raleway", sans-serif;
-    color: var(--fontColorMain);
-    background: var(--colorWhite);
-  }
+    color: $colorFontPrimary;
+    background:$colorBackgroundPrimary;
+}
