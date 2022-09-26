@@ -1,24 +1,26 @@
+$colorBackgroundPrimary: #ffffff;
+$colorBackgroundSecondary: #2f303a;
+$colorBackgroundTertiary:#f5f4fa;
+$colorFontPrimary:#212121;
+$colorFontSecondary:#757575;
+$colorFontTertiary:#ffffff99;
+$colorFontAlt:#fff;
+$colorSelection:#2196f3;
+$colorIconPrimary:#afb1b8;
+$colorIconSecondary:#ffffff1a;
+$colorIconAlt:#ffffff;
+$colorOverlayPrimary:#2196f3e6;
+$colorOverlaySecondary: #2f303a66; 
+$colorOverlayTertiary:#2f303acc;
+$colorBackdrop: #00000033;
+$colorBorderPrimary:#afb1b8;
+$colorBorderSecondary:#2f303a66;
+$colorBorderTertiary:#ececec;
+$colorInputBorderPrimary:#00000033;
+$colorInputBorderSecondary:#ffffff4d;
+$colorPlaceholder:#75757580;
+
 :root {
-    /* colors */
-    --backgroundColorMain: #e5e5e5;
-    --backgroundColorSecondary: #2f303a;
-    --fontColorMain: #212121;
-    --fontColorSecondary: #757575;
-    --fontColorGrayTransp: #75757580;
-    --selectionColor: #2196f3;
-    --colorWhite: #ffffff;
-    --colorWhiteTransp: #ffffff99;
-    --colorAlmostWhite: #f5f4fa;
-    --colorGrey: #ececec;
-    --colorAlmostWhiteTwo: #eeeeee;
-    --colorIconInactive: #afb1b8;
-    --colorIconBackgroundFooter: #ffffff1a;
-    --colorBackgroundImage: #2f303a66;
-    --colorBackgroundFigcaption: #2f303acc;
-    --colorBackgroundOverlay: #2196f3e6;
-    --colorBlackTransp: #00000033;
-  
-    /* transitions */
     --timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
     --duration: 250ms;
     --transitionButton: box-shadow var(--duration) var(--timingFunction), background var(--duration) var(--timingFunction),
