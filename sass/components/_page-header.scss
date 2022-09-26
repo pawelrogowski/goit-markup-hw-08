@@ -7,9 +7,6 @@
         width: 1200px;
         margin: 0 auto;
     }
-    &__logo {
-        margin-right: 93px;    
-    }
     &__navigation {
         margin-right: 345px;
     }
@@ -21,7 +18,8 @@
         line-height: 1.192307692;
         letter-spacing: 0.03em;
         color: $colorSelection;
-        text-decoration: none; 
+        text-decoration: none;
+        margin-right: 93px;  
     }
     &__navigation {
         display: flex;
