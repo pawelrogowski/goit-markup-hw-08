@@ -1,41 +1,40 @@
 {
-  "arrowParens": "always",
-  "bracketSpacing": true,
-  "endOfLine": "lf",
-  "htmlWhitespaceSensitivity": "css",
-  "insertPragma": false,
-  "jsxBracketSameLine": false,
-  "jsxSingleQuote": false,
-  "printWidth": 80,
-  "proseWrap": "preserve",
-  "quoteProps": "as-needed",
-  "requirePragma": false,
-  "semi": true,
-  "singleQuote": false,
-  "tabWidth": 2,
-  "trailingComma": "es5",
-  "useTabs": false,
-  "vueIndentScriptAndStyle": false,
-  "parser": "babel-flow",
-  "bracketSameLine": true,
-  "overrides": [
-    {
-      "files": "*.html",
-      "options": {
-        "printWidth": 800,
-        "endOfLine": "auto",
-        "parser": "html",
-        "htmlWhitespaceSensitivity": "strict",
-        "bracketSameLine": true
-      }
-    },
-    {
-      "files": "*.css,.scss",
-      "options": {
-        "parser": "css",
-        "printWidth": 150,
-        "tabWidth": 2
-      }
-    }
-  ]
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false,
+    "bracketSameLine": true,
+    "overrides": [
+        {
+            "files": "*.html",
+            "options": {
+                "printWidth": 300,
+                "endOfLine": "auto",
+                "parser": "html",
+                "htmlWhitespaceSensitivity": "strict",
+                "bracketSameLine": true
+            }
+        },
+        {
+            "files": "*.css",
+            "options": {
+                "parser": "css",
+                "printWidth": 150,
+                "tabWidth": 2
+            }
+        }
+    ]
 }
