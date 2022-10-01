@@ -1,7 +1,7 @@
 .link {
     color: inherit;
     text-decoration: none;
-    transition: var(--transitionLink);
+    transition: $transitionLink;
     &__clients {
         display: flex;
         justify-content: center;
@@ -17,10 +17,10 @@
     &:hover,
     &:focus {
         color: $colorSelection;
-        transition: var(--transitionLink);
+        transition: $transitionLink;
     }
     &--underline {
-        text-decoration: underline;  
+        text-decoration: underline;
     }
     &--active {
         @extend .link;
@@ -29,13 +29,13 @@
             position: absolute;
             display: block;
             content: "";
-            top: 44px;
+            top: 45px;
             width: 100%;
             height: 4px;
             border-radius: 2px;
             background-color: $colorSelection;
             cursor: unset;
-            pointer-events: none;   
+            pointer-events: none;
         }
     }
 }

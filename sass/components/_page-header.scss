@@ -1,33 +1,83 @@
+@import "../utils/mixins";
 .page-header {
     display: flex;
     align-items: center;
-    padding: 0 15px;
     &__container {
         @extend .page-header;
-        width: 1200px;
-        margin: 0 auto;
-    }
-    &__navigation {
-        margin-right: 345px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-width: $screenMobile;
+        max-width: $screenDesktop;
+        padding: 0 15px;
+        height: 60px;
     }
     &__logo {
+        @include fontProperties(
+            700,
+            24px,
+            28px,
+            0.03em,
+            $colorSelection
+        );
         font-family: "Raleway";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.192307692;
-        letter-spacing: 0.03em;
-        color: $colorSelection;
-        text-decoration: none;
-        margin-right: 93px;  
     }
-    &__navigation {
-        display: flex;
-        align-items: center;
-        color: $colorFontPrimary;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.142857143;
-        letter-spacing: 0.02em;
+    &__menu {
+        background: none;
+        border: none;
+    }
+    &__menu-icon {
+        fill: $colorFontPrimary;
+        transition: $transitionIcon;
+        &:hover,
+        &:focus {
+            fill: $colorSelection;
+            transition: $transitionIcon;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .page-header {
+        &__container {
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__navigation {
+            @include fontProperties(
+                500,
+                14px,
+                16px,
+                0.02em,
+                $colorFontPrimary
+            );
+            display: flex;
+            align-items: center;
+        }
+        &__logo {
+            margin-right: 83px;
+        }
+        &__menu {
+            display: none;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .page-header {
+        &__container {
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        &__logo {
+            @include fontProperties(
+                null,
+                26px,
+                1.192,
+                0.03em,
+                $colorSelection
+            );
+            margin-right: 93px;
+        }
     }
 }

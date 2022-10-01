@@ -1,22 +1,20 @@
 .features {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
     &__container {
         @extend .features;
-        width: 1200px;
-        margin: 0 auto; 
-    }
-    &__item {
+        min-width: $screenMobile;
+        max-width: $screenDesktop;
+        padding: 0 15px;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px;
+        // margin: 0 auto;
     }
     &__icon-box {
         display: flex;
         align-items: center;
         justify-content: center;
         background: $colorBackgroundTertiary;
-        width: 270px;
+        width: 100%;
         height: 120px;
         border-radius: 4px;
     }
@@ -25,6 +23,7 @@
         height: 70px;
     }
     &__heading {
+        text-align: center;
         font-weight: 700;
         font-size: 14px;
         line-height: 1.142857143;
@@ -39,5 +38,87 @@
         letter-spacing: 0.03em;
         color: $colorFontSecondary;
         margin: 0px;
+    }
+}
+@media screen and (min-width: $screenTablet) {
+    .features {
+        &__container {
+            margin: 0 auto;
+            transition: 250ms;
+        }
+        &__icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $colorBackgroundTertiary;
+            width: 100%;
+            height: 120px;
+            border-radius: 4px;
+        }
+        &__item {
+            flex-basis: calc((100% - 30px * 1) / (1 + 1));
+        }
+        &__icon {
+            width: 70px;
+            height: 70px;
+        }
+        &__heading {
+            text-align: justify;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.142857143;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: $colorFontPrimary;
+            padding: 30px 0 10px 0;
+        }
+        &__description {
+            font-size: 14px;
+            line-height: 1.714285714;
+            letter-spacing: 0.03em;
+            color: $colorFontSecondary;
+            margin: 0px;
+        }
+    }
+}
+@media screen and (min-width: $screenDesktop) {
+    .features {
+        &__container {
+            flex-wrap: nowrap;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+        }
+        &__icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $colorBackgroundTertiary;
+            width: 270px;
+            height: 120px;
+            border-radius: 4px;
+            transition: 250ms;
+        }
+        &__icon {
+            width: 70px;
+            height: 70px;
+        }
+        &__heading {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.142857143;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: $colorFontPrimary;
+            padding: 30px 0 10px 0;
+        }
+        &__description {
+            font-size: 14px;
+            line-height: 1.714285714;
+            letter-spacing: 0.03em;
+            color: $colorFontSecondary;
+            margin: 0px;
+        }
     }
 }

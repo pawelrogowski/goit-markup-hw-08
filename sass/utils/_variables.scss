@@ -1,45 +1,62 @@
+//colors
 $colorBackgroundPrimary: #ffffff;
 $colorBackgroundSecondary: #2f303a;
-$colorBackgroundTertiary:#f5f4fa;
-$colorFontPrimary:#212121;
-$colorFontSecondary:#757575;
-$colorFontTertiary:#ffffff99;
-$colorFontAlt:#fff;
-$colorSelection:#2196f3;
-$colorIconPrimary:#afb1b8;
-$colorIconSecondary:#ffffff1a;
-$colorIconAlt:#ffffff;
-$colorOverlayPrimary:#2196f3e6;
-$colorOverlaySecondary: #2f303a66; 
-$colorOverlayTertiary:#2f303acc;
+$colorBackgroundTertiary: #f5f4fa;
+$colorFontPrimary: #212121;
+$colorFontSecondary: #757575;
+$colorFontTertiary: #ffffff99;
+$colorFontAlt: #fff;
+$colorSelection: #2196f3;
+$colorIconPrimary: #afb1b8;
+$colorIconSecondary: #ffffff1a;
+$colorIconAlt: #ffffff;
+$colorOverlayPrimary: #2196f3e6;
+$colorOverlaySecondary: #2f303a66;
+$colorOverlayTertiary: #2f303acc;
 $colorBackdrop: #00000033;
-$colorBorderPrimary:#afb1b8;
-$colorBorderSecondary:#2f303a66;
-$colorBorderTertiary:#ececec;
-$colorInputBorderPrimary:#00000033;
-$colorInputBorderSecondary:#ffffff4d;
-$colorPlaceholder:#75757580;
+$colorBorderPrimary: #afb1b8;
+$colorBorderSecondary: #2f303a66;
+$colorBorderTertiary: #ececec;
+$colorInputBorderPrimary: #00000033;
+$colorInputBorderSecondary: #ffffff4d;
+$colorPlaceholder: #75757580;
 
-:root {
-    --timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
-    --duration: 250ms;
-    --transitionButton: box-shadow var(--duration) var(--timingFunction), background var(--duration) var(--timingFunction),
-      color var(--duration) var(--timingFunction);
-    --transitionBtnIcon: box-shadow var(--duration) var(--timingFunction), background var(--duration) var(--timingFunction),
-      color var(--duration) var(--timingFunction), fill var(--duration) var(--timingFunction);
-    --transitionLink: color var(--duration) var(--timingFunction);
-    --transitionIcon: fill var(--duration) var(--timingFunction);
-    --transitionIconSocialFooter: background-color var(--duration) var(--timingFunction);
-    --transitionIconSocial: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
-    --transitionIconClient: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
-    --transitionCard: box-shadow var(--duration) var(--timingFunction);
-    --transitionCardOverlay: transform var(--duration) var(--timingFunction);
-    --transitionIconModalClose: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction),
-      background-color var(--duration) var(--timingFunction);
-    --transitionBackdrop: opacity var(--duration) var(--timingFunction), visibility var(--duration) var(--timingFunction);
-    --transitionInputLabel: border-color var(--duration) var(--timingFunction);
-    --transitionCheckbox: fill var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction),
-      border-color var(--duration) var(--timingFunction);
-    --transitionLinkUnderline: text-decoration-thickness var(--duration) var(--timingFunction);
-    --transitionFormTextInput: fill var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
-  }
+//screen breakpoints
+$screenMobile: 480px;
+$screenTablet: 768px;
+$screenDesktop: 1200px;
+
+//transitions
+$commonDuration: 250ms;
+$commonTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+$commonTransitionValues: $commonDuration
+    $commonTimingFunction;
+
+$transitionButton: box-shadow $commonTransitionValues,
+    background $commonTransitionValues,
+    color $commonTransitionValues;
+$transitionButtonIcon: box-shadow $commonTransitionValues,
+    background $commonTransitionValues,
+    color $commonTransitionValues,
+    fill $commonTransitionValues;
+$transitionLink: color $commonTransitionValues;
+$transitionIcon: fill $commonTransitionValues;
+$transitionIconBackground: background-color
+    $commonTransitionValues;
+$transitionIconAndBackground: fill $commonTransitionValues,
+    background-color $commonTransitionValues;
+$transitionIconAndBorder: fill $commonTransitionValues,
+    border-color $commonTransitionValues;
+$transitionShadow: box-shadow $commonTransitionValues;
+$transitionTransform: transform $commonTransitionValues;
+$transitionModal: fill $commonTransitionValues,
+    border-color $commonTransitionValues,
+    background-color $commonTransitionValues;
+$transitionBackdrop: opacity $commonTransitionValues,
+    visibility $commonTransitionValues;
+$transitionInputBorder: border-color $commonTransitionValues;
+$transitionCheckbox: fill $commonTransitionValues,
+    background-color $commonTransitionValues,
+    border-color $commonTransitionValues;
+$transitionUnderline: text-decoration-thickness
+    $commonTransitionValues;

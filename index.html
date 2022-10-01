@@ -14,8 +14,8 @@
     <header class="section__page-header">
       <div class="page-header">
         <div class="page-header__container">
-          <a class="page-header__logo" href="./index.html"> Web<span class="logo logo--dark">Studio</span> </a>
           <nav class="page-header__navigation">
+            <a class="page-header__logo" href="./index.html"> Web<span class="logo logo--dark">Studio</span> </a>
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a class="link--active" href="./index.html">Agencja</a>
@@ -31,7 +31,7 @@
           <div class="contacts">
             <ul class="contacts__list">
               <li class="contacts__item">
-                <a class="contacts__link link" href="emailto:info@devstudio.com">
+                <a class="contacts__link" href="emailto:info@devstudio.com">
                   <svg class="contacts__icon" width="16px" height="12px">
                     <use href="./images/icons.svg#icon-envelope"></use>
                   </svg>
@@ -39,7 +39,7 @@
                 </a>
               </li>
               <li class="contacts__item">
-                <a class="contacts__link link" href="tel:+48111111111">
+                <a class="contacts__link" href="tel:+48111111111">
                   <svg class="contacts__icon" width="10px" height="16px">
                     <use href="./images/icons.svg#icon-smartphone"></use>
                   </svg>
@@ -48,6 +48,11 @@
               </li>
             </ul>
           </div>
+          <button type="button" class="page-header__menu js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="page-header__menu-icon" width="24px" height="46px">
+              <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -129,6 +134,16 @@
           </div>
         </div>
       </section>
+      <script src="./js/modal.js"></script>
+      <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <button type="button" class="js-close-menu"></button>
+      </div>
+      <script src="./js/mobile-menu.js"></script>
+    </main>
+  </body>
+</html>
+<!-- 
+      
       <section class="section__our-team">
         <div class="our-team">
           <div class="our-team__container">
@@ -396,7 +411,4 @@
           <button class="modal-window__button" type="submit">Wyślij</button>
         </form>
       </div>
-    </div>
-    <script src="./js/modal.js"></script>
-  </body>
-</html>
+    </div> -->

@@ -7,11 +7,17 @@
     line-height: 1.142857143;
     letter-spacing: 0.02em;
     &__list {
-        display: flex;
-        align-items: center;
-        gap: 46px;
-      }
+        display: none;
+    }
     &__item {
         position: relative;
-      }
-  }
+    }
+}
+@media screen and (min-width: 768px) {
+    .navigation {
+        &__list {
+            gap: 60px;
+            display: flex;
+        }
+    }
+}

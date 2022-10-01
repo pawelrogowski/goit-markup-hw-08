@@ -1,45 +1,54 @@
 .our-speciality {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+    display: none;
     &__container {
         @extend .our-speciality;
-        width: 1200px;
+        width: $screenDesktop;
         margin: 0 auto;
     }
-    &__heading {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 42px;
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: #212121;
-    }
-    &__list {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-    }
-    &__item {
+}
+@media screen and (min-width: $screenDesktop) {
+    .our-speciality {
         display: flex;
         flex-direction: column;
-        position: relative;
-    }
-    &__image {
-        display: block;
-    }
-    &__caption {
-        position: absolute;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.142857143;
-        text-align: center;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        padding: 27px 0px;
-        background: $colorOverlayTertiary;
-        color: $colorFontAlt;
-        bottom: 0;
-        width: 100%;
+        gap: 50px;
+        &__heading {
+            @include fontProperties(
+                700,
+                36px,
+                42px,
+                0.03em,
+                $colorFontPrimary
+            );
+            text-align: center;
+        }
+        &__list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        &__image {
+            display: block;
+        }
+        &__caption {
+            @include fontProperties(
+                700,
+                14px,
+                1.1428,
+                0.03em,
+                $colorFontAlt
+            );
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 27px 0px;
+            background: $colorOverlayTertiary;
+            text-align: center;
+            text-transform: uppercase;
+        }
     }
 }

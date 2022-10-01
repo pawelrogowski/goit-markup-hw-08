@@ -1,27 +1,60 @@
-.contacts {
-    display: flex;
-    align-items: center;
-    color: $colorFontSecondary;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.142857143;
-    letter-spacing: 0.02em;
-    &__link {
+@media screen and (max-width: $screenTablet) {
+    .contacts {
+        display: none;
+    }
+}
+@media screen and (min-width: $screenTablet) {
+    .contacts {
         display: flex;
         align-items: center;
-        gap: 10px;   
+        justify-self: flex-end;
+        &__icon {
+            fill: $colorFontSecondary;
+        }
+        &__list {
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            gap: 8px;
+        }
+        &__text {
+            @include fontProperties(
+                500,
+                12px,
+                14px,
+                0.02em,
+                $colorFontSecondary
+            );
+        }
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            &:hover .contacts__icon,
+            &:focus .contacts__icon {
+                fill: $colorSelection;
+                transition: $transitionIcon;
+            }
+            &:hover .contacts__text,
+            &:focus .contacts__text {
+                color: $colorSelection;
+                transition: $transitionLink;
+            }
+        }
     }
-    &__icon {
-        fill: $colorFontSecondary; 
-    }
-    &__link:hover .contacts__icon,
-    &__link:focus .contacts__icon {
-      fill: $colorSelection;
-      transition: var(--transitionIcon);
-    }
-    &__list {
-        display: flex;
-        align-content: center;
-        gap: 30px;
+}
+@media screen and (min-width: $screenDesktop) {
+    .contacts {
+        &__list {
+            flex-direction: row;
+            gap: 30px;
+        }
+        &__text {
+            color: $colorFontSecondary;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.142857143;
+            letter-spacing: 0.02em;
+        }
     }
 }

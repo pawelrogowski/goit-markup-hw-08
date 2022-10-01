@@ -17,9 +17,12 @@ ul {
 img {
     display: block;
 }
+a {
+    text-decoration: none;
+}
 
 body {
     font-family: "Roboto", "Raleway", sans-serif;
     color: $colorFontPrimary;
-    background:$colorBackgroundPrimary;
+    background: $colorBackgroundPrimary;
 }
