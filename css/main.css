@@ -35,7 +35,6 @@ body {
 }
 .section__container {
   max-width: 1600px;
-  min-width: 480px;
 }
 .section__page-header {
   border-bottom: 1px solid #ececec;

@@ -2,7 +2,7 @@
     background: $colorBackgroundSecondary;
     &__container {
         max-width: 1600px;
-        min-width: $screenMobile;
+        // min-width: $screenMobile;
     }
     &__page-header {
         border-bottom: 1px solid $colorBorderTertiary;
