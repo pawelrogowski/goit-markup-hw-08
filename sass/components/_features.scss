@@ -1,7 +1,7 @@
 .features {
     &__container {
         @extend .features;
-        min-width: $screenMobile;
+        // min-width: $screenMobile;
         max-width: $screenDesktop;
         padding: 0 15px;
         display: flex;
