@@ -9,6 +9,7 @@
         width: 100%;
         // min-width: $screenMobile;
         max-width: $screenDesktop;
+        min-width: $ScreenMinWidth;
         padding: 0 15px;
         height: 60px;
     }
