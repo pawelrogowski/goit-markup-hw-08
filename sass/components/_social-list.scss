@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     &__icon {
         width: 44px;
         height: 44px;
@@ -40,5 +40,9 @@
             transition: var(--transitionIconSocial);
         }
     }
-
+}
+@media screen and (min-width: $screenDesktop) {
+    .social-list {
+        margin-bottom: 30px;
+    }
 }

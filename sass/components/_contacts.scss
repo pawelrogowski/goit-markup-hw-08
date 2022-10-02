@@ -43,6 +43,7 @@
         }
     }
 }
+
 @media screen and (min-width: $screenDesktop) {
     .contacts {
         &__list {
@@ -50,11 +51,13 @@
             gap: 30px;
         }
         &__text {
-            color: $colorFontSecondary;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 1.142857143;
-            letter-spacing: 0.02em;
+            @include fontProperties(
+                null,
+                14px,
+                1.142,
+                0.02em,
+                $colorFontSecondary
+            );
         }
     }
 }

@@ -1,49 +1,101 @@
 .our-team {
+    min-width: $ScreenMinWidth;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
     &__container {
         @extend .our-team;
-        width: 1200px;
-        margin: 0 auto;
+        width: 100%;
+        padding: 0 15px;
     }
     &__heading {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 42px;
         text-align: center;
-        letter-spacing: 0.03em;
-        color: var(--fontColorMain);
+        @include fontProperties(
+            700,
+            28px,
+            33px,
+            0.03em,
+            $colorFontPrimary
+        );
     }
     &__list {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         gap: 30px;
     }
     &__item {
         display: flex;
         flex-direction: column;
-        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%),
+            0px 1px 1px rgb(0 0 0 / 14%),
+            0px 2px 1px rgb(0 0 0 / 20%);
         background-color: $colorBackgroundPrimary;
     }
     &__portrait {
         margin-bottom: 30px;
+        width: 100%;
+        height: 100%;
     }
     &__person-name {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.1875;
-        letter-spacing: 0.03em;
-        margin: 0 0 10px 0;
         text-align: center;
+        margin-bottom: 10px;
+        @include fontProperties(
+            500,
+            16px,
+            19px,
+            0.03em,
+            $colorFontPrimary
+        );
     }
     &__person-position {
         text-align: center;
-        color: $colorFontSecondary;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.1875;
-        letter-spacing: 0.03em;
         margin-bottom: 16px;
+        @include fontProperties(
+            400,
+            16px,
+            19px,
+            0.03em,
+            $colorFontSecondary
+        );
     }
-  }
+}
+@media screen and (min-width: $screenTablet) {
+    .our-team {
+        &__list {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        &__item {
+            flex-basis: calc((100% - 30px * 1) / 2);
+        }
+    }
+}
+@media screen and (min-width: $screenDesktop) {
+    .our-team {
+        &__container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        &__list {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 30px;
+        }
+        &__heading {
+            text-align: center;
+            @include fontProperties(
+                700,
+                36px,
+                42px,
+                0.03em,
+                $colorFontPrimary
+            );
+        }
+    }
+}

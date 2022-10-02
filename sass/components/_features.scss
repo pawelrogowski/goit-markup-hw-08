@@ -3,6 +3,7 @@
         @extend .features;
         // min-width: $screenMobile;
         max-width: $screenDesktop;
+        min-width: $ScreenMinWidth;
         padding: 0 15px;
         display: flex;
         flex-wrap: wrap;
@@ -44,7 +45,6 @@
     .features {
         &__container {
             margin: 0 auto;
-            transition: 250ms;
         }
         &__icon-box {
             display: flex;

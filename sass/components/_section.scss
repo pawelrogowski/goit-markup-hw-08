@@ -1,6 +1,7 @@
 .section {
     background: $colorBackgroundSecondary;
     &__container {
+        min-width: $ScreenMinWidth;
         max-width: 1600px;
         // min-width: $screenMobile;
     }
@@ -17,7 +18,7 @@
         padding: 0px 0 60px 0;
     }
     &__our-team {
-        padding: 94px 0;
+        padding: 60px 0;
         background-color: $colorBackgroundTertiary;
     }
     &__clients {
@@ -38,6 +39,9 @@
         }
         &__features {
             padding: 94px 0px;
+        }
+        &__our-team {
+            padding: 94px 0;
         }
     }
 }
