@@ -22,7 +22,7 @@
         background-color: $colorBackgroundTertiary;
     }
     &__clients {
-        padding: 94px 0;
+        padding: 60px 0;
     }
     &__page-footer {
         background: $colorBackgroundSecondary;
@@ -41,6 +41,9 @@
             padding: 94px 0px;
         }
         &__our-team {
+            padding: 94px 0;
+        }
+        &__clients {
             padding: 94px 0;
         }
     }
