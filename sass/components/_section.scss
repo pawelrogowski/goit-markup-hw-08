@@ -31,7 +31,7 @@
         padding: 60px 0px;
     }
     &__gallery {
-        padding: 94px 0;
+        padding: 60px 0;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -46,6 +46,9 @@
             padding: 94px 0;
         }
         &__clients {
+            padding: 94px 0;
+        }
+        &__gallery {
             padding: 94px 0;
         }
     }
