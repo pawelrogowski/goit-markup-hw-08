@@ -2,5 +2,5 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    transition: var(--transitionBackdrop);
+    transition: $transitionBackdrop;
 }
