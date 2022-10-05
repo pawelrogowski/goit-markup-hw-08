@@ -1,272 +1,281 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
-        <link rel="stylesheet" href="./css/main.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
-        <title>Portfolio</title>
-    </head>
-    <body>
-        <header class="page-header">
-            <div class="page-header__container">
-                <a class="page-header__logo" href="./index.html"> Web<span class="logo logo--dark">Studio</span> </a>
-                <nav class="page-header__navigation">
-                    <ul class="navigation">
-                        <li class="navigation__item">
-                            <a class="link" href="./index.html">Agencja</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="link--active" href="./portfolio.html">Portfolio</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="link" href="./index.html">Kontakt</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="contacts">
-                    <ul class="contacts__list">
-                        <li class="contacts__item">
-                            <a class="contacts__link link" href="emailto:info@devstudio.com">
-                                <svg class="contacts__icon" width="16px" height="12px">
-                                    <use href="./images/icons.svg#icon-envelope"></use>
-                                </svg>
-                                <span class="contacts__text">info@devstudio.com</span>
-                            </a>
-                        </li>
-                        <li class="contacts__item">
-                            <a class="contacts__link link" href="tel:+48111111111">
-                                <svg class="contacts__icon" width="10px" height="16px">
-                                    <use href="./images/icons.svg#icon-smartphone"></use>
-                                </svg>
-                                <span class="contacts__text">+48 111 111 111</span>
-                            </a>
-                        </li>
-                    </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="section__page-header">
+      <div class="page-header">
+        <div class="page-header__container">
+          <nav class="page-header__navigation">
+            <a class="page-header__logo" href="./index.html"> Web<span class="logo--dark">Studio</span> </a>
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="link" href="./index.html">Agencja</a>
+              </li>
+              <li class="navigation__item">
+                <a class="link--active" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="navigation__item">
+                <a class="link" href="./index.html">Kontakt</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link" href="emailto:info@devstudio.com">
+                  <svg class="contacts__icon" width="16px" height="12px">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  <span class="contacts__text">info@devstudio.com</span>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+48111111111">
+                  <svg class="contacts__icon" width="10px" height="16px">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  <span class="contacts__text">+48 111 111 111</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="page-header__menu js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="page-header__menu-icon" width="24px" height="46px">
+              <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- <section class="section__gallery">
+        <div class="grid__container">
+          <ul class="button-list list">
+            <li><button class="button" type="button">Wszystkie</button></li>
+            <li><button class="button" type="button">Strony</button></li>
+            <li><button class="button" type="button">Aplikacje</button></li>
+            <li><button class="button" type="button">Dizajn</button></li>
+            <li><button class="button" type="button">Marketing</button></li>
+          </ul>
+          <ul class="grid list">
+            <li class="grid__item">
+              <figure class="product-card">
+                <div class="product-card__anchor">
+                  <img class="product-card__image" src="./images/portfolio1.jpg" alt="internet site on a laptop screen picturing 3 people" width="370" height="294" />
+                  <p class="product-card__overlay">
+                    We're no strangers to love <br />
+                    You know the rules and so do I<br />
+                    A full commitment's what I'm thinking of<br />
+                    You wouldn't get this from any other guy
+                  </p>
                 </div>
+                <figcaption class="product-card__caption-box">
+                  <h6 class="product-card__heading">Technocrack</h6>
+                  <p class="product-card__description">Strona internetowa</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="grid__item">
+              <figure class="product-card">
+                <div class="product-card__anchor">
+                  <img class="product-card__image" src="./images/portfolio2.jpg" alt="two basketball players midair" width="370" height="294" />
+                  <p class="product-card__overlay">
+                    I just wanna tell you how I'm feeling <br />
+                    Gotta make you understand
+                  </p>
+                </div>
+                <figcaption class="product-card__caption-box">
+                  <h6 class="product-card__heading">Grafika New Orlean Vs Golden Star</h6>
+                  <p class="product-card__description">Dizajn</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="grid__item">
+              <figure class="product-card">
+                <div class="product-card__anchor">
+                  <img class="product-card__image" src="./images/portfolio3.jpg" alt="seafood restaurant logo with fancy fonts and picture of a fish" width="370" height="294" />
+                  <p class="product-card__overlay">
+                    Never gonna give you up <br />
+                    Never gonna let you down <br />
+                    Never gonna run around and desert you <br />
+                    Never gonna make you cry <br />
+                    Never gonna say goodbye <br />
+                    Never gonna tell a lie and hurt you
+                  </p>
+                </div>
+                <figcaption class="product-card__caption-box">
+                  <h6 class="product-card__heading">Restauracja Seafood</h6>
+                  <p class="product-card__description">Aplikacja</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="grid__item">
+              <figure class="product-card">
+                <div class="product-card__anchor">
+                  <img class="product-card__image" src="./images/portfolio4.jpg" alt="wireless headphones on a white background" width="370" height="294" />
+                  <p class="product-card__overlay">
+                    We've known each other for so long <br />
+                    Your heart's been aching, but <br />
+                    You're too shy to say it <br />
+                    Inside, we both know what's been going on <br />
+                    We know the game and we're gonna play it
+                  </p>
+                </div>
+                <figcaption class="product-card__caption-box">
+                  <h6 class="product-card__heading">Projekt Prime</h6>
+                  <p class="product-card__description">Marketing</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="grid__item">
+              <figure class="product-card">
+                <div class="product-card__anchor">
+                  <img class="product-card__image" src="./images/portfolio5.jpg" alt="white and beige cardbord boxes on a white background" width="370" height="294" />
+                  <p class="product-card__overlay">
+                    And if you ask me how I'm feeling <br />
+                    Don't tell me you're too blind to see
+                  </p>
+                </div>
+                <figcaption class="product-card__caption-box">
+                  <h6 class="product-card__heading">Projekt Boxes</h6>
+                  <p class="product-card__description">Aplikacja</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="grid__item">
+              <figure class="product-card">
+                <div class="product-card__anchor">
+                  <img class="product-card__image" src="./images/portfolio6.jpg " alt="pc screen showing world map and an inspirational quote" width="370" height="294" />
+                  <p class="product-card__overlay">
+                    Never gonna give you up <br />
+                    Never gonna let you down <br />
+                    Never gonna run around and desert you <br />
+                    Never gonna make you cry <br />
+                    Never gonna say goodbye <br />
+                    Never gonna tell a lie and hurt you
+                  </p>
+                </div>
+                <figcaption class="product-card__caption-box">
+                  <h6 class="product-card__heading">Inspiration has no Borders</h6>
+                  <p class="product-card__description">Strona internetowa</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="grid__item">
+              <figure class="product-card">
+                <div class="product-card__anchor">
+                  <img class="product-card__image" src="./images/portfolio7.jpg" alt="Opened magazine showing two pages with pictures and text" width="370" height="294" />
+                  <p class="product-card__overlay">
+                    Never gonna give you up <br />
+                    Never gonna let you down <br />
+                    Never gonna run around and desert you <br />
+                    Never gonna make you cry <br />
+                    Never gonna say goodbye <br />
+                    Never gonna tell a lie and hurt you
+                  </p>
+                </div>
+                <figcaption class="product-card__caption-box">
+                  <h6 class="product-card__heading">Magazyn Limited Edition</h6>
+                  <p class="product-card__description">Dizajn</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="grid__item">
+              <figure class="product-card">
+                <div class="product-card__anchor">
+                  <img class="product-card__image" src="./images/portfolio8.jpg" alt="hanging white label some black text on it" width="370" height="294" />
+                  <p class="product-card__overlay">
+                    (Ooh, give you up) <br />
+                    (Ooh, give you up) <br />
+                    Never gonna give, never gonna give <br />
+                    (Give you up) <br />
+                    Never gonna give, never gonna give <br />
+                    (Give you up)
+                  </p>
+                </div>
+                <figcaption class="product-card__caption-box">
+                  <h6 class="product-card__heading">Projekt LAB</h6>
+                  <p class="product-card__description">Marketing</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="grid__item">
+              <figure class="product-card">
+                <div class="product-card__anchor">
+                  <img class="product-card__image" src="./images/portfolio9.jpg" alt="person writing on a laptop, growing business header is seen on it's screen" height="294" />
+                  <p class="product-card__overlay">
+                    We've known each other for so long <br />
+                    Your heart's been aching, but <br />
+                    You're too shy to say it <br />
+                    Inside, we both know what's been going on <br />
+                    We know the game and we're gonna play it
+                  </p>
+                </div>
+                <figcaption class="product-card__caption-box">
+                  <h6 class="product-card__heading">Growing Business</h6>
+                  <p class="product-card__description">Aplikacja</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+    </main>
+    <footer class="section__page-footer">
+      <div class="page-footer">
+        <div class="page-footer__container">
+          <div class="page-footer__contacts">
+            <a class="page-footer__logo" href="./index.html"> Web<span class="logo--light">Studio</span> </a>
+            <address class="page-footer__address"> m. Warszawa, Aleje Jerozolimskie 21 </address>
+            <a class="page-footer__link link--underline" href="mailto:info@example.com">info@example.com</a>
+            <a class="page-footer__link" href="tel:+48111111111">+48 111 111 111</a>
+          </div>
+          <div class="page-footer__socials">
+            <h2 class="social-list__heading">Dołącz do nas</h2>
+            <div class="page-footer__social-list">
+              <a class="social-list__link" href="./index.html">
+                <svg class="social-list__icon social-list__icon--dark">
+                  <use href="./images/icons.svg#icon-instagram" width="20" height="20" x="12" y="12"></use>
+                </svg>
+              </a>
+              <a class="social-list__link" href="./index.html">
+                <svg class="social-list__icon social-list__icon--dark">
+                  <use href="./images/icons.svg#icon-twitter" width="20" height="20" x="12" y="12"></use>
+                </svg>
+              </a>
+              <a class="social-list__link" href="./index.html">
+                <svg class="social-list__icon social-list__icon--dark">
+                  <use href="./images/icons.svg#icon-facebook" width="20" height="20" x="12" y="12"></use>
+                </svg>
+              </a>
+              <a class="social-list__link" href="./index.html">
+                <svg class="social-list__icon social-list__icon--dark">
+                  <use href="./images/icons.svg#icon-linkedin" width="20" height="20" x="12" y="12"></use>
+                </svg>
+              </a>
             </div>
-        </header>
-        <main>
-            <section class="section__gallery">
-                <div class="grid__container">
-                    <ul class="button-list list">
-                        <li><button class="button" type="button">Wszystkie</button></li>
-                        <li><button class="button" type="button">Strony</button></li>
-                        <li><button class="button" type="button">Aplikacje</button></li>
-                        <li><button class="button" type="button">Dizajn</button></li>
-                        <li><button class="button" type="button">Marketing</button></li>
-                    </ul>
-                    <ul class="grid list">
-                        <li class="grid__item">
-                            <figure class="product-card">
-                                <div class="product-card__anchor">
-                                    <img class="product-card__image" src="./images/portfolio1.jpg" alt="internet site on a laptop screen picturing 3 people" width="370" height="294" />
-                                    <p class="product-card__overlay">
-                                        We're no strangers to love <br />
-                                        You know the rules and so do I<br />
-                                        A full commitment's what I'm thinking of<br />
-                                        You wouldn't get this from any other guy
-                                    </p>
-                                </div>
-                                <figcaption class="product-card__caption-box">
-                                    <h6 class="product-card__heading">Technocrack</h6>
-                                    <p class="product-card__description">Strona internetowa</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="grid__item">
-                            <figure class="product-card">
-                                <div class="product-card__anchor">
-                                    <img class="product-card__image" src="./images/portfolio2.jpg" alt="two basketball players midair" width="370" height="294" />
-                                    <p class="product-card__overlay">
-                                        I just wanna tell you how I'm feeling <br />
-                                        Gotta make you understand
-                                    </p>
-                                </div>
-                                <figcaption class="product-card__caption-box">
-                                    <h6 class="product-card__heading">Grafika New Orlean Vs Golden Star</h6>
-                                    <p class="product-card__description">Dizajn</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="grid__item">
-                            <figure class="product-card">
-                                <div class="product-card__anchor">
-                                    <img class="product-card__image" src="./images/portfolio3.jpg" alt="seafood restaurant logo with fancy fonts and picture of a fish" width="370" height="294" />
-                                    <p class="product-card__overlay">
-                                        Never gonna give you up <br />
-                                        Never gonna let you down <br />
-                                        Never gonna run around and desert you <br />
-                                        Never gonna make you cry <br />
-                                        Never gonna say goodbye <br />
-                                        Never gonna tell a lie and hurt you
-                                    </p>
-                                </div>
-                                <figcaption class="product-card__caption-box">
-                                    <h6 class="product-card__heading">Restauracja Seafood</h6>
-                                    <p class="product-card__description">Aplikacja</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="grid__item">
-                            <figure class="product-card">
-                                <div class="product-card__anchor">
-                                    <img class="product-card__image" src="./images/portfolio4.jpg" alt="wireless headphones on a white background" width="370" height="294" />
-                                    <p class="product-card__overlay">
-                                        We've known each other for so long <br />
-                                        Your heart's been aching, but <br />
-                                        You're too shy to say it <br />
-                                        Inside, we both know what's been going on <br />
-                                        We know the game and we're gonna play it
-                                    </p>
-                                </div>
-                                <figcaption class="product-card__caption-box">
-                                    <h6 class="product-card__heading">Projekt Prime</h6>
-                                    <p class="product-card__description">Marketing</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="grid__item">
-                            <figure class="product-card">
-                                <div class="product-card__anchor">
-                                    <img class="product-card__image" src="./images/portfolio5.jpg" alt="white and beige cardbord boxes on a white background" width="370" height="294" />
-                                    <p class="product-card__overlay">
-                                        And if you ask me how I'm feeling <br />
-                                        Don't tell me you're too blind to see
-                                    </p>
-                                </div>
-                                <figcaption class="product-card__caption-box">
-                                    <h6 class="product-card__heading">Projekt Boxes</h6>
-                                    <p class="product-card__description">Aplikacja</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="grid__item">
-                            <figure class="product-card">
-                                <div class="product-card__anchor">
-                                    <img class="product-card__image" src="./images/portfolio6.jpg " alt="pc screen showing world map and an inspirational quote" width="370" height="294" />
-                                    <p class="product-card__overlay">
-                                        Never gonna give you up <br />
-                                        Never gonna let you down <br />
-                                        Never gonna run around and desert you <br />
-                                        Never gonna make you cry <br />
-                                        Never gonna say goodbye <br />
-                                        Never gonna tell a lie and hurt you
-                                    </p>
-                                </div>
-                                <figcaption class="product-card__caption-box">
-                                    <h6 class="product-card__heading">Inspiration has no Borders</h6>
-                                    <p class="product-card__description">Strona internetowa</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="grid__item">
-                            <figure class="product-card">
-                                <div class="product-card__anchor">
-                                    <img class="product-card__image" src="./images/portfolio7.jpg" alt="Opened magazine showing two pages with pictures and text" width="370" height="294" />
-                                    <p class="product-card__overlay">
-                                        Never gonna give you up <br />
-                                        Never gonna let you down <br />
-                                        Never gonna run around and desert you <br />
-                                        Never gonna make you cry <br />
-                                        Never gonna say goodbye <br />
-                                        Never gonna tell a lie and hurt you
-                                    </p>
-                                </div>
-                                <figcaption class="product-card__caption-box">
-                                    <h6 class="product-card__heading">Magazyn Limited Edition</h6>
-                                    <p class="product-card__description">Dizajn</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="grid__item">
-                            <figure class="product-card">
-                                <div class="product-card__anchor">
-                                    <img class="product-card__image" src="./images/portfolio8.jpg" alt="hanging white label some black text on it" width="370" height="294" />
-                                    <p class="product-card__overlay">
-                                        (Ooh, give you up) <br />
-                                        (Ooh, give you up) <br />
-                                        Never gonna give, never gonna give <br />
-                                        (Give you up) <br />
-                                        Never gonna give, never gonna give <br />
-                                        (Give you up)
-                                    </p>
-                                </div>
-                                <figcaption class="product-card__caption-box">
-                                    <h6 class="product-card__heading">Projekt LAB</h6>
-                                    <p class="product-card__description">Marketing</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li class="grid__item">
-                            <figure class="product-card">
-                                <div class="product-card__anchor">
-                                    <img class="product-card__image" src="./images/portfolio9.jpg" alt="person writing on a laptop, growing business header is seen on it's screen" height="294" />
-                                    <p class="product-card__overlay">
-                                        We've known each other for so long <br />
-                                        Your heart's been aching, but <br />
-                                        You're too shy to say it <br />
-                                        Inside, we both know what's been going on <br />
-                                        We know the game and we're gonna play it
-                                    </p>
-                                </div>
-                                <figcaption class="product-card__caption-box">
-                                    <h6 class="product-card__heading">Growing Business</h6>
-                                    <p class="product-card__description">Aplikacja</p>
-                                </figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-        <footer class="page-footer">
-            <div class="page-footer__container">
-                <div class="page-footer__contacts">
-                    <a class="page-footer__logo" href="./index.html"> Web<span class="logo logo--light">Studio</span> </a>
-                    <address class="page-footer__address"> m. Warszawa, Aleje Jerozolimskie 21 </address>
-                    <a class="page-footer__link link--underline" href="mailto:info@example.com">info@example.com</a>
-                    <a class="link page-footer__link" href="tel:+48111111111">+48 111 111 111</a>
-                </div>
-                <div class="page-footer__socials">
-                    <h2 class="social-list__heading">Dołącz do nas</h2>
-                    <div class="page-footer__social-list">
-                        <a class="social-list__link" href="./index.html">
-                            <svg class="social-list__icon social-list__icon--dark">
-                                <use href="./images/icons.svg#icon-instagram" width="20" height="20" x="12" y="12"></use>
-                            </svg>
-                        </a>
-                        <a class="social-list__link" href="./index.html">
-                            <svg class="social-list__icon social-list__icon--dark">
-                                <use href="./images/icons.svg#icon-twitter" width="20" height="20" x="12" y="12"></use>
-                            </svg>
-                        </a>
-                        <a class="social-list__link" href="./index.html">
-                            <svg class="social-list__icon social-list__icon--dark">
-                                <use href="./images/icons.svg#icon-facebook" width="20" height="20" x="12" y="12"></use>
-                            </svg>
-                        </a>
-                        <a class="social-list__link" href="./index.html">
-                            <svg class="social-list__icon social-list__icon--dark">
-                                <use href="./images/icons.svg#icon-linkedin" width="20" height="20" x="12" y="12"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <form class="newsletter-signup" name="newsletter-signup-form">
-                    <label class="newsletter-signup__label" for="input_email_newsletter">Zapisz się do Newslettera</label>
-                    <div class="newsletter-signup__box">
-                        <input class="newsletter-signup__textfield" id="input_email_newsletter" type="email" name="newsletter_email" placeholder="E-mail" />
-                        <button class="newsletter-signup__button" type="submit">
-                            Zapisz się
-                            <svg class="newsletter-signup__icon" width="24" height="24">
-                                <use href="./images/icons.svg#icon-send"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
+          </div>
+          <form class="newsletter-signup" name="newsletter-signup-form">
+            <label class="newsletter-signup__label" for="input_email_newsletter">Zapisz się do Newslettera</label>
+            <div class="newsletter-signup__box">
+              <input class="newsletter-signup__textfield" id="input_email_newsletter" type="email" name="newsletter_email" placeholder="E-mail" />
+              <button class="newsletter-signup__button" type="submit">
+                Zapisz się
+                <svg class="newsletter-signup__icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
             </div>
-        </footer>
-    </body>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

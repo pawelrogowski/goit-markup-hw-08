@@ -53,8 +53,13 @@
             0.03em,
             $colorFontTertiary
         );
-        transition: var(--transitionLink);
+        transition: $transitionLink;
         margin-bottom: 9px;
+        &:hover,
+        &:focus {
+            color: $colorSelection;
+            transition: $transitionLink;
+        }
     }
     &__socials {
         display: flex;
@@ -120,7 +125,6 @@
                 0.03em,
                 $colorFontTertiary
             );
-            transition: var(--transitionLink);
             margin-bottom: 9px;
         }
         &__socials {

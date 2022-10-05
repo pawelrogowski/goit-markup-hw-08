@@ -41,6 +41,8 @@ $transitionButtonIcon: box-shadow $commonTransitionValues,
     color $commonTransitionValues,
     fill $commonTransitionValues;
 $transitionLink: color $commonTransitionValues;
+$transitionIconAndLink: color $commonTransitionValues,
+    fill $commonTransitionValues;
 $transitionIcon: fill $commonTransitionValues;
 $transitionIconBackground: background-color
     $commonTransitionValues;

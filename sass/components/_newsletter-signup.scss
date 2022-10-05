@@ -34,18 +34,18 @@
         min-width: 290px;
         height: 50px;
         padding: 15px 16px;
-        transition: var(--transitionInputLabel);
+        transition: $transitionInputBorder;
         outline: none;
         &:focus-within,
         &:hover {
             border-color: $colorSelection;
-            transition: var(--transitionInputLabel);
+            transition: $transitionInputBorder;
         }
     }
     &__icon {
         fill: $colorIconAlt;
         background: $colorSelection;
-        transition: var(--transitionBtnIcon);
+        transition: $transitionButtonIcon;
     }
     &__button {
         height: 50px;
@@ -66,19 +66,19 @@
         height: 50px;
         gap: 24px;
         cursor: pointer;
-        transition: var(--transitionButton);
+        transition: $transitionButtonIcon;
         outline: none;
         &:hover,
         &:focus {
             background: $colorBackgroundTertiary;
             color: $colorFontPrimary;
-            transition: var(--transitionButton);
+            transition: $transitionButtonIcon;
         }
         &:hover .newsletter-signup__icon,
         &:focus .newsletter-signup__icon {
             background: $colorBackgroundTertiary;
             fill: $colorSelection;
-            transition: var(--transitionBtnIcon);
+            transition: $transitionButtonIcon;
         }
     }
 }

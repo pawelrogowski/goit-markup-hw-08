@@ -10,6 +10,7 @@
         justify-self: flex-end;
         &__icon {
             fill: $colorFontSecondary;
+            transition: $transitionIcon;
         }
         &__list {
             display: flex;
@@ -25,6 +26,7 @@
                 0.02em,
                 $colorFontSecondary
             );
+            transition: $transitionLink;
         }
         &__link {
             display: flex;
