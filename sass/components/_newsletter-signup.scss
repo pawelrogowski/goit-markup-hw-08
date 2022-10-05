@@ -1,30 +1,37 @@
 .newsletter-signup {
-    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     &__label {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.03em;
+        @include fontProperties(
+            700,
+            14px,
+            16px,
+            0.03em,
+            $colorFontAlt
+        );
         text-transform: uppercase;
-        color: $colorFontAlt;
-        display: block;
-        padding-bottom: 20px;
     }
     &__box {
-        display: inline-flex;
-        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
     }
     &__textfield {
         font-size: 16px;
         line-height: 20px;
-        display: flex;
         align-items: center;
         letter-spacing: 0.03em;
         background-color: $colorBackgroundSecondary;
         border: 1px solid #ffffff4d;
         border-radius: 4px;
         color: #ffffff99;
-        width: 350px;
+        width: 50%;
+        max-width: 450px;
+        min-width: 290px;
         height: 50px;
         padding: 15px 16px;
         transition: var(--transitionInputLabel);
@@ -32,13 +39,13 @@
         &:focus-within,
         &:hover {
             border-color: $colorSelection;
-            transition: var(--transitionInputLabel);  
+            transition: var(--transitionInputLabel);
         }
     }
     &__icon {
         fill: $colorIconAlt;
         background: $colorSelection;
-        transition: var(--transitionBtnIcon);    
+        transition: var(--transitionBtnIcon);
     }
     &__button {
         height: 50px;
@@ -65,13 +72,40 @@
         &:focus {
             background: $colorBackgroundTertiary;
             color: $colorFontPrimary;
-            transition: var(--transitionButton);    
+            transition: var(--transitionButton);
         }
         &:hover .newsletter-signup__icon,
         &:focus .newsletter-signup__icon {
             background: $colorBackgroundTertiary;
             fill: $colorSelection;
-            transition: var(--transitionBtnIcon);  
+            transition: var(--transitionBtnIcon);
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .newsletter-signup {
+        margin: 0px 202px;
+        &__textfield {
+            width: 450px;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .newsletter-signup {
+        align-items: flex-start;
+        align-self: flex-start;
+        margin: 0;
+        margin-top: 12px;
+        &__textfield {
+            width: 341px;
+        }
+        &__button {
+            display: inline-flex;
+        }
+        &__box {
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
         }
     }
 }

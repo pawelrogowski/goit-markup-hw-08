@@ -20,6 +20,7 @@
         transition: $transitionLink;
     }
     &--underline {
+        @extend .link
         text-decoration: underline;
     }
     &--active {

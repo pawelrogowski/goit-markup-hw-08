@@ -1,63 +1,155 @@
 .page-footer {
-    display: flex;
-    align-items: flex-start;
+    min-width: $ScreenMinWidth;
     &__container {
         @extend .page-footer;
-        width: 1200px;
+        $ScreenMinWidth: 320px;
+        max-width: 1200px;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
         margin: 0 auto;
+        gap: 60px;
     }
     &__logo {
         font-family: "Raleway";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.192307692;
-        letter-spacing: 0.03em;
-        color: $colorSelection;
-        text-decoration: none;
         margin-bottom: 20px;
+        @include fontProperties(
+            700,
+            24px,
+            28px,
+            0.03em,
+            $colorSelection
+        );
     }
     &__contacts {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-right: 70px;
+        @include fontProperties(
+            500,
+            14px,
+            1.142,
+            0.02em,
+            $colorFontSecondary
+        );
         display: flex;
-        align-items: flex-start;
-        color: $colorFontSecondary;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.142857143;
-        letter-spacing: 0.02em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     &__address {
+        @include fontProperties(
+            null,
+            14px,
+            1.714,
+            0.03em,
+            $colorFontAlt
+        );
         font-style: normal;
-        font-size: 14px;
-        line-height: 1.714285714;
-        letter-spacing: 0.03em;
-        color: $colorFontAlt;
         margin-bottom: 9px;
     }
     &__link {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.714285714;
-        letter-spacing: 0.03em;
-        color: $colorFontTertiary;
+        @include fontProperties(
+            400,
+            14px,
+            1.714,
+            0.03em,
+            $colorFontTertiary
+        );
         transition: var(--transitionLink);
         margin-bottom: 9px;
     }
     &__socials {
         display: flex;
         flex-direction: column;
-        margin-top: 12px;
-        margin-right: 78px;
+        align-items: center;
     }
     &__social-list {
         margin-bottom: 0;
         display: flex;
         justify-content: center;
         gap: 10px;
-        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .page-footer {
+        &__container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 51px;
+        }
+        &__logo {
+            font-family: "Raleway";
+            margin-bottom: 20px;
+            @include fontProperties(
+                700,
+                24px,
+                28px,
+                0.03em,
+                $colorSelection
+            );
+        }
+        &__contacts {
+            @include fontProperties(
+                500,
+                14px,
+                1.142,
+                0.02em,
+                $colorFontSecondary
+            );
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__address {
+            @include fontProperties(
+                null,
+                14px,
+                1.714,
+                0.03em,
+                $colorFontAlt
+            );
+            font-style: normal;
+            margin-bottom: 9px;
+        }
+        &__link {
+            @include fontProperties(
+                400,
+                14px,
+                1.714,
+                0.03em,
+                $colorFontTertiary
+            );
+            transition: var(--transitionLink);
+            margin-bottom: 9px;
+        }
+        &__socials {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            padding-right: auto;
+        }
+        &__social-list {
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .page-footer {
+        &__container {
+            gap: 70px;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+        }
+        &__contacts {
+            align-items: flex-start;
+        }
+        &__socials {
+            margin-top: 12px;
+        }
     }
 }

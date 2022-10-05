@@ -10,7 +10,6 @@
         padding: 0 15px;
     }
     &__heading {
-        text-align: center;
         @include fontProperties(
             700,
             28px,
@@ -18,12 +17,12 @@
             0.03em,
             $colorFontPrimary
         );
+        text-align: center;
     }
     &__list {
         display: flex;
-        justify-content: center;
-        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
     }
     &__item {
@@ -34,7 +33,7 @@
     }
     &__icon {
         fill: $colorIconPrimary;
-        transition: var(--transitionIconClient);
+        transition: $transitionIconAndBorder;
     }
     &__link {
         display: flex;
@@ -45,19 +44,19 @@
         background-color: $colorBackgroundPrimary;
         border: 1px solid $colorBorderPrimary;
         border-radius: 4px;
-        transition: var(--transitionIconClient);
+        transition: $transitionIconAndBorder;
         outline: none;
         &:hover,
         &:focus {
             border-color: $colorSelection;
             fill: $colorSelection;
-            transition: var(--transitionIconClient);
+            transition: $transitionIconAndBorder;
         }
         &:hover .clients__icon,
         &:focus .clients__icon {
             border-color: $colorSelection;
             fill: $colorSelection;
-            transition: var(--transitionIconClient);
+            transition: $transitionIconAndBorder;
         }
     }
 }
@@ -75,6 +74,15 @@
         }
         &__list {
             flex-wrap: nowrap;
+        }
+        &__heading {
+            @include fontProperties(
+                700,
+                36px,
+                42px,
+                0.03em,
+                $colorFontPrimary
+            );
         }
     }
 }

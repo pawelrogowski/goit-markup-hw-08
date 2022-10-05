@@ -10,21 +10,23 @@
         overflow: hidden;
         background-color: $colorBackgroundPrimary;
         fill: $colorIconPrimary;
-        transition: var(--transitionIconSocial);
+        transition: $transitionIconAndBackground;
         &--dark {
             background-color: $colorIconSecondary;
             fill: $colorFontAlt;
-            transition: var(--transitionIconSocialFooter);
+            transition: $transitionIconAndBackground;
         }
     }
     &__heading {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.142857143;
-        letter-spacing: 0.03em;
+        @include fontProperties(
+            700,
+            14px,
+            1.143,
+            0.03em,
+            $colorBackgroundTertiary
+        );
         text-transform: uppercase;
         text-align: start;
-        color: $colorBackgroundTertiary;
         margin-bottom: 20px;
     }
     &__link {
@@ -37,7 +39,7 @@
             fill: $colorIconAlt;
             background-color: $colorSelection;
             overflow: hidden;
-            transition: var(--transitionIconSocial);
+            transition: $transitionIconAndBackground;
         }
     }
 }

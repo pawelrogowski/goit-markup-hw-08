@@ -9,7 +9,6 @@
         padding: 0 15px;
     }
     &__heading {
-        text-align: center;
         @include fontProperties(
             700,
             28px,
@@ -17,6 +16,7 @@
             0.03em,
             $colorFontPrimary
         );
+        text-align: center;
     }
     &__list {
         display: flex;
@@ -38,8 +38,6 @@
         height: 100%;
     }
     &__person-name {
-        text-align: center;
-        margin-bottom: 10px;
         @include fontProperties(
             500,
             16px,
@@ -47,10 +45,10 @@
             0.03em,
             $colorFontPrimary
         );
+        text-align: center;
+        margin-bottom: 10px;
     }
     &__person-position {
-        text-align: center;
-        margin-bottom: 16px;
         @include fontProperties(
             400,
             16px,
@@ -58,15 +56,17 @@
             0.03em,
             $colorFontSecondary
         );
+        text-align: center;
+        margin-bottom: 16px;
     }
 }
 @media screen and (min-width: $screenTablet) {
     .our-team {
         &__list {
             display: flex;
-            justify-content: center;
             flex-direction: row;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 30px;
         }
         &__item {
@@ -82,13 +82,11 @@
         }
         &__list {
             display: flex;
-            justify-content: center;
             flex-direction: row;
             flex-wrap: nowrap;
-            gap: 30px;
+            justify-content: center;
         }
         &__heading {
-            text-align: center;
             @include fontProperties(
                 700,
                 36px,
@@ -96,6 +94,7 @@
                 0.03em,
                 $colorFontPrimary
             );
+            text-align: center;
         }
     }
 }
