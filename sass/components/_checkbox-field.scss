@@ -2,14 +2,21 @@
     display: flex;
     align-items: center;
     align-content: center;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.714285714;
-    letter-spacing: 0.03em;
-    color: $colorFontSecondary;
-    white-space: pre;
     &__label {
-        display: inline-flex;
+        display: flex;
+        align-items: center;
+    }
+    &__text {
+        @include fontProperties(
+            400,
+            12px,
+            14px,
+            0.03em,
+            $colorFontSecondary
+        );
+        display: flex;
+        flex-wrap: wrap;
+        white-space: pre;
     }
     &__input {
         margin-left: 14px;
@@ -19,30 +26,44 @@
             fill: $colorIconAlt;
             background: $colorSelection;
             border-color: $colorSelection;
-            transition: var(--transitionCheckbox);
+            transition: $transitionCheckbox;
         }
     }
     &__icon {
+        min-width: 16px;
         border: 2px $colorFontPrimary solid;
         border-radius: 2px;
         background: $colorBackgroundPrimary;
         fill: $colorIconAlt;
-        margin: 4px 7px 2px 15px;
+        margin: 0px 8px 0px 0px;
         cursor: pointer;
-        transition: var(--transitionCheckbox);
+        transition: $transitionCheckbox;
     }
     &__link {
         text-decoration: underline;
         text-decoration-thickness: 1px;
         color: $colorSelection;
-        transition: var(--transitionLinkUnderline);
+        transition: $transitionUnderline;
         &:focus,
         &:hover {
             text-decoration: underline;
             text-decoration-thickness: 2px;
             text-decoration-skip-ink: none;
             color: $colorSelection;
-            transition: var(--transitionLinkUnderline);
+            transition: $transitionUnderline;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .checkbox-field {
+        &__text {
+            @include fontProperties(
+                400,
+                14px,
+                24px,
+                0.03em,
+                $colorFontSecondary
+            );
         }
     }
 }

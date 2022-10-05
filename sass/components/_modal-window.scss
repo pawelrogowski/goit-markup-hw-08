@@ -1,7 +1,8 @@
 .modal-window {
     position: relative;
-    width: 528px;
-    height: 581px;
+    min-width: 320px;
+    max-width: 450px;
+    height: 609px;
     background: $colorBackgroundPrimary;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -17,25 +18,26 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        transition: var(--transitionIconModalClose);
+        transition: $transitionIcon;
         cursor: pointer;
         &:hover,
         &:focus {
             outline: none;
             border-color: $colorSelection;
             fill: $colorSelection;
-            transition: var(--transitionIconModalClose);
-            background-color: $colorBackgroundSecondary;
+            transition: $transitionIcon;
         }
     }
     &__heading {
+        @include fontProperties(
+            700,
+            20px,
+            1.15,
+            0.03em,
+            $colorFontPrimary
+        );
         text-align: center;
         margin-bottom: 12px;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 1.15;
-        letter-spacing: 0.03em;
-        color: $colorFontPrimary;
     }
     &__form {
         display: flex;
@@ -43,26 +45,35 @@
         gap: 8px;
     }
     &__button {
+        @include fontProperties(
+            700,
+            16px,
+            1.875,
+            0.06em,
+            $colorFontAlt
+        );
         background: $colorSelection;
         box-shadow: 0px 4px 4px #00000026;
         border-radius: 4px;
         border-style: none;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.875;
-        letter-spacing: 0.06em;
-        color: $colorFontAlt;
         padding: 10px 76px;
         cursor: pointer;
         align-self: center;
-        transition: var(--transitionButton);
+        transition: $transitionButton;
         margin-top: 20px;
         &:hover,
         &:focus {
             background: $colorBackgroundSecondary;
             color: $colorSelection;
             cursor: pointer;
-            transition: var(--transitionButton);
+            transition: $transitionButton;
         }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .modal-window {
+        max-width: 528px;
+        width: 528px;
+        height: 576px;
     }
 }

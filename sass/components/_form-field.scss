@@ -12,7 +12,7 @@
         transition: $transitionInputBorder;
     }
     &__input {
-        width: 448px;
+        width: 100%;
         height: 40px;
         border: 1px solid $colorInputBorderPrimary;
         border-radius: 4px;
@@ -21,19 +21,20 @@
         line-height: 1.166666667;
         letter-spacing: 0.01em;
         margin-top: 2px;
-        transition: var(--transitionFormTextInput);
+        transition: $transitionIconAndBorder;
         &:focus {
             border-color: $colorSelection;
             outline: none;
-            transition: var(--transitionFormTextInput);
+            transition: $transitionIconAndBorder;
         }
         &:focus + .form-field__icon {
             fill: $colorSelection;
-            transition: var(--transitionFormTextInput);
+            transition: $transitionIconAndBorder;
         }
     }
     &__comment {
-        width: 448px;
+        position: relative;
+        width: 100%;
         height: 120px;
         border: 1px solid $colorInputBorderPrimary;
         border-radius: 4px;
@@ -44,13 +45,14 @@
         margin-top: 2px;
         margin-bottom: 10px;
         resize: none;
+        transition: $transitionInputBorder;
         &::placeholder {
             color: $colorPlaceholder;
         }
         &:focus {
             border-color: $colorSelection;
             outline: none;
-            transition: var(--transitionFormTextInput);
+            transition: $transitionInputBorder;
         }
     }
     &__icon {
@@ -58,6 +60,6 @@
         top: 35px;
         left: 15px;
         fill: $colorFontPrimary;
-        transition: var(--transitionFormTextInput);
+        transition: $transitionIconAndBorder;
     }
 }
