@@ -1,6 +1,7 @@
 .product-card {
     display: flex;
     flex-direction: column;
+    flex: 1;
     cursor: pointer;
     &__anchor {
         position: relative;
@@ -10,6 +11,7 @@
         display: block;
         width: 100%;
         height: 100%;
+        flex: 1;
     }
     &__overlay {
         position: absolute;
@@ -24,6 +26,7 @@
         height: 100%;
         transform: translateY(100%);
         transition: $transitionTransform;
+        flex: 1;
     }
     &__caption-box {
         display: flex;
@@ -33,6 +36,7 @@
         border-left: 1px solid $colorBorderTertiary;
         border-right: 1px solid $colorBorderTertiary;
         border-bottom: 1px solid $colorBorderTertiary;
+        flex: 1;
     }
     &__heading {
         font-weight: 700;
