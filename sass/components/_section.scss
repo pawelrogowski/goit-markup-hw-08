@@ -1,7 +1,7 @@
 .section {
     background: $colorBackgroundSecondary;
     &__container {
-        min-width: $ScreenMinWidth;
+        min-width: $contentMinWidth;
         max-width: 1600px;
         // min-width: $screenMobile;
     }
@@ -19,7 +19,7 @@
         padding: 0px 0 60px 0;
     }
     &__our-team {
-        min-width: $ScreenMinWidth;
+        min-width: $contentMinWidth;
         padding: 60px 0;
         background-color: $colorBackgroundTertiary;
     }
@@ -27,7 +27,7 @@
         padding: 60px 0;
     }
     &__page-footer {
-        min-width: $ScreenMinWidth;
+        min-width: $contentMinWidth;
         background-color: $colorBackgroundSecondary;
         padding: 60px 0px;
     }

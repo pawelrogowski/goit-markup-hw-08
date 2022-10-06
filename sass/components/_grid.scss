@@ -5,7 +5,7 @@
     flex-basis: 100%;
     &__container {
         max-width: 1200px;
-        min-width: 320px;
+        min-width: $contentMinWidth;
         padding: 0 15px;
         margin: 0 auto;
     }
@@ -14,7 +14,7 @@
         flex-direction: column;
         justify-content: flex-start;
         transition: $transitionShadow;
-        min-width: 320px;
+        min-width: $contentMinWidth;
         width: 100%;
         &:hover {
             box-shadow: 0px 1px 1px rgb(0 0 0 / 12%),

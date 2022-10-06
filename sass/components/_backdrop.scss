@@ -2,7 +2,7 @@
     content: "";
     position: fixed;
     top: 0;
-    min-width: 320px;
+    min-width: $contentMinWidth;
     width: 100vw;
     height: 100vh;
     background: $colorBackdrop;

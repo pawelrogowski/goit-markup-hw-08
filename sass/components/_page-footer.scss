@@ -1,8 +1,8 @@
 .page-footer {
-    min-width: $ScreenMinWidth;
+    min-width: $contentMinWidth;
     &__container {
         @extend .page-footer;
-        $ScreenMinWidth: 320px;
+        min-width: $contentMinWidth;
         max-width: 1200px;
         padding: 0 15px;
         display: flex;

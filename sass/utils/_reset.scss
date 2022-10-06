@@ -25,10 +25,4 @@ body {
     font-family: "Roboto", "Raleway", sans-serif;
     color: $colorFontPrimary;
     background: $colorBackgroundPrimary;
-    overflow-x: visible;
-}
-@media screen and (min-width: $ScreenMinWidth) {
-    body {
-        overflow-x: hidden;
-    }
 }

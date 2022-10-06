@@ -2,7 +2,7 @@
     &__container {
         @extend .features;
         max-width: $screenDesktop;
-        min-width: $ScreenMinWidth;
+        min-width: $contentMinWidth;
         padding: 0 15px;
         display: flex;
         flex-wrap: wrap;

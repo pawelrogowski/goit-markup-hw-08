@@ -5,8 +5,7 @@
         ),
         url("../images/sliderbg.jpg");
     max-width: 1600px;
-    min-width: $ScreenMinWidth;
-    // min-width: 320px;
+    min-width: $contentMinWidth;
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
