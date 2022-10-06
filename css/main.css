@@ -1352,6 +1352,7 @@ body {
     margin: 0px 202px;
   }
   .newsletter-signup__textfield {
+    min-width: 200px;
     width: 450px;
   }
 }
@@ -1366,6 +1367,7 @@ body {
     margin-top: 12px;
   }
   .newsletter-signup__textfield {
+    min-width: 200px;
     width: 341px;
   }
   .newsletter-signup__button {

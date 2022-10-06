@@ -92,6 +92,7 @@
     .newsletter-signup {
         margin: 0px 202px;
         &__textfield {
+            min-width: 200px;
             width: 450px;
         }
     }
@@ -103,6 +104,7 @@
         margin: 0;
         margin-top: 12px;
         &__textfield {
+            min-width: 200px;
             width: 341px;
         }
         &__button {
