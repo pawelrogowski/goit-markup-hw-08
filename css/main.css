@@ -28,8 +28,14 @@ body {
   font-family: "Roboto", "Raleway", sans-serif;
   color: #212121;
   background: #ffffff;
+  overflow-x: visible;
 }
 
+@media screen and (min-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 .section {
   background: #2f303a;
 }
