@@ -27,7 +27,7 @@ body {
     background: $colorBackgroundPrimary;
     overflow-x: visible;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: $ScreenMinWidth) {
     body {
         overflow-x: hidden;
     }
