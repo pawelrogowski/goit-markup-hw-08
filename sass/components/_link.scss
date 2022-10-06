@@ -23,6 +23,10 @@
         @extend .link;
         text-decoration: underline;
     }
+    &--highlight {
+        @extend .link;
+        color: $colorSelection;
+    }
     &--active {
         @extend .link;
         color: $colorSelection;

@@ -15,6 +15,7 @@
         padding: 60px 0px;
     }
     &__our-speciality {
+        display: none;
         padding: 0px 0 60px 0;
     }
     &__our-team {
@@ -34,13 +35,17 @@
         padding: 60px 0;
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $screenDesktop) {
     .section {
         &__container {
             margin: 0 auto;
         }
         &__features {
             padding: 94px 0px;
+        }
+        &__our-speciality {
+            display: block;
+            padding: 0px 0 60px 0;
         }
         &__our-team {
             padding: 94px 0;

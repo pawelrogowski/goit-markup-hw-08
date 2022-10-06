@@ -1,7 +1,19 @@
 .button-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
-    padding-bottom: 50px;
+    margin-bottom: 30px;
     list-style: none;
+    justify-content: center;
+}
+@media screen and (min-width: $screenTablet) {
+    .button-list {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: $screenDesktop) {
+    .button-list {
+        margin-bottom: 50px;
+    }
 }

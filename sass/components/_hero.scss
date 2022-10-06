@@ -48,14 +48,13 @@
         transition: $transitionButton;
         &:hover,
         &:focus {
-            background: $colorBackgroundPrimary;
-            color: $colorFontPrimary;
+            background: $colorButtonPressed;
             cursor: pointer;
             transition: $transitionButton;
         }
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $screenDesktop) {
     .hero {
         &__container {
             height: 600px;
@@ -69,5 +68,16 @@
                 $colorFontAlt
             );
         }
+    }
+}
+@media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(
+                $colorOverlaySecondary,
+                $colorOverlaySecondary
+            ),
+            url("../images/sliderbg@2x.jpg");
     }
 }

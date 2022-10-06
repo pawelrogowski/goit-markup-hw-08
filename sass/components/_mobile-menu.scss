@@ -1,15 +1,129 @@
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 100vw;
     width: 100vw;
     height: 100vh;
     padding: 40px 48px;
     display: flex;
     flex-direction: column;
     visibility: hidden;
+    justify-content: space-between;
+    background-color: $colorBackgroundPrimary;
+    transition: $transitionTransformMenu;
+    &__close-button {
+        fill: $colorFontPrimary;
+        transition: $transitionIcon;
+        &:hover,
+        &:focus {
+            fill: $colorSelection;
+            transition: $transitionIcon;
+        }
+    }
+    &__nav-list {
+        @include fontProperties(
+            500,
+            40px,
+            47px,
+            0.02em,
+            $colorFontPrimary
+        );
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        list-style: none;
+    }
+    &__nav-item {
+    }
+    &__contact-list {
+        @include fontProperties(
+            500,
+            40px,
+            47px,
+            0.02em,
+            $colorFontPrimary
+        );
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        list-style: none;
+    }
+    &__phone {
+        @include fontProperties(
+            500,
+            34px,
+            40px,
+            0.02em,
+            $colorSelection
+        );
+        white-space: nowrap;
+    }
+    &__email {
+        @include fontProperties(
+            null,
+            24px,
+            28px,
+            0.02em,
+            $colorFontSecondary
+        );
+    }
+    &__social-list {
+        text-decoration: none;
+        display: flex;
+        gap: 10px;
+        margin-top: 34px;
+        & > a:not(:first-child) {
+            padding-left: 10px;
+            border-left: 1px solid rgba(33, 33, 33, 0.2);
+        }
+    }
+    @include fontProperties(
+        400,
+        15px,
+        22px,
+        0.02em,
+        $colorSelection
+    );
+    &__social-link {
+        @include fontProperties(
+            500,
+            18px,
+            22px,
+            0.02em,
+            $colorSelection
+        );
+    }
+}
+@media screen and (max-width: $screenMobile) {
+    .mobile-menu {
+        padding-left: 40px;
+        &__social-list {
+            gap: 5px;
+            & > a:not(:first-child) {
+                padding-left: 5px;
+            }
+        }
+        &__social-link {
+            @include fontProperties(
+                400,
+                18px,
+                22px,
+                0.02em,
+                $colorSelection
+            );
+        }
+    }
 }
 .is-open {
-    transform: translateX(0);
+    transition: $transitionTransformMenu;
+    transform: translateX(100%);
     visibility: visible;
+}
+.js-close-menu {
+    position: absolute;
+    top: 17px;
+    right: 19px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
 }

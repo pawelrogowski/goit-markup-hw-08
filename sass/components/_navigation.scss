@@ -1,11 +1,13 @@
 .navigation {
+    @include fontProperties(
+        500,
+        14px,
+        1.142,
+        0.02em,
+        $colorFontPrimary
+    );
     display: flex;
     align-items: center;
-    color: $colorFontPrimary;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.142857143;
-    letter-spacing: 0.02em;
     &__list {
         display: none;
     }
@@ -13,7 +15,7 @@
         position: relative;
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $screenTablet) {
     .navigation {
         &__list {
             gap: 60px;

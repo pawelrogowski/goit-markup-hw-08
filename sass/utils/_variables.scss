@@ -8,6 +8,7 @@ $colorFontTertiary: #ffffff99;
 $colorFontAlt: #fff;
 $colorSelection: #2196f3;
 $colorIconPrimary: #afb1b8;
+$colorButtonPressed: #188ce8;
 $colorIconSecondary: #ffffff1a;
 $colorIconAlt: #ffffff;
 $colorOverlayPrimary: #2196f3e6;
@@ -52,6 +53,8 @@ $transitionIconAndBorder: fill $commonTransitionValues,
     border-color $commonTransitionValues;
 $transitionShadow: box-shadow $commonTransitionValues;
 $transitionTransform: transform $commonTransitionValues;
+$transitionTransformMenu: transform $commonTransitionValues,
+    visibility $commonTransitionValues;
 $transitionModal: fill $commonTransitionValues,
     border-color $commonTransitionValues,
     background-color $commonTransitionValues;

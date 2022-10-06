@@ -1,6 +1,6 @@
 .modal-window {
     position: relative;
-    min-width: 320px;
+    min-width: $ScreenMinWidth;
     max-width: 450px;
     height: 609px;
     background: $colorBackgroundPrimary;
@@ -18,6 +18,7 @@
         height: 30px;
         border-radius: 50%;
         transition: $transitionIcon;
+        background: $colorBackgroundPrimary;
         cursor: pointer;
         &:hover,
         &:focus {
@@ -62,17 +63,16 @@
         margin-top: 20px;
         &:hover,
         &:focus {
-            background: $colorBackgroundSecondary;
-            color: $colorSelection;
+            background: $colorButtonPressed;
             cursor: pointer;
             transition: $transitionButton;
         }
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $screenDesktop) {
     .modal-window {
         max-width: 528px;
         width: 528px;
-        height: 576px;
+        height: 590px;
     }
 }
